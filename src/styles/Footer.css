@@ -1,0 +1,46 @@
+.footer-container {
+    /* border: 1px solid white; */
+    height: 50vh;
+    width: 100vw;
+    background-color: #050505 !important;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer-logo {
+    height: 75px;
+    margin-bottom: 50px !important;
+}
+
+.footer-address {
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer-phone-number {
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer-email {
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer-hours {
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.footer-rights {
+    font-size: .6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 50px;
+    color: #D0D3D4;
+}

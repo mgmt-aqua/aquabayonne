@@ -1,0 +1,120 @@
+.availability-main-text {
+    margin-top: 50px;
+    font-size: 9rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: center;
+    color: #050505;
+    /* -webkit-text-stroke: 3px #050505;
+    text-stroke: 3px #050505;     */
+}
+
+.button-wrapper {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button-filters-btn { 
+    text-transform: uppercase;
+    width: 200px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid #050505;
+    color: #050505
+}
+
+.button-filters-btn:hover { 
+    background-color: #1C88AA;
+    border: 1px solid white;
+    color: white;
+}
+
+.button-filters-btn:target { 
+    background-color: #050505;
+    border: 1px solid white;
+    color: white;
+}
+
+.button-filters-btn.active {
+    background-color: #1C88AA;
+    border: 1px solid white;
+    color: white;
+}
+
+.availability-inventory-container {
+    width: 90%;
+    margin: 50px auto;
+
+}
+
+.availability-card-btn {
+    /* margin: 0 auto;
+    width: 50%; */
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 0;
+    background-color: #1C88AA;
+    color: white;
+    border: 1px solid #1C88AA;
+}
+
+.availability-card-btn:hover {
+    background-color: transparent;
+    color: #1C88AA;
+    border: 1px solid #1C88AA;
+}
+
+/* .availability-card {
+    height: 400px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.availability-card:hover {
+    background-color: #1C88AA;
+    color: white;
+}
+
+.availability-card-title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+} */
+
+/* Mobile Styles */
+@media (max-width: 1200px) {
+    .availability-main-text {
+        font-size: 7rem;
+    }
+
+    .button-filters-btn { 
+        width: 200px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .availability-main-text {
+        font-size: 5rem;
+    }
+
+    .button-filters-btn { 
+        width: 100px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .availability-main-text {
+        font-size: 4rem;
+    }
+
+    .button-filters-btn { 
+        width: 100px;
+    }
+  }

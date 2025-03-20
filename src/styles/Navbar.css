@@ -1,0 +1,150 @@
+.navbar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between; /* Distribute space between logo and button */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    background-color: #050505;
+    color: white;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+  
+.navbar-logo {
+    position: absolute; /* Position logo in the center */
+    left: 50%;
+    transform: translateX(-50%); /* Ensure the logo is perfectly centered */
+}
+  
+  .navbar-logo img {
+    height: 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .book-tour-link {
+    padding-left: 100px !important;
+  }
+  
+  .book-tour-btn {
+    font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
+    padding: 0.4rem 1.3rem;
+    background-color: #050505;
+    border: 1px solid white;
+    color: white;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    border-radius: 0%;
+  }
+  
+  .book-tour-btn:hover {
+    background-color: #1C88AA;
+    color: white;
+    border: 1px solid white;
+  }
+
+  .contact-us-link {
+    padding-right: 80px !important;
+  }
+
+  .contact-us-btn {
+    font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
+    padding: 0.4rem 1.3rem;
+    background-color: #050505;
+    border: 1px solid white;
+    color: white;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 0%;
+  }
+
+  .contact-us-btn:hover {
+    background-color: #1C88AA;
+    color: white;
+    border: 1px solid white;
+  }
+
+  
+  body {
+    padding-top: 75px; /* To prevent content from being hidden behind the navbar */
+  }
+  
+
+  .mobile-menu-title {
+    font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 5rem;
+    color: white;
+  }
+
+  .btn-close {
+    background-color: #D0D3D4;
+  }
+
+  #responsive-navbar-nav {
+    background-color: #050505;
+    width: 100%;
+  }
+
+  .mobile-menu-body a {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #050505;
+    text-align: left;
+    padding: 15px;
+    color: #D0D3D4;
+  }
+
+  .mobile-menu-body a:hover {
+    background-color: #D0D3D4;
+    color: #050505;
+  }
+
+  .navbar-toggler {
+    background-color: #fff;
+    border-radius: 0;
+  }
+
+  .btn-close {
+    margin-top: -150px !important;
+    margin-right: 25px !important;
+  }
+
+  .navbar-links{
+    font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
+    padding: 0.4rem 1rem;
+    background-color: #050505;
+    color: white;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 0%;
+  }
+
+  .navbar-links:hover{
+    border-bottom: 3px solid #1C88AA;
+    text-transform: uppercase;
+    color:white;
+  }
