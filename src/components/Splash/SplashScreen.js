@@ -83,7 +83,7 @@ const SplashScreen = ({ duration = 1500, children }) => {
               }}
               initial={{ width: `0%`, x: "0%" }}
               animate={{ width: `${progress}%`, x: "0%" }}
-              transition={{ duration: 1, ease: "easeOut", delay: 1 }} // Slightly adjusted transition timing for smoother progress
+              transition={{ duration: 1.8, ease: "easeOut", delay: .1 }} // Slightly adjusted transition timing for smoother progress
             />
           </motion.div>
         </motion.div>

@@ -6,24 +6,24 @@ const BookTour = () => {
 
   const baseStyles = {
     color: "transparent", 
-    "text-transform": "uppercase",
-    "font-weight": "700",
-    "-webkit-text-stroke": "3px #D0D3D4",
-    "text-stroke": "3px #D0D3D4"
+    textTransform: "uppercase",
+    fontWeight: "700",
+    WebkitTextStroke: "3px #D0D3D4",
+    textStroke: "3px #D0D3D4"
   }
 
   const desktopStyles = {
     ...baseStyles,
-    "font-size": "8rem"
+    fontSize: "8rem"
   }
 
   const mobileStyles = {
     ...baseStyles,
-    "font-size": "3rem"
+    fontSize: "3rem"
   }
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '0px' }}>
+    <div style={{ textAlign: 'center', marginTop: '100px' }}>
       <FramerSlide text="Book A Tour" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
         <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
           <iframe

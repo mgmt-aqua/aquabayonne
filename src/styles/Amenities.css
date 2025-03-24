@@ -4,7 +4,7 @@
     width: 100vw;
     position: relative;
     color: white; /* Adjust text color */
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
 .amenities-container::before {
@@ -28,7 +28,7 @@
 .amenities-text {
     z-index: 10;
     opacity: 1 !important;
-    color: #1C88AA;
+    color: #3C7C92;
     text-align: right;
     margin-right: 50px;
 }

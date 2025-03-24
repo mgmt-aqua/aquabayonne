@@ -104,20 +104,20 @@ function Availability() {
     // Styles for transition page
     const baseStyles = {
         color: "transparent",
-        "text-transform": "uppercase",
-        "font-weight": "700",
-        "-webkit-text-stroke": "3px #D0D3D4",
-        "text-stroke": "3px #D0D3D4"
+        textTransform: "uppercase",
+        fontWeight: "700",
+        WebkitTextStroke: "3px #D0D3D4",
+        textStroke: "3px #D0D3D4"
     }
 
     const desktopStyles = {
         ...baseStyles,
-        "font-size": "8rem"
+        fontSize: "8rem"
     }
 
     const mobileStyles = {
         ...baseStyles,
-        "font-size": "3rem"
+        fontSize: "3rem"
     }
 
 

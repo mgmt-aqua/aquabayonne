@@ -10,20 +10,20 @@ function ContactUsForm() {
   // Styles for transition page
   const baseStyles = {
     color: "transparent",
-    "text-transform": "uppercase",
-    "font-weight": "700",
-    "-webkit-text-stroke": "3px #D0D3D4",
-    "text-stroke": "3px #D0D3D4"
+    textTransform: "uppercase",
+    fontWeight: "700",
+    WebkitTextStroke: "3px #D0D3D4",
+    textStroke: "3px #D0D3D4"
   }
 
   const desktopStyles = {
     ...baseStyles,
-    "font-size": "8rem"
+    fontSize: "8rem"
   }
 
   const mobileStyles = {
     ...baseStyles,
-    "font-size": "3rem"
+    fontSize: "3rem"
   }
 
   // State to hold form values
@@ -38,6 +38,15 @@ function ContactUsForm() {
       twoBed: false,
     },
     leaseStartDate: '',
+    pets: {
+      yes: false,
+      no: false
+    },
+    parking: {
+      yes: false,
+      no: false,
+    },
+    attribution: '',
   });
 
   // Handle input change for text, email, and select fields
@@ -51,11 +60,14 @@ function ContactUsForm() {
 
   // Handle checkbox changes (bedrooms selection)
   const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
+    const { name, checked, id } = e.target;
+    console.log(id)
+    console.log(name)
+    console.log(checked)
     setFormData((prevData) => ({
       ...prevData,
-      bedrooms: {
-        ...prevData.bedrooms,
+      [id]: {
+        ...prevData[id],
         [name]: checked,
       },
     }));
@@ -87,7 +99,7 @@ function ContactUsForm() {
       <h1 className="text-center mb-4 contact-us-main-text">Let's get <br/> Acquainted</h1>
       <Container fluid className="d-flex justify-content-center contact-us-container">
         <Row className="w-100">
-          <Col xs={12} md={6} lg={4} className="mx-auto contact-us-column">
+          <Col xs={10} md={4} lg={2} className="mx-auto contact-us-column">
             {/* Customizable Heading */}
 
 
@@ -150,7 +162,7 @@ function ContactUsForm() {
 
               {/* Bedrooms */}
               <Form.Group controlId="bedrooms">
-                <Form.Label className="contact-us-form-label">BEDROOMS</Form.Label>
+                <Form.Label className="contact-us-form-label">WHAT APARTMENT ARE YOU INTERESTED IN?</Form.Label>
                 <div className="d-flex">
                   <Form.Check
                     type="checkbox"
@@ -182,9 +194,59 @@ function ContactUsForm() {
                 </div>
               </Form.Group>
 
+              {/* Pets */}
+              <Form.Group controlId="pets">
+                <Form.Label className="contact-us-form-label">DO YOU HAVE ANY PETS?</Form.Label>
+                <div className="d-flex">
+                  <Form.Check
+                    type="checkbox"
+                    label="Yes"
+                    name="yes"
+                    className='contact-us-form-control'
+                    checked={formData.pets.yes}
+                    onChange={handleCheckboxChange}
+                    inline
+                  />
+                  <Form.Check
+                    type="checkbox"
+                    label="No"
+                    name="no"
+                    className='contact-us-form-control'
+                    checked={formData.pets.no}
+                    onChange={handleCheckboxChange}
+                    inline
+                  />
+                </div>
+              </Form.Group>
+
+              {/* Parking */}
+              <Form.Group controlId="parking">
+                <Form.Label className="contact-us-form-label">DO YOU NEED PARKING?</Form.Label>
+                <div className="d-flex">
+                  <Form.Check
+                    type="checkbox"
+                    label="Yes"
+                    name="yes"
+                    className='contact-us-form-control'
+                    checked={formData.parking.yes}
+                    onChange={handleCheckboxChange}
+                    inline
+                  />
+                  <Form.Check
+                    type="checkbox"
+                    label="No"
+                    name="no"
+                    className='contact-us-form-control'
+                    checked={formData.parking.no}
+                    onChange={handleCheckboxChange}
+                    inline
+                  />
+                </div>
+              </Form.Group>
+
               {/* Lease Start Date */}
               <Form.Group controlId="leaseStartDate">
-                <Form.Label className="contact-us-form-label">LEASE START DATE</Form.Label>
+                <Form.Label className="contact-us-form-label">PREFERRED MOVE-IN DATE</Form.Label>
                 <Form.Control
                   type="date"
                   name="leaseStartDate"
@@ -192,6 +254,24 @@ function ContactUsForm() {
                   value={formData.leaseStartDate}
                   onChange={handleInputChange}
                 />
+              </Form.Group>
+
+              {/* How did you hear about us? */}
+              <Form.Group controlId="attribution">
+                <Form.Control
+                  as="select"
+                  name="attribution"
+                  className='contact-us-form-control'
+                  value={formData.attribution}
+                  onChange={handleInputChange}
+                  required
+                >
+                  <option value="">HOW DID YOU HEAR ABOUT US?</option>
+                  <option value="REFERRAL">REFERRAL</option>
+                  <option value="SOCIAL MEDIA">SOCIAL MEDIA</option>
+                  <option value="REALTOR">REALTOR</option>
+                  <option value="OTHER">OTHER</option>
+                </Form.Control>
               </Form.Group>
 
               {/* Submit Button */}

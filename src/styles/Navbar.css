@@ -1,13 +1,12 @@
-.navbar {
+/* .navbar {
     height: 100px;
     display: flex;
-    justify-content: space-between; /* Distribute space between logo and button */
+    justify-content: space-between; 
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 1rem 2rem;
     background-color: #050505;
     color: white;
     z-index: 1000;
@@ -15,9 +14,9 @@
 }
   
 .navbar-logo {
-    position: absolute; /* Position logo in the center */
+    position: absolute; 
     left: 50%;
-    transform: translateX(-50%); /* Ensure the logo is perfectly centered */
+    transform: translateX(-50%); 
 }
   
   .navbar-logo img {
@@ -77,9 +76,11 @@
     border: 1px solid white;
   }
 
+
+  v
   
   body {
-    padding-top: 75px; /* To prevent content from being hidden behind the navbar */
+    padding-top: 75px;
   }
   
 
@@ -143,8 +144,184 @@
     border-radius: 0%;
   }
 
-  .navbar-links:hover{
+  .navbar-links:hover, .navbar-links:active, .navbar-links:focus{
     border-bottom: 3px solid #1C88AA;
     text-transform: uppercase;
     color:white;
-  }
+  } */
+
+  .navbar-transparent {
+    height: 100px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    color: white;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+  height: 100px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #050505;
+  color: white;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 100px;
+}
+
+.navbar-logo {
+    position: relative; 
+    left: auto;
+    transform: none;
+    margin-left: 20px;
+}
+  
+.navbar-logo img {
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+  
+.book-tour-btn {
+    font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
+    padding: 0.4rem 1.3rem;
+    background-color: #1C88AA;
+    border: 1px solid white;
+    color: white;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    border-radius: 0%;
+}
+  
+.book-tour-btn:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.contact-us-btn {
+    font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
+    padding: 0.4rem 1.3rem;
+    background-color: #1C88AA;
+    border: 1px solid white;
+    color: white;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    border-radius: 0%;
+}
+
+.contact-us-btn:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+  
+.mobile-menu-title {
+    font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 5rem;
+    color: white;
+}
+
+.btn-close {
+    background-color: #D0D3D4;
+}
+
+#responsive-navbar-nav {
+    background-color: #050505;
+    width: 100%;
+}
+
+.mobile-menu-body a {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: transparent;
+    text-align: left;
+    padding: 15px;
+    color: #D0D3D4;
+}
+
+.mobile-menu-body a:hover {
+    background-color: #D0D3D4;
+    color: #050505;
+}
+
+.navbar-toggler {
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.btn-close {
+    margin-top: -150px !important;
+    margin-right: 25px !important;
+}
+
+.navbar-links {
+    font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
+    padding: 0.8rem 0.9rem;
+    background-color: transparent;
+    color: white;
+    font-size: .8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-left: 30px;
+    margin-right: 10px;
+    border-radius: 0%;
+}
+
+.navbar-links:hover, .navbar-links:active, .navbar-links:focus {
+    border-bottom: 3px solid #1C88AA;
+    text-transform: uppercase;
+    color: white;
+}
+
+.navbar-links.active {
+  border-bottom: 3px solid #1C88AA;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 992px) {
+    .navbar-left,
+    .navbar-right {
+        flex-direction: column;
+    }
+    
+    /* Make logo centered on mobile */
+    .navbar-logo {
+        margin: 0 auto;
+    }
+}

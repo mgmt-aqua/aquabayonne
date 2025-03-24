@@ -18,13 +18,15 @@
     font-weight: 700;
 }
 
-.footer-phone-number {
+.footer-phone-number a{
+    color: white;
     font-size: .8rem;
     text-transform: uppercase;
     font-weight: 700;
 }
 
-.footer-email {
+.footer-email a {
+    color: white;
     font-size: .8rem;
     text-transform: uppercase;
     font-weight: 700;

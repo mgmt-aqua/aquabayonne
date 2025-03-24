@@ -9,7 +9,7 @@ import img from "../../img/aqua-logo-white.png";
 class Footer extends Component {
     render() {
         return (
-            <Section id="footer">
+            // <Section id="footer">
                 <footer className="bg-dark text-white py-4 d-flex align-items-center justify-content-center footer-container">
                     <Container className="text-center">
                         <Row>
@@ -17,8 +17,8 @@ class Footer extends Component {
                                 <img src={img} alt="Logo" className="mb-3 footer-logo" />
                                 <p className="footer-address">54 Flagship Street, Bayonne, NJ 07002</p>
 
-                                <p className="footer-phone-number">Phone: (201) 561-0066</p>
-                                <p className="footer-email">Email: leasing@auqabayonne.com</p>
+                                <p className="footer-phone-number"><a href="tel:2015610066">Phone: (201) 561-0066</a></p>
+                                <p className="footer-email"><a href="mailto:leasing@aquabayonne.com">Email: leasing@aquabayonne.com</a></p>
                                 <p className="footer-hours">Mon - Sat: 10 am - 6 pm</p>
                                 <p className="footer-hours">Sun: 10 am - 5:30 pm</p>
 
@@ -27,7 +27,7 @@ class Footer extends Component {
                         </Row>
                     </Container>
                 </footer>
-            </Section>
+            // </Section>
         )
     }
 }
