@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Container, Row, Col } from 'react-bootstrap';
 
 import Section from "../Common/Section"
-import "../../styles/Footer.css"
+import "./Footer.css"
 import img from "../../img/aqua-logo-white.png";
 
 
