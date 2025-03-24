@@ -9,7 +9,7 @@ import img from "../../img/aqua-logo-white.png";
 class Footer extends Component {
     render() {
         return (
-            // <Section id="footer">
+            <Section id="footer">
                 <footer className="bg-dark text-white py-4 d-flex align-items-center justify-content-center footer-container">
                     <Container className="text-center">
                         <Row>
@@ -27,7 +27,7 @@ class Footer extends Component {
                         </Row>
                     </Container>
                 </footer>
-            // </Section>
+            </Section>
         )
     }
 }

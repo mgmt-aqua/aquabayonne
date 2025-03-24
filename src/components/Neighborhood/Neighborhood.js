@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { motion, AnimatePresence, useInView } from "framer-motion"
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom"

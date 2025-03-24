@@ -70,7 +70,7 @@ const FullPageSlideAnimation = (props) => {
         variants={textVariants}
         initial="initial"
         animate="animate"
-        style={size == "small" ? props.mobileTextStyles : props.desktopTextStyles}
+        style={size === "small" ? props.mobileTextStyles : props.desktopTextStyles}
       >
        {props.text}
       </motion.h1>

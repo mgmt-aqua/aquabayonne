@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import Section from "../Common/Section"
 import MainText from "../Common/MainText"

@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import Section from "../Common/Section"
 import { AnimatePresence, motion } from 'framer-motion'
 import { Button } from 'react-bootstrap'
-import { Link, useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 import Typewriter from 'typewriter-effect/dist/core';
 
 import "../../styles/Home.css"
@@ -10,13 +10,12 @@ import "../../styles/Home.css"
 import video from '../../assets/DJI_0300.mp4'
 
 export default function Home() {
-  const mainTextStrings = ['serenity.', 'luxury.', 'elegance.', 'comfort.', 'home.'];
 
   useEffect(() => {
     var app = document.getElementById('typewriter');
 
     new Typewriter(app, {
-      strings: mainTextStrings,
+      strings: ['serenity.', 'luxury.', 'elegance.', 'comfort.', 'home.'],
       pauseFor: 2500,
       loop: true,
       autoStart: true,
