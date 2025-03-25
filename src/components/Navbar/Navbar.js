@@ -124,7 +124,7 @@ function ResponsiveCenteredNavbar() {
     
     // </AnimatePresence>
     <AnimatePresence>
-      <Navbar bg="transparent" expand="lg" sticky="top">
+      <Navbar bg="transparent" expand="xl" sticky="top">
         <motion.div
           className={'navbar-transparent w-100'}
           initial={{opacity: 0, y: -100}}
@@ -142,7 +142,7 @@ function ResponsiveCenteredNavbar() {
             <Navbar.Toggle
               aria-controls="responsive-navbar-nav"
               onClick={handleShow}
-              className="d-lg-none navbar-toggler"
+              className="d-xl-none navbar-toggler"
             />
 
             {/* Logo on the left */}
@@ -165,7 +165,7 @@ function ResponsiveCenteredNavbar() {
               }}
             >
               {/* Navigation Links next to logo */}
-              <Nav className="d-none d-lg-flex align-items-center">
+              <Nav className="d-none d-xl-flex align-items-center">
                 <Nav.Link as={Link} to="/building" className={activeLink === '/building' ? "navbar-links active" : "navbar-links"}>
                   Building
                 </Nav.Link>
@@ -181,7 +181,7 @@ function ResponsiveCenteredNavbar() {
               </Nav>
 
               {/* Buttons on the right */}
-              <Nav className="d-none d-lg-flex align-items-center navbar-button-container">
+              <Nav className="d-none d-xl-flex align-items-center navbar-button-container">
                 <Nav.Link as={Link} to="/inquire" className="book-tour-link">
                   <Button className="book-tour-btn">Book A Tour</Button>
                 </Nav.Link>

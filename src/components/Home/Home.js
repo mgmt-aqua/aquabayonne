@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom"
 import Typewriter from 'typewriter-effect/dist/core';
 
-import "../../styles/Home.css"
+import "./Home.css"
 
 import video from '../../assets/DJI_0300.mp4'
 
