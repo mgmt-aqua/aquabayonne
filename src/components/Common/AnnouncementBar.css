@@ -1,0 +1,17 @@
+.announcement-bar-container {
+    background-color: #3C7C92; /* Choose your desired color */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: .75rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999; /* Ensures the bar stays on top */
+  }
+  
+  .announcement-bar-text {
+    margin: 0;
+    font-weight: 700;
+    color: white;
+  }

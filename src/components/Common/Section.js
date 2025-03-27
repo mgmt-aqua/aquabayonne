@@ -1,17 +1,27 @@
 import React, { useEffect } from 'react';
-import  "../../styles/Section.css"
+import { useNavigate } from 'react-router-dom';  // useNavigate for React Router v6
+import "../../styles/Section.css";
 
 const Section = ({ id, children }) => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            window.history.replaceState(null, '', `#${entry.target.id}`);
+            // Update the hash and let React Router handle the navigation
+            navigate(`#${entry.target.id}`, { replace: true });
+
+            // Optionally, add a class to highlight the active section
+            entry.target.classList.add('active');
+          } else {
+            // Remove the active class when the section is out of view
+            entry.target.classList.remove('active');
           }
         });
       },
-      { threshold: .95 }
+      { threshold: 0.95 } // Adjust this as needed
     );
 
     const section = document.getElementById(id);
@@ -24,7 +34,7 @@ const Section = ({ id, children }) => {
         observer.unobserve(section);
       }
     };
-  }, [id]);
+  }, [id, navigate]); // Add navigate to the dependency array
 
   return (
     <section id={id} className="scroll-section">
@@ -34,4 +44,3 @@ const Section = ({ id, children }) => {
 };
 
 export default Section;
-

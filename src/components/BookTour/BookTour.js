@@ -1,5 +1,6 @@
 import React from 'react';
 import FramerSlide from '../Common/FramerSlide'
+import InformationPage from '../Common/InformationPage';
 
 const BookTour = () => {
 
@@ -22,8 +23,9 @@ const BookTour = () => {
   }
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '100px' }}>
+    <div style={{ textAlign: 'center' }}>
       <FramerSlide text="Book A Tour" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
+      <InformationPage pageTitle={'Book A Tour'}>
         <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
           <iframe
             title="Calendly"
@@ -34,6 +36,7 @@ const BookTour = () => {
             style={{ position: 'absolute', top: 0, left: 0 }}
           ></iframe>
         </div>
+        </InformationPage>
     </div>
   );
 };

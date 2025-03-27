@@ -23,7 +23,7 @@ class App extends Component {
           <Amenities />
           <Residences />
           <Neighborhood />
-          <Footer />  
+          <Footer id="footer"/>  
         </div>
       </SplashScreen>
     )

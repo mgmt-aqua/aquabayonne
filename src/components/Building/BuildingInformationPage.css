@@ -1,0 +1,69 @@
+.building-information-page-img {
+    width: 100%;
+    height: 100%;
+}
+
+.building-information-page-content-container {
+    min-height: 500px;
+    background-color: white;
+}
+
+.building-information-image-gallery-row {
+    background-color: white;
+    /* padding: 100px; */
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.our-story-col-left {
+    padding: 25px;
+}
+
+.our-story-col-right {
+    padding: 50px;
+}
+
+.building-information-page-our-story-heading {
+    font-size: 2rem;
+    margin-top: 50px;
+    font-weight: 400;
+}
+
+.our-story-text {
+    font-weight: 400;
+    font-size: 3rem;
+    text-indent: 150px;
+}
+
+.building-information-page-section-title {
+    font-size: 9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* position: absolute;
+    bottom: 0; */
+    padding-left: 50px;
+    padding-bottom: 25px;
+    margin-top: 100px;
+    color: #050505;
+}
+
+.building-information-page-img {
+    height: 100vh;
+}
+
+.col-left {
+    position: relative;
+}
+
+.building-information-page-section-1-row {
+}
+
+.section-1-col {
+    color: white;
+    padding: 50px;
+}
+
+.section-1-col p {
+    color: white;
+    font-size: 1rem;
+}

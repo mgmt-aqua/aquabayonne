@@ -49,14 +49,12 @@
 }
 
 .availability-inventory-container {
-    width: 90%;
+    width: 70%;
     margin: 50px auto;
 
 }
 
 .availability-card-btn {
-    /* margin: 0 auto;
-    width: 50%; */
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 0;
@@ -71,12 +69,12 @@
     border: 1px solid #1C88AA;
 }
 
-/* .availability-card {
-    height: 400px;
+.availability-card {
+    height: 300px;
     text-align: center;
     cursor: pointer;
 }
-
+/* 
 .availability-card:hover {
     background-color: #1C88AA;
     color: white;

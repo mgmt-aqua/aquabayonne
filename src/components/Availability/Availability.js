@@ -4,102 +4,105 @@ import { Button, Row, Col, Card } from 'react-bootstrap'
 import FramerSlide from '../Common/FramerSlide'
 import "../../styles/Availability.css"
 
+// Floor Plans
+import Studio1 from '../../assets/Floor Plans/Aquaview_UnitS1.pdf'
+import Studio2 from '../../assets/Floor Plans/Aquaview_UnitS2.pdf'
+import Studio3 from '../../assets/Floor Plans/Aquaview_UnitS3.pdf'
+import Studio4 from '../../assets/Floor Plans/Aquaview_UnitS4.pdf'
+
+import OneBed1 from '../../assets/Floor Plans/Aquaview_UnitA1.pdf'
+import OneBed2 from '../../assets/Floor Plans/Aquaview_UnitA2.pdf'
+import OneBed3 from '../../assets/Floor Plans/Aquaview_UnitA3.pdf'
+import OneBed4 from '../../assets/Floor Plans/Aquaview_UnitAD1.pdf'
+
+import TwoBed1 from '../../assets/Floor Plans/Aquaview_UnitB1.pdf'
+import TwoBed2 from '../../assets/Floor Plans/Aquaview_UnitB2.pdf'
+import TwoBed3 from '../../assets/Floor Plans/Aquaview_UnitB3.pdf'
+import TwoBed4 from '../../assets/Floor Plans/Aquaview_UnitB4.pdf'
+
 function Availability() {
     const filterOptions = ['All', 'Studio', '1 Bed', '2 Bed'];
     const inventoryOptions = [{
-        id: "studio1",
+        id: "S1",
         type: "Studio",
         bedrooms: "Studio",
         bathrooms: "1",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: Studio1
     }, {
-        id: "studio2",
+        id: "S2",
         type: "Studio",
         bedrooms: "Studio",
         bathrooms: "1",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: Studio2
     }, {
-        id: "studio3",
+        id: "S3",
         type: "Studio",
         bedrooms: "Studio",
         bathrooms: "1",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: Studio3
+    },{
+        id: "S4",
+        type: "Studio",
+        bedrooms: "Studio",
+        bathrooms: "1",
+        floorplan: Studio4
     }, {
-        id: "1bed1",
+        id: "A1",
         type: "1 Bed",
         bedrooms: "1",
         bathrooms: "1",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: OneBed1
     }, {
-        id: "1bed2",
+        id: "A2",
         type: "1 Bed",
         bedrooms: "1",
         bathrooms: "1",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: OneBed2
     }, {
-        id: "1bed3",
+        id: "A3",
         type: "1 Bed",
         bedrooms: "1",
         bathrooms: "1",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: OneBed3
     },
     {
-        id: "1bed4",
+        id: "AD1",
         type: "1 Bed",
         bedrooms: "1",
         bathrooms: "1",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: OneBed4
     },
     {
-        id: "1bed5",
-        type: "1 Bed",
-        bedrooms: "1",
-        bathrooms: "1",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
-    },
-    {
-        id: "2bed1",
+        id: "B1",
         type: "2 Bed",
         bedrooms: "2",
         bathrooms: "1",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: TwoBed1
     },
     {
-        id: "2bed2",
+        id: "B2",
         type: "2 Bed",
         bedrooms: "2",
         bathrooms: "1",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: TwoBed2
     },
     {
-        id: "2bed3",
+        id: "B3",
         type: "2 Bed",
         bedrooms: "2",
         bathrooms: "2",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: TwoBed3
     },
     {
-        id: "2bed4",
+        id: "B4",
         type: "2 Bed",
         bedrooms: "2",
         bathrooms: "2",
-        floorplan: "Some Random Floor Plan Will Go Here",
-        gallery: ["some", "images", "will", "go", "here"]
+        floorplan: TwoBed4
     }]
+
     const [activeFilter, setActiveFilter] = useState('All');
     const [activeInventoryOptions, setActiveInventoryOptions] = useState(inventoryOptions);
-
 
     // Styles for transition page
     const baseStyles = {
@@ -119,7 +122,6 @@ function Availability() {
         ...baseStyles,
         fontSize: "3rem"
     }
-
 
     const handleClickFilter = (item) => {
         setActiveFilter(item)
@@ -145,7 +147,7 @@ function Availability() {
                     <Row>
                         <AnimatePresence>
                             {activeInventoryOptions.map((item, index) => (
-                                <Col sm={12} md={6} lg={4} key={index}>
+                                <Col sm={12} md={6} lg={6} key={index}>
                                     <motion.div
                                         initial={{ opacity: 0, x: -50 }}
                                         animate={{ opacity: 1, x: 0 }}
@@ -160,7 +162,7 @@ function Availability() {
                                     >
                                         <Card className="mb-4 availability-card">
                                             <Card.Body>
-                                                <Card.Title className="availability-card-title">{item.type}</Card.Title>
+                                                <Card.Title className="availability-card-title">Residence {item.id}</Card.Title>
                                                 <Card.Text>
                                                     <strong>Bedrooms:</strong>{item.bedrooms}
                                                 </Card.Text>
@@ -174,12 +176,11 @@ function Availability() {
                                 </Col>
                             ))}
                         </AnimatePresence>
-                    </Row>
+                    </Row> 
+                    </div>
                 </div>
-            </div>
         </AnimatePresence>
     )
-
 }
 
 export default Availability

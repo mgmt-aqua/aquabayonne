@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import FramerSlide from '../Common/FramerSlide'
 import '../../styles/ContactUs.css'
+import InformationPage from '../Common/InformationPage';
 
 function ContactUsForm() {
 
@@ -96,7 +97,8 @@ function ContactUsForm() {
   return (
     <AnimatePresence mode='wait'>
       <FramerSlide text="Contact Us" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-      <h1 className="text-center mb-4 contact-us-main-text">Let's get <br/> Acquainted</h1>
+      <InformationPage pageTitle={'Contact Us'}>
+      {/* <h1 className="text-center mb-4 contact-us-main-text">Contact Us</h1> */}
       <Container fluid className="d-flex justify-content-center contact-us-container">
         <Row className="w-100">
           <Col xs={10} md={4} lg={2} className="mx-auto contact-us-column">
@@ -109,11 +111,12 @@ function ContactUsForm() {
               <Form.Group controlId="Name">
                 <Form.Control
                   type="text"
-                  placeholder="NAME"
+                  placeholder="NAME (required)"
                   name="name"
                   className="contact-us-form-control"
                   value={formData.name}
                   onChange={handleInputChange}
+                  required={true}
                 />
               </Form.Group>
 
@@ -121,11 +124,12 @@ function ContactUsForm() {
               <Form.Group controlId="email">
                 <Form.Control
                   type="email"
-                  placeholder="EMAIL"
+                  placeholder="EMAIL (required)"
                   name="email"
                   className="contact-us-form-control"
                   value={formData.email}
                   onChange={handleInputChange}
+                  required={true}
                 />
               </Form.Group>
 
@@ -133,11 +137,12 @@ function ContactUsForm() {
               <Form.Group controlId="phone">
                 <Form.Control
                   type="text"
-                  placeholder="PHONE NUMBER"
+                  placeholder="PHONE NUMBER (required)"
                   name="phone"
                   className="contact-us-form-control"
                   value={formData.phone}
                   onChange={handleInputChange}
+                  required
                 />
               </Form.Group>
 
@@ -151,7 +156,7 @@ function ContactUsForm() {
                   onChange={handleInputChange}
                   required
                 >
-                  <option value="">SELECT YOUR BUDGET</option>
+                  <option value="">SELECT YOUR BUDGET (required)</option>
                   <option value="500">$2,000-$2,500</option>
                   <option value="1000">$2,500-$3,000</option>
                   <option value="1500">$3,000-$3,500</option>
@@ -162,7 +167,7 @@ function ContactUsForm() {
 
               {/* Bedrooms */}
               <Form.Group controlId="bedrooms">
-                <Form.Label className="contact-us-form-label">WHAT APARTMENT ARE YOU INTERESTED IN?</Form.Label>
+                <Form.Label className="contact-us-form-label">WHAT APARTMENT ARE YOU INTERESTED IN? (required)</Form.Label>
                 <div className="d-flex">
                   <Form.Check
                     type="checkbox"
@@ -172,6 +177,7 @@ function ContactUsForm() {
                     checked={formData.bedrooms.studio}
                     onChange={handleCheckboxChange}
                     inline
+                    required
                   />
                   <Form.Check
                     type="checkbox"
@@ -246,13 +252,14 @@ function ContactUsForm() {
 
               {/* Lease Start Date */}
               <Form.Group controlId="leaseStartDate">
-                <Form.Label className="contact-us-form-label">PREFERRED MOVE-IN DATE</Form.Label>
+                <Form.Label className="contact-us-form-label">PREFERRED MOVE-IN DATE (required)</Form.Label>
                 <Form.Control
                   type="date"
                   name="leaseStartDate"
                   className='contact-us-form-control'
                   value={formData.leaseStartDate}
                   onChange={handleInputChange}
+                  required
                 />
               </Form.Group>
 
@@ -282,6 +289,7 @@ function ContactUsForm() {
           </Col>
         </Row>
       </Container>
+      </InformationPage>
     </AnimatePresence>
   );
 }

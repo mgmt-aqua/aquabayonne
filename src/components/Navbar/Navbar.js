@@ -4,10 +4,16 @@ import { Link, useLocation} from 'react-router-dom';
 import img from "../../img/aqua-logo-white.png";
 import '../../styles/Navbar.css';
 import { AnimatePresence, motion } from 'framer-motion';
+import { MdEmail } from "react-icons/md";
+import { MdPhone } from "react-icons/md";
+
+
 
 function ResponsiveCenteredNavbar() {
   const [show, setShow] = useState(false);
   const [activeLink, setActiveLink] = useState('');
+  const [navbarStyle, setNavbarStyle] = useState('transparent');
+  const [isHomePath, setHomePath] = useState(false);
   const location = useLocation();
 
   const handleClose = () => setShow(false);
@@ -15,6 +21,14 @@ function ResponsiveCenteredNavbar() {
 
   useEffect(() => {
     setActiveLink(location.pathname)
+    setHomePath(location.pathname === '/')
+     // Change the navbar style based on the current route
+     if (location.pathname === '/' && location.hash === '#home') {
+      setNavbarStyle('navbar-transparent'); // Make navbar transparent on the landing page
+    } else {
+      setNavbarStyle('navbar'); // Set a solid color for other pages
+      
+    }
   }, [location])
 
   return (
@@ -126,12 +140,12 @@ function ResponsiveCenteredNavbar() {
     <AnimatePresence>
       <Navbar bg="transparent" expand="xl" sticky="top">
         <motion.div
-          className={'navbar-transparent w-100'}
+          className={navbarStyle}
           initial={{opacity: 0, y: -100}}
           animate={{opacity: 1, y: 0}}
           transition={{
             duration: .75, 
-            delay: 5, 
+            delay: isHomePath ? 5 : 2, 
             type: "spring",
             stiffness: 800,
             damping: 100
@@ -158,7 +172,7 @@ function ResponsiveCenteredNavbar() {
               animate={{opacity: 1}}
               transition={{
                 duration: 1, 
-                delay: 5, 
+                delay: isHomePath ? 5 : 2, 
                 type: "spring",
                 stiffness: 800,
                 damping: 100
@@ -182,6 +196,8 @@ function ResponsiveCenteredNavbar() {
 
               {/* Buttons on the right */}
               <Nav className="d-none d-xl-flex align-items-center navbar-button-container">
+                <a href="tel:555-555-5555" className="navbar-email-icon"><MdEmail /></a>
+                <a href="mailto:info@aquabayone.comy" className="navbar-phone-icon"><MdPhone /></a>
                 <Nav.Link as={Link} to="/inquire" className="book-tour-link">
                   <Button className="book-tour-btn">Book A Tour</Button>
                 </Nav.Link>
