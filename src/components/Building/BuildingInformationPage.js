@@ -7,6 +7,7 @@ import InformationPage from '../Common/InformationPage';
 import {motion} from 'framer-motion'
 
 import coverImage from '../../img/our_building_1.jpg'
+import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
 
 import './BuildingInformationPage.css'
 
@@ -39,25 +40,6 @@ export default function BuildingInformationPage() {
         // image8,
         // image9,
     ];
-
-    // Styles for transition page
-    const baseStyles = {
-        color: "transparent",
-        textTransform: "uppercase",
-        fontWeight: "700",
-        WebkitTextStroke: "3px #D0D3D4",
-        textStroke: "3px #D0D3D4"
-    }
-
-    const desktopStyles = {
-        ...baseStyles,
-        fontSize: "8rem"
-    }
-
-    const mobileStyles = {
-        ...baseStyles,
-        fontSize: "3rem"
-    }
 
     return (
         <div className="building-information-page">
