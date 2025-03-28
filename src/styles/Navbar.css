@@ -45,7 +45,7 @@
   }
   
   .book-tour-btn:hover {
-    background-color: #1C8CAC;
+    background-color: #649FB9;
     color: white;
     border: 1px solid white;
   }
@@ -71,7 +71,7 @@
   }
 
   .contact-us-btn:hover {
-    background-color: #1C8CAC;
+    background-color: #649FB9;
     color: white;
     border: 1px solid white;
   }
@@ -145,7 +145,7 @@
   }
 
   .navbar-links:hover, .navbar-links:active, .navbar-links:focus{
-    border-bottom: 3px solid #1C8CAC;
+    border-bottom: 3px solid #649FB9;
     text-transform: uppercase;
     color:white;
   } */
@@ -205,7 +205,7 @@
 .book-tour-btn {
   font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
   padding: 0.4rem 1.3rem;
-  background-color: #1C8CAC;
+  background-color: #649FB9;
   border: 1px solid white;
   color: white;
   font-size: 0.75rem;
@@ -225,7 +225,7 @@
 .contact-us-btn {
   font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
   padding: 0.4rem 1.3rem;
-  background-color: #1C8CAC;
+  background-color: #649FB9;
   border: 1px solid white;
   color: white;
   font-size: 0.75rem;
@@ -306,13 +306,13 @@
 .navbar-links:hover,
 .navbar-links:active,
 .navbar-links:focus {
-  border-bottom: 3px solid #1C8CAC;
+  border-bottom: 3px solid #649FB9;
   text-transform: uppercase;
   color: white !important;
 }
 
 .navbar-links.active {
-  border-bottom: 3px solid #1C8CAC;
+  border-bottom: 3px solid #649FB9;
   text-transform: uppercase;
   color: white !important;
 }
@@ -324,7 +324,7 @@
 }
 
 .navbar-email-icon:hover {
-    color: #1C8CAC;
+    color: #649FB9;
 }
 
 .navbar-phone-icon {
@@ -334,7 +334,7 @@
 }
 
 .navbar-phone-icon:hover {
-  color: #1C8CAC;
+  color: #649FB9;
 }
 
 /* For mobile responsiveness */

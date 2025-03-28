@@ -31,7 +31,7 @@
 }
 
 .button-filters-btn:hover { 
-    background-color: #1C8CAC;
+    background-color: #649FB9;
     border: 1px solid white;
     color: white;
 }
@@ -43,7 +43,7 @@
 }
 
 .button-filters-btn.active {
-    background-color: #1C8CAC;
+    background-color: #649FB9;
     border: 1px solid white;
     color: white;
 }
@@ -58,15 +58,15 @@
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 0;
-    background-color: #1C8CAC;
+    background-color: #649FB9;
     color: white;
-    border: 1px solid #1C8CAC;
+    border: 1px solid #649FB9;
 }
 
 .availability-card-btn:hover {
     background-color: transparent;
-    color: #1C8CAC;
-    border: 1px solid #1C8CAC;
+    color: #649FB9;
+    border: 1px solid #649FB9;
 }
 
 .availability-card {
@@ -76,7 +76,7 @@
 }
 /* 
 .availability-card:hover {
-    background-color: #1C8CAC;
+    background-color: #649FB9;
     color: white;
 }
 

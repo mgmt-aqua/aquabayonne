@@ -52,13 +52,13 @@
 }
 
 .building-btn:hover {
-    background-color: #1C8CAC;
+    background-color: #649FB9;
     border: 2px solid white;
     color: white;
 }
 /* 
 .build-text {
-    color: #1C8CAC;
+    color: #649FB9;
     margin-top: 25px;
     margin-left: 60px;
     font-weight: 700;

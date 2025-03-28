@@ -4,6 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 const FullPageSlideAnimation = (props) => {
   const controls = useAnimation();
   const containerRef = useRef(null);
+  const mounted = useRef(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -20,13 +21,20 @@ const FullPageSlideAnimation = (props) => {
   const size = windowWidth < 600 ? "small" : windowWidth < 1200 ? "medium" : "large";
 
   useEffect(() => {
+    mounted.current = true;
     const sequence = async () => {
-      await controls.start({ x: 0, transition: { duration: 0.2, ease: 'easeInOut' } });
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      await controls.start({ y: '-100vh', transition: { duration: 0.4, ease: 'easeInOut' } });
+      if (mounted.current) {
+        await controls.start({ x: 0, transition: { duration: 0.2, ease: 'easeInOut' } });
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+        await controls.start({ y: '-100vh', transition: { duration: 0.4, ease: 'easeInOut' } });
+      }
     };
 
     sequence();
+
+    return () => {
+      mounted.current = false;
+    };
   }, [controls]);
 
   const containerVariants = {
