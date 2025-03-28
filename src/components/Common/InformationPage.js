@@ -22,7 +22,7 @@ export default function InformationPage({pageTitle, subText, img, imgStyles, chi
             <ScrollToTop/>
             <AnimatePresence>
             <div className="information-page-hero-container">
-                <img src={img} className={imgStyles} alt={pageTitle || ""} />
+                <motion.img src={img} className={imgStyles} alt={pageTitle || ""} initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration:1, delay: 1}}/>
                 <div className="information-page-overlay"></div>
                 <motion.h1 className="information-page-title" initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration:2, delay: 2}}>{pageTitle}</motion.h1>
                 {subText && <motion.h4 className="information-page-sub-text" initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration:2, delay: 2}}>{subText}</motion.h4>}
