@@ -38,7 +38,7 @@ const FullPageSlideAnimation = (props) => {
       position: 'fixed',
       top: 0,
       left: 0,
-      backgroundColor: '#050505',
+      backgroundColor: '#241C23',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',

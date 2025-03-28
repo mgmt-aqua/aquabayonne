@@ -25,7 +25,7 @@
 }
 
 .neighborhood-text {
-    color: #3C7C92;
+    color: #649FB9;
     text-align: right;
     margin-right: 50px;
 }
@@ -43,18 +43,18 @@
     margin-right: 60px;
     width: 300px;
     height: 75px;
-    background-color: #050505;
-    font-size: 1.1rem;
+    background-color: #241C23;
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 400;
-    border: 2px solid #050505;
+    border: 2px solid #241C23;
     font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
     float: right;
     border-radius: 0;
 }
 
 .neighborhood-btn:hover {
-    background-color: #1C88AA;
+    background-color: #1C8CAC;
     border: 2px solid white;
     color: white;
 }

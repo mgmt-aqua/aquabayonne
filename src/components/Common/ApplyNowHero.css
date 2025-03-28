@@ -1,6 +1,6 @@
 .apply-now-hero {
     width: 100vw;
-    background-color: #3C7C92;
+    background-color: #649FB9;
     text-align: center;
 }
 
@@ -30,7 +30,7 @@
 
 .apply-now-hero-button {
     width: 20%;
-    background-color: #3C7C92;
+    background-color: #649FB9;
     color: white;
     text-transform: uppercase;
     border: 1px solid white;
@@ -43,8 +43,8 @@
 
 .apply-now-hero-button:hover {
     background-color: #D0D3D4;
-    color: #050505;
-    border: 1px solid #050505;
+    color: #241C23;
+    border: 1px solid #241C23;
 }
 
 /* Mobile Styles */

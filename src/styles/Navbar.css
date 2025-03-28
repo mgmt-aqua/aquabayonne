@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #050505;
+    background-color: #241C23;
     color: white;
     z-index: 1000;
     font-family: Arial, sans-serif;
@@ -32,7 +32,7 @@
   .book-tour-btn {
     font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
     padding: 0.4rem 1.3rem;
-    background-color: #050505;
+    background-color: #241C23;
     border: 1px solid white;
     color: white;
     font-size: 0.75rem;
@@ -45,7 +45,7 @@
   }
   
   .book-tour-btn:hover {
-    background-color: #1C88AA;
+    background-color: #1C8CAC;
     color: white;
     border: 1px solid white;
   }
@@ -57,7 +57,7 @@
   .contact-us-btn {
     font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
     padding: 0.4rem 1.3rem;
-    background-color: #050505;
+    background-color: #241C23;
     border: 1px solid white;
     color: white;
     font-size: 0.75rem;
@@ -71,7 +71,7 @@
   }
 
   .contact-us-btn:hover {
-    background-color: #1C88AA;
+    background-color: #1C8CAC;
     color: white;
     border: 1px solid white;
   }
@@ -97,7 +97,7 @@
   }
 
   #responsive-navbar-nav {
-    background-color: #050505;
+    background-color: #241C23;
     width: 100%;
   }
 
@@ -108,7 +108,7 @@
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
-    background-color: #050505;
+    background-color: #241C23;
     text-align: left;
     padding: 15px;
     color: #D0D3D4;
@@ -116,7 +116,7 @@
 
   .mobile-menu-body a:hover {
     background-color: #D0D3D4;
-    color: #050505;
+    color: #241C23;
   }
 
   .navbar-toggler {
@@ -132,7 +132,7 @@
   .navbar-links{
     font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
     padding: 0.4rem 1rem;
-    background-color: #050505;
+    background-color: #241C23;
     color: white;
     font-size: 0.75rem;
     cursor: pointer;
@@ -145,7 +145,7 @@
   }
 
   .navbar-links:hover, .navbar-links:active, .navbar-links:focus{
-    border-bottom: 3px solid #1C88AA;
+    border-bottom: 3px solid #1C8CAC;
     text-transform: uppercase;
     color:white;
   } */
@@ -175,7 +175,7 @@
   top: 35px;
   left: 0;
   right: 0;
-  background-color: rgba(5,5,5,.8);
+  background-color: #241C23;
   color: white;
   z-index: 1000;
   font-family: Arial, sans-serif;
@@ -205,7 +205,7 @@
 .book-tour-btn {
   font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
   padding: 0.4rem 1.3rem;
-  background-color: #1C88AA;
+  background-color: #1C8CAC;
   border: 1px solid white;
   color: white;
   font-size: 0.75rem;
@@ -225,7 +225,7 @@
 .contact-us-btn {
   font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
   padding: 0.4rem 1.3rem;
-  background-color: #1C88AA;
+  background-color: #1C8CAC;
   border: 1px solid white;
   color: white;
   font-size: 0.75rem;
@@ -256,7 +256,7 @@
 }
 
 #responsive-navbar-nav {
-  background-color: #050505;
+  background-color: #241C23;
   width: 100%;
 }
 
@@ -275,7 +275,7 @@
 
 .mobile-menu-body a:hover {
   background-color: #D0D3D4;
-  color: #050505;
+  color: #241C23;
 }
 
 .navbar-toggler {
@@ -306,13 +306,13 @@
 .navbar-links:hover,
 .navbar-links:active,
 .navbar-links:focus {
-  border-bottom: 3px solid #1C88AA;
+  border-bottom: 3px solid #1C8CAC;
   text-transform: uppercase;
   color: white !important;
 }
 
 .navbar-links.active {
-  border-bottom: 3px solid #1C88AA;
+  border-bottom: 3px solid #1C8CAC;
   text-transform: uppercase;
   color: white !important;
 }
@@ -324,7 +324,7 @@
 }
 
 .navbar-email-icon:hover {
-    color: #1C88AA;
+    color: #1C8CAC;
 }
 
 .navbar-phone-icon {
@@ -334,7 +334,7 @@
 }
 
 .navbar-phone-icon:hover {
-  color: #1C88AA;
+  color: #1C8CAC;
 }
 
 /* For mobile responsiveness */

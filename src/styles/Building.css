@@ -27,7 +27,7 @@
 
 
 .building-text{
-    color: #3C7C92;
+    color: #649FB9;
     text-align: left;
     margin-left: 50px;
     z-index: 2;
@@ -41,24 +41,24 @@
     margin-left: 60px;
     width: 300px;
     height: 75px;
-    background-color: #050505;
-    font-size: 1.3rem;
+    background-color: #241C23;
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 400;
-    border: 2px solid #050505;
+    border: 2px solid #241C23;
     font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
     float: left;
     border-radius: 0;
 }
 
 .building-btn:hover {
-    background-color: #1C88AA;
+    background-color: #1C8CAC;
     border: 2px solid white;
     color: white;
 }
 /* 
 .build-text {
-    color: #1C88AA;
+    color: #1C8CAC;
     margin-top: 25px;
     margin-left: 60px;
     font-weight: 700;
