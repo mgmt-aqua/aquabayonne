@@ -24,6 +24,7 @@ import image8 from '../../img/our_building_2.jpg';
 import image9 from '../../img/our_building_1.jpg';
 
 import apartmentBuilding from '../../img/apartment_building.jpg'
+import buildingGif from '../../img/building.gif'
 import ApplyNowHero from '../Common/ApplyNowHero';
 import Section from '../Common/Section';
 
@@ -66,7 +67,7 @@ export default function BuildingInformationPage() {
                             <Image src={image3} className="building-information-grid-img" />
                         </Col>
                         <Col key={3} xs={12} sm={12} md={6} lg={6} className="section-1-col building-information-grid-img-comtainer">
-                            <Image src={image1} className="building-information-grid-img" />
+                            <Image src={buildingGif} className="building-information-grid-img" />
                         </Col>
                         <Col key={1} xs={12} sm={12} md={12} lg={6} className="building-information-grid-text-container">
                         <div className="building-information-grid-text">   
