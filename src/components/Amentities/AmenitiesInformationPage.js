@@ -9,8 +9,8 @@ export default function AmenitiesInformationPage() {
 
     return (
         <div className="amenities-information-page">
-            <FramerSlide text="Our Amenities" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Our Amenities'} subText={"Elevate Your Lifestyle with Unmatched Amenities"}>
+            <FramerSlide text="Amenities" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
+            <InformationPage pageTitle={'Amenities'} subText={"Elevate Your Lifestyle with Unmatched Amenities"}>
 
             </InformationPage>
         </div>

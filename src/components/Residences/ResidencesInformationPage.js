@@ -9,8 +9,8 @@ export default function ResidencesInformationPage() {
 
     return (
         <div className="residences-information-page">
-            <FramerSlide text="Our Residences" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Our Residences'}></InformationPage>
+            <FramerSlide text="Residences" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
+            <InformationPage pageTitle={'Residences'}></InformationPage>
         </div>
     );
 }

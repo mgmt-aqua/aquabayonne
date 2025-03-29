@@ -50,15 +50,15 @@ export default function BuildingInformationPage() {
 
     return (
         <div className="building-information-page">
-            <FramerSlide text="Our Building" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Our Buidling'} img={coverImage} >
+            <FramerSlide text="Building" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
+            <InformationPage pageTitle={'Buidling'} img={coverImage} >
             
                 {/** Intro Section */}
                 <div className="building-information-page-section">
                 <Row className="building-information-page-section-1-row">
                         <Col key={1} xs={12} sm={12} md={12} lg={6} className="building-information-grid-text-container">
                             <div className="building-information-grid-text">
-                            <p className='building-information-grid-title-text'>Our Story</p>
+                            <p className='building-information-grid-title-text'>Our story</p>
                             <p>Nestled near the picturesque shores of the Hudson River in Bayonne, NJ, AQUA offers an unparalleled living experience that redefines luxury. AQUA is thoughtfully designed to provide residents with a harmonious blend of comfort, elegance, and modernity.</p>
                             <p>Our apartment units range from comfortable studios to expansive two-bedroom layouts, our units feature large windows that boast breathtaking views of the Hudson River, the iconic New York City skyline, and the beautiful Bayonne golf course.</p>
                             </div>
@@ -71,7 +71,7 @@ export default function BuildingInformationPage() {
                         </Col>
                         <Col key={1} xs={12} sm={12} md={12} lg={6} className="building-information-grid-text-container">
                         <div className="building-information-grid-text">   
-                            <p className='building-information-grid-title-text'>Our Journey</p>                         
+                            <p className='building-information-grid-title-text'>Our journey</p>                         
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit.</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta.</p>
                             </div>

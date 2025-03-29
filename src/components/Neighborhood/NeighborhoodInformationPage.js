@@ -10,8 +10,8 @@ export default function NeighborhoodInformationPage() {
 
     return (
         <div className="neighborhood-information-page">
-            <FramerSlide text="Our Neighborhood" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Our Neighborhood'} img={coverImage} imgStyles={'neighborhood-cover-img'}></InformationPage>
+            <FramerSlide text="Neighborhood" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
+            <InformationPage pageTitle={'Neighborhood'} img={coverImage} imgStyles={'neighborhood-cover-img'}></InformationPage>
         </div>
     );
 }
