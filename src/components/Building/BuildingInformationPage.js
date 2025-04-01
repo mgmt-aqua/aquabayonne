@@ -136,18 +136,18 @@ export default function BuildingInformationPage() {
                      */}
 
                     {/* Information Section */}
-                    <div className="building-information-page-section">
+                    {/* <div className="building-information-page-section">
 
-                    </div>
+                    </div> */}
 
                     {/* Image Gallery */}
-                    <Row className="building-information-image-gallery-row">
+                    {/* <Row className="building-information-image-gallery-row">
                         {images.map((image, index) => (
                             <Col key={index} xs={12} sm={6} md={4} lg={4} className="mb-4">
                                 <Image src={image} fluid />
                             </Col>
                         ))}
-                    </Row>
+                    </Row> */}
 
                     {/* Grid Blocks Section */}
                     <div className="building-information-grid-blocks">
