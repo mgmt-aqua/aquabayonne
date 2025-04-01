@@ -23,6 +23,7 @@
     width: 50%;
     margin: 0 auto;
     text-align: center;
+    font-weight: 400;
 }
 
 .floorplans-card {
@@ -34,7 +35,7 @@
 }
 
 .floorplans-row {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -71,6 +72,7 @@
     border-radius: 0;
     height: 50px;
     background-color: #241C23;
+    font-weight: 700;
 }
 
 .floorplans-card-btn:hover {

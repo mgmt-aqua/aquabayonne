@@ -5,7 +5,7 @@ import FramerSlide from '../Common/FramerSlide'
 import InformationPage from '../Common/InformationPage';
 import QuoteHero from '../Common/QuoteHero'
 
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import coverImage from '../../img/our_building_1.jpg'
 import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
@@ -48,19 +48,44 @@ export default function BuildingInformationPage() {
         // image9,
     ];
 
+    const gridBlocksContent= [{
+        title: "Amenities",
+        hoverTitle: "Experience the comfort and luxury."
+    },
+    {
+        title: "Residences",
+        hoverTitle: "Find your perfect home here."
+    },
+    {
+        title: "Neighborhood",
+        hoverTitle: "A vibrant community awaits you."
+    },
+    {
+        title: "Explore",
+        hoverTitle: "Discover all the possibilities."
+    },
+    {
+        title: "Book A Tour",
+        hoverTitle: "See the space in person, schedule now!"
+    },
+    {
+        title: "Contact Us",
+        hoverTitle: "We're here to help you anytime."
+    }]
+
     return (
         <div className="building-information-page">
             <FramerSlide text="Building" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
             <InformationPage pageTitle={'Buidling'} img={coverImage} >
-            
+
                 {/** Intro Section */}
                 <div className="building-information-page-section">
-                <Row className="building-information-page-section-1-row">
+                    <Row className="building-information-page-section-1-row">
                         <Col key={1} xs={12} sm={12} md={12} lg={6} className="building-information-grid-text-container">
                             <div className="building-information-grid-text">
-                            <p className='building-information-grid-title-text'>Our Story</p>
-                            <p>Nestled near the picturesque shores of the Hudson River in Bayonne, NJ, AQUA offers an unparalleled living experience that redefines luxury. AQUA is thoughtfully designed to provide residents with a harmonious blend of comfort, elegance, and modernity.</p>
-                            <p>Our apartment units range from comfortable studios to expansive two-bedroom layouts, our units feature large windows that boast breathtaking views of the Hudson River, the iconic New York City skyline, and the beautiful Bayonne golf course.</p>
+                                <p className='building-information-grid-title-text'>Our Story</p>
+                                <p>Nestled near the picturesque shores of the Hudson River in Bayonne, NJ, AQUA offers an unparalleled living experience that redefines luxury. AQUA is thoughtfully designed to provide residents with a harmonious blend of comfort, elegance, and modernity.</p>
+                                <p>Our apartment units range from comfortable studios to expansive two-bedroom layouts, our units feature large windows that boast breathtaking views of the Hudson River, the iconic New York City skyline, and the beautiful Bayonne golf course.</p>
                             </div>
                         </Col>
                         <Col key={2} xs={12} sm={12} md={6} lg={6} className="section-1-col building-information-grid-img-comtainer">
@@ -70,13 +95,13 @@ export default function BuildingInformationPage() {
                             <Image src={buildingGif} className="building-information-grid-img" />
                         </Col>
                         <Col key={1} xs={12} sm={12} md={12} lg={6} className="building-information-grid-text-container">
-                        <div className="building-information-grid-text">   
-                            <p className='building-information-grid-title-text'>Our Journey</p>                         
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta.</p>
+                            <div className="building-information-grid-text">
+                                <p className='building-information-grid-title-text'>Our Journey</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta.</p>
                             </div>
                         </Col>
-                </Row>
+                    </Row>
                 </div>
 
                 <QuoteHero quote={"Where Luxury Meets Serenity"} />
@@ -106,6 +131,17 @@ export default function BuildingInformationPage() {
                             </Col>
                         ))}
                     </Row>
+
+                    {/* Grid Blocks Section */}
+                    <div className="building-information-grid-blocks">
+                        <Row className="building-information-page-grid-blocks-row">
+                        {gridBlocksContent.map((data, index) => (
+                            <Col key={index} xs={12} sm={6} md={4} lg={4} className="mb-4 building-information-page-grid-blocks-col">
+                                <p>{data.title}</p>
+                            </Col>
+                        ))}
+                        </Row>
+                    </div>
 
                     {/* Hero Section */}
                     <ApplyNowHero />

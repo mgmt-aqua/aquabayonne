@@ -142,8 +142,8 @@ export default function ResidencesInformationPage() {
                                     <motion.div
                                         initial={{ opacity: 0, x: -50 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        exit={{ opacity: 0, x: 50 }} // For when an item is removed
-                                        layout // This prop ensures smooth layout transitions
+                                        exit={{ opacity: 0, x: 50 }}
+                                        layout
                                         transition={{
                                             type: "spring",
                                             stiffness: 800,

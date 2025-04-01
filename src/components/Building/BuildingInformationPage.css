@@ -89,6 +89,10 @@
     font-weight: 700;
 }
 
+.building-information-page-grid-blocks-col {
+    border: 1px solid red;
+}
+
 /* Mobile Styles */
 @media (max-width: 1200px) {
     .building-information-grid-img-comtainer {
