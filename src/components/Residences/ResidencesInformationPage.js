@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import FramerSlide from '../Common/FramerSlide'
 import InformationPage from '../Common/InformationPage';
 import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
-import { Row, Col, Card, Button } from 'react-bootstrap'
+import { Row, Col, Card, Button, Modal } from 'react-bootstrap'
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoIosBed } from "react-icons/io";
 import { FaBath } from "react-icons/fa";
+import { MdClose } from "react-icons/md";
+
 
 
 import './ResidencesInformationPage.css'
@@ -112,6 +114,8 @@ export default function ResidencesInformationPage() {
 
     const [activeFilter, setActiveFilter] = useState('All');
     const [activeInventoryOptions, setActiveInventoryOptions] = useState(inventoryOptions);
+    const [show, setShow] = useState(false);
+    const [selectedOption, setSelectedOption] = useState({})
 
     const handleClickFilter = (item) => {
         setActiveFilter(item)
@@ -119,6 +123,14 @@ export default function ResidencesInformationPage() {
         setActiveInventoryOptions(filteredInventory)
     }
 
+    const handleViewDetails = (item) => {
+        setSelectedOption(item)
+        setShow(true);
+    }
+
+    const handleClose = () => setShow(false);
+
+    console.log(selectedOption)
     return (
         <div className="residences-information-page">
             <FramerSlide text="Residences" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
@@ -153,16 +165,16 @@ export default function ResidencesInformationPage() {
                                     >
                                         <Card className="mb-4 floorplans-card">
                                             <Card.Body className="floorplans-card-body">
-                                                <img src={item.floorplan} alt={item.id + " img"} className="floorplans-card-img"/>
-                                                
-                                                <Card.Text>
+                                                <img src={item.floorplan} alt={item.id + " img"} className="floorplans-card-img" />
+
+
                                                 <div className="floorplans-card-text">
-                                                    <span className="floorplans-card-text-span"><IoIosBed className="floorplans-card-icon"/>{item.bedrooms}</span> 
+                                                    <span className="floorplans-card-text-span"><IoIosBed className="floorplans-card-icon" />{item.bedrooms}</span>
                                                     <span className="floorplans-card-text-span"><FaBath className="floorplans-card-icon" />{item.bathrooms} </span>
-                                                    </div>
-                                                </Card.Text>                                                
+                                                </div>
+
                                             </Card.Body>
-                                            <Button className="floorplans-card-btn">View Details</Button>
+                                            <Button className="floorplans-card-btn" onClick={() => handleViewDetails(item)}>View Details</Button>
                                         </Card>
                                     </motion.div>
                                 </Col>
@@ -170,6 +182,28 @@ export default function ResidencesInformationPage() {
                         </AnimatePresence>
                     </Row>
                 </div>
+
+                {/* React-Bootstrap Modal for full screen image */}
+                <Modal
+                    show={show}
+                    onHide={handleClose}
+                    size="lg"
+                    centered
+                    aria-labelledby="full-screen-modal"
+                    className="residences-information-modal"
+                >
+                    {/* Modal Header with the "X" close button */}
+                    <Modal.Header className="p-0" closeButton={false}>
+                        <button className="close-btn" onClick={handleClose}><MdClose /></button>
+                    </Modal.Header>
+                    <Modal.Body className="p-0">
+                        <img
+                            src={selectedOption.floorplan}
+                            alt="Full Screen"
+                            className="full-screen-image"
+                        />
+                    </Modal.Body>
+                </Modal>
 
             </InformationPage>
         </div>

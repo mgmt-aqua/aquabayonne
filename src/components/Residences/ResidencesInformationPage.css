@@ -58,7 +58,7 @@
 }
 
 .floorplans-card-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-right: 10px;
     color: #241C23;
 }
@@ -71,18 +71,46 @@
 .floorplans-card-btn {
     border-radius: 0;
     height: 50px;
-    background-color: #241C23;
+    background-color: #AA9580;
     font-weight: 700;
+    border: none;
 }
 
 .floorplans-card-btn:hover {
-    border-radius: 0;
-    height: 50px;
     background-color: white;
-    color: #241C23;
-    border: 1px solid #241C23
+    color: #AA9580;
+    border: 1px solid #AA9580;
 }
 
+/* Full-Screen Modal Styles */
+.residences-information-modal .modal-dialog {
+    margin: 0;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .residences-information-modal .modal-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .residences-information-modal .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
 
 /* Mobile Styles */
 @media (max-width: 1200px) {

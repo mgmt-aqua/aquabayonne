@@ -1,11 +1,9 @@
-import * as React from 'react';
+import React, { useState} from 'react';
 import { Col, Row, Image } from 'react-bootstrap'
 
 import FramerSlide from '../Common/FramerSlide'
 import InformationPage from '../Common/InformationPage';
 import QuoteHero from '../Common/QuoteHero'
-
-import { motion } from 'framer-motion'
 
 import coverImage from '../../img/our_building_1.jpg'
 import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
@@ -28,8 +26,15 @@ import buildingGif from '../../img/building.gif'
 import ApplyNowHero from '../Common/ApplyNowHero';
 import Section from '../Common/Section';
 
+import residencesGridImg from '../../img/residences_cover.jpg'
+import amenitiesGridImg from '../../img/amemities/amenities_gym.jpg'
+import neighborhoodGridImg from '../../img/neighborhood/neighborhood_golf.jpg'
+import { Link } from 'react-router-dom';
+
 
 export default function BuildingInformationPage() {
+    const [hoveredGridIndex, setHoveredGridIndex] = useState(null);
+
 
     const images = [
         image1,
@@ -48,29 +53,41 @@ export default function BuildingInformationPage() {
         // image9,
     ];
 
-    const gridBlocksContent= [{
+    const gridBlocksContent = [{
         title: "Amenities",
-        hoverTitle: "Experience the comfort and luxury."
+        description: "Experience the comfort and luxury.",
+        img: amenitiesGridImg,
+        link: '/amenities'
     },
     {
         title: "Residences",
-        hoverTitle: "Find your perfect home here."
+        description: "Find your perfect home here.",
+        img: residencesGridImg,
+        link: '/residences'
     },
     {
         title: "Neighborhood",
-        hoverTitle: "A vibrant community awaits you."
+        description: "A vibrant community awaits you.",
+        img: neighborhoodGridImg,
+        link: '/neighborhood'
     },
     {
         title: "Explore",
-        hoverTitle: "Discover all the possibilities."
+        description: "Discover all the possibilities.",
+        img: image3,
+        link: '/explore'
     },
     {
         title: "Book A Tour",
-        hoverTitle: "See the space in person, schedule now!"
+        description: "See the space in person, schedule now!",
+        img: image3,
+        link: '/inquire'
     },
     {
         title: "Contact Us",
-        hoverTitle: "We're here to help you anytime."
+        description: "We're here to help you anytime.",
+        img: image3,
+        link: '/contact'
     }]
 
     return (
@@ -135,11 +152,19 @@ export default function BuildingInformationPage() {
                     {/* Grid Blocks Section */}
                     <div className="building-information-grid-blocks">
                         <Row className="building-information-page-grid-blocks-row">
-                        {gridBlocksContent.map((data, index) => (
-                            <Col key={index} xs={12} sm={6} md={4} lg={4} className="mb-4 building-information-page-grid-blocks-col">
-                                <p>{data.title}</p>
-                            </Col>
-                        ))}
+                            {gridBlocksContent.map((data, index) => (
+                                
+                                <Col key={index} xs={12} sm={6} md={4} lg={4} className="mb-4 building-information-page-grid-blocks-col" 
+                                onMouseEnter={() => setHoveredGridIndex(index)} // Set the index when hovered
+                                onMouseLeave={() => setHoveredGridIndex(null)} >
+                                    <Link to={data.link}>
+                                    <img src={data.img} alt={data.title || ""} className="building-information-page-grig-img" />
+                                    {hoveredGridIndex === index && <div className="building-information-page-grid-blocks-overlay-hovered"></div> || <div className="building-information-page-grid-blocks-overlay"></div>}
+                                    {hoveredGridIndex === index ? <h1 className="building-information-page-grid-blocks-description">{data.description}</h1> : <h1 className="building-information-page-grid-blocks-title">{data.title}</h1>}
+                                    </Link>
+                                </Col>
+                               
+                            ))}
                         </Row>
                     </div>
 
