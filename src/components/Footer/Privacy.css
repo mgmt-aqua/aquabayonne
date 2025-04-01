@@ -1,0 +1,24 @@
+.privacy-container {
+    margin-top: 150px;
+    background-color: #ffffff;
+}
+
+.privacy-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #241C23;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.privacy-section-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #241C23;
+}
+
+.privacy-container-row {
+    margin-bottom: 50px;
+}

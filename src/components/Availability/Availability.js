@@ -5,20 +5,20 @@ import FramerSlide from '../Common/FramerSlide'
 import "../../styles/Availability.css"
 
 // Floor Plans
-import Studio1 from '../../assets/Floor Plans/Aquaview_UnitS1.pdf'
-import Studio2 from '../../assets/Floor Plans/Aquaview_UnitS2.pdf'
-import Studio3 from '../../assets/Floor Plans/Aquaview_UnitS3.pdf'
-import Studio4 from '../../assets/Floor Plans/Aquaview_UnitS4.pdf'
+import Studio1 from '../../assets/Floor Plans/S1.jpg'
+import Studio2 from '../../assets/Floor Plans/S2.jpg'
+import Studio3 from '../../assets/Floor Plans/S3.jpg'
+import Studio4 from '../../assets/Floor Plans/S4.jpg'
 
-import OneBed1 from '../../assets/Floor Plans/Aquaview_UnitA1.pdf'
-import OneBed2 from '../../assets/Floor Plans/Aquaview_UnitA2.pdf'
-import OneBed3 from '../../assets/Floor Plans/Aquaview_UnitA3.pdf'
-import OneBed4 from '../../assets/Floor Plans/Aquaview_UnitAD1.pdf'
+import OneBed1 from '../../assets/Floor Plans/A1.jpg'
+import OneBed2 from '../../assets/Floor Plans/A2.jpg'
+import OneBed3 from '../../assets/Floor Plans/A3.jpg'
+import OneBed4 from '../../assets/Floor Plans/AD1.jpg'
 
-import TwoBed1 from '../../assets/Floor Plans/Aquaview_UnitB1.pdf'
-import TwoBed2 from '../../assets/Floor Plans/Aquaview_UnitB2.pdf'
-import TwoBed3 from '../../assets/Floor Plans/Aquaview_UnitB3.pdf'
-import TwoBed4 from '../../assets/Floor Plans/Aquaview_UnitB4.pdf'
+import TwoBed1 from '../../assets/Floor Plans/B1.jpg'
+import TwoBed2 from '../../assets/Floor Plans/B2.jpg'
+import TwoBed3 from '../../assets/Floor Plans/B3.jpg'
+import TwoBed4 from '../../assets/Floor Plans/B4.jpg'
 
 function Availability() {
     const filterOptions = ['All', 'Studio', '1 Bed', '2 Bed'];

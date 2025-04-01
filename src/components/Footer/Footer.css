@@ -41,8 +41,20 @@
     font-size: .6rem;
     text-transform: uppercase;
     font-weight: 700;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     color: #D0D3D4;
+}
+
+.privacy-policy-link {
+    color: white;
+}
+
+.footer-icon {
+    color: white;
+}
+
+.text-center {
+
 }
 
 /* Mobile Styles */

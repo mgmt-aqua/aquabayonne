@@ -62,7 +62,6 @@
 
 .building-information-grid-text-container {
     padding: 0 !important;
-    
 }
 
 .building-information-grid-text {
@@ -82,7 +81,7 @@
 
 .building-information-grid-title-text {
     color: #241C23;
-    border-bottom: 3px solid #241C23;
+    border-bottom: 1px solid #241C23;
     font-family: 'Lato', sans-serif;
     align-items: flex-start;
     font-size: 1.5rem;

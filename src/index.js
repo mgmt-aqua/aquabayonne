@@ -16,6 +16,7 @@ import AmenitiesInformationPage from './components/Amentities/AmenitiesInformati
 import ResidencesInformationPage from './components/Residences/ResidencesInformationPage';
 import NeighborhoodInformationPage from './components/Neighborhood/NeighborhoodInformationPage';
 import AnnouncementBar from './components/Common/AnnouncementBar'
+import Privacy from './components/Footer/Privacy';
 
 const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
@@ -31,6 +32,7 @@ ReactDOM.createRoot(root).render(
             <Route path="/amenities" element={<AmenitiesInformationPage />} />
             <Route path="/residences" element={<ResidencesInformationPage />} />
             <Route path="/neighborhood" element={<NeighborhoodInformationPage />} />
+            <Route path='/privacy' element={<Privacy />} />
         </Routes>
     </BrowserRouter>
 );
