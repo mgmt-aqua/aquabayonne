@@ -1,67 +1,34 @@
 .footer-container {
-    min-height: 40vh;
+    height: 40vh;
     width: 100vw;
     background-color: #241C23 !important;
     color: white;
 }
 
-.footer-visit-us {
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: start;
+.footer-logo {
+    height: 50px;
+    margin-bottom: 50px !important;
 }
 
-.footer-title {
-    font-size: .75rem;
+.footer-address {
+    font-size: 1rem;
     font-weight: 400;
     text-transform: uppercase;
+    font-weight: 700;
     padding-bottom: 10px;
     border-bottom: 1px solid white;
     letter-spacing: 5px;
 }
 
-.footer-title-content {
-    font-size: .75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.footer-contact-us {
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: start;
-}
-
-.footer-contact-us-content {
-    font-size: .75rem;
-    font-weight: 700;
-}
-
-.footer-contact-us-content a {
+.footer-contact-information a {
     color: white;
     font-size: 1rem;
-    font-weight: 700;
+    text-decoration: none;
 }
 
-.footer-follow-us {
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: start;
-}
-
-.footer-follow-us a{
-    font-size: .75rem;
-    margin-right: 25px;
-}
-
-.footer-logo {
-    height: 40px;
+.footer-hours p {
+    margin: 0;
+    font-size: 1rem;
 }
 
 .privacy-policy-link {
@@ -73,6 +40,7 @@
 }
 
 .footer-rights {
+    margin-top: 50px;
     font-size: .75rem;
 }
 
@@ -80,17 +48,20 @@
 @media (max-width: 1200px) {
     .footer-logo {
         height: 75px;
+        margin-bottom: 50px !important;
     }
 }
 
 @media (max-width: 992px) {
     .footer-logo {
         height: 50px;
+        margin-bottom: 50px !important;
     }
 }
 
 @media (max-width: 576px) {
     .footer-logo {
         height: 50px;
+        margin-bottom: 50px !important;
     }
 }
