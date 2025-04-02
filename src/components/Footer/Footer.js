@@ -13,7 +13,7 @@ export default function Footer({ id }) {
             <Container fluid className="text-center px-0">
                 <Row className="d-flex justify-content-center align-items-center g-0">
                     {/* First Column with Inline Logos */}
-                    <Col xs={12} sm={12} md={4} lg={4} className="footer-col d-flex flex-column align-items-center justify-content-center">
+                    <Col xs={12} sm={12} md={12} lg={4} className="footer-col d-flex flex-column align-items-center justify-content-center">
                         <div className="d-flex justify-content-center gap-5">
                             <img
                                 src={logo}
@@ -29,7 +29,7 @@ export default function Footer({ id }) {
                     </Col>
 
                     {/* Second Column with Address, Contact Info, and Hours */}
-                    <Col xs={12} sm={12} md={4} lg={4} className="footer-col d-flex flex-column align-items-center justify-content-center">
+                    <Col xs={12} sm={12} md={12} lg={4} className="footer-col d-flex flex-column align-items-center justify-content-center">
                         <p className="footer-address">54 Flagship Street, Bayonne, NJ 07002</p>
 
                         <p className="footer-contact-information">
@@ -45,7 +45,7 @@ export default function Footer({ id }) {
                     </Col>
 
                     {/* Third Column with Social Icons */}
-                    <Col xs={12} sm={12} md={4} lg={4} className="footer-col d-flex flex-column align-items-center justify-content-center">
+                    <Col xs={12} sm={12} md={12} lg={4} className="footer-col d-flex flex-column align-items-center justify-content-center">
                         <div className="d-flex justify-content-center gap-3">
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                                 <FaFacebook size={30} className="footer-icon" />

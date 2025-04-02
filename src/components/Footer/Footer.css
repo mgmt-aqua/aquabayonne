@@ -7,11 +7,11 @@
 
 .footer-logo {
     height: 50px;
-    margin-bottom: 50px !important;
 }
 
 .footer-address {
-    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
+    font-size: .8rem;
     font-weight: 400;
     text-transform: uppercase;
     font-weight: 700;
@@ -22,13 +22,13 @@
 
 .footer-contact-information a {
     color: white;
-    font-size: 1rem;
+    font-size: .8rem;
     text-decoration: none;
 }
 
 .footer-hours p {
     margin: 0;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 .privacy-policy-link {
@@ -47,7 +47,7 @@
 /* Mobile Styles */
 @media (max-width: 1200px) {
     .footer-logo {
-        height: 75px;
+        height: 50px;
         margin-top: 50px !important;
         margin-bottom: 50px !important;
     }
@@ -60,7 +60,7 @@
 
 @media (max-width: 992px) {
     .footer-logo {
-        height: 50px;
+        height: 40px;
         margin-top: 50px !important;
         margin-bottom: 50px !important;
     }
@@ -69,11 +69,16 @@
         margin-top: 40px;
         color: white;
     }
+
+    .footer-rights {
+        padding-left: 50px;
+        padding-right: 50px;
+     }
 }
 
 @media (max-width: 576px) {
     .footer-address {
-        width: 80%;
+        width: 60%;
     }
 
     .footer-logo {
@@ -85,5 +90,10 @@
     .footer-icon {
         margin-top: 40px;
         color: white;
+    }
+
+    .footer-rights {
+       padding-left: 50px;
+       padding-right: 50px;
     }
 }
