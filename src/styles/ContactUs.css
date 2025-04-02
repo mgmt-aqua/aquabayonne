@@ -49,6 +49,32 @@
     font-weight: 700;
 }
 
+.contact-us-col {
+  margin-top: 100px !important;
+}
+
+.contact-us-col-left {
+  margin: 0 auto;
+  padding: 100px;
+}
+
+.contact-us-title {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.contact-us-address {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.contact-us-img{
+  width: 100%;
+  object-fit: cover;
+}
+
 /* Mobile Styles */
 @media (max-width: 1200px) {
     .contact-us-main-text {

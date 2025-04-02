@@ -6,6 +6,7 @@ import FramerSlide from '../Common/FramerSlide'
 import '../../styles/ContactUs.css'
 import InformationPage from '../Common/InformationPage';
 
+import MapImg from '../../img/AquaMap.png'
 function ContactUsForm() {
 
   // Styles for transition page
@@ -97,16 +98,12 @@ function ContactUsForm() {
   return (
     <AnimatePresence mode='wait'>
       <FramerSlide text="Contact Us" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-      <InformationPage pageTitle={'Contact Us'}>
-      {/* <h1 className="text-center mb-4 contact-us-main-text">Contact Us</h1> */}
-      <Container fluid className="d-flex justify-content-center contact-us-container">
-        <Row className="w-100">
-          <Col xs={10} md={4} lg={2} className="mx-auto contact-us-column">
-            {/* Customizable Heading */}
-
-
-            {/* Form */}
-            <Form onSubmit={handleSubmit}>
+      <Row className="contact-us-container">
+        <Col xs={6} md={6} lg={6} xl={6} className="contact-us-col contact-us-col-left">
+        <h1 className="contact-us-title">Let's Get Acquainted</h1>
+        <h1 className="contact-us-address">54 Flagship Street, Bayonne, NJ 07002</h1>
+         {/* Form */}
+         <Form onSubmit={handleSubmit}>
               {/* Name */}
               <Form.Group controlId="Name">
                 <Form.Control
@@ -286,10 +283,13 @@ function ContactUsForm() {
                 Submit
               </Button>
             </Form>
-          </Col>
-        </Row>
-      </Container>
-      </InformationPage>
+        
+        </Col>
+        <Col xs={6} md={6} lg={6} xl={6} className="contact-us-col contact-us-col-right">
+          <img src={MapImg} className="contact-us-img"/>
+          <div className="contact-us-img-overlay"></div>
+        </Col>
+      </Row>
     </AnimatePresence>
   );
 }
