@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect/dist/core';
 
 import "./Home.css"
 
-import video from '../../assets/DJI_0300.mp4'
+import video from '../../assets/neighborhood_1.mp4'
 
 export default function Home() {
 
