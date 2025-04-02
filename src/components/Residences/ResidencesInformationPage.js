@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import FramerSlide from '../Common/FramerSlide'
 import InformationPage from '../Common/InformationPage';
 import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
-import { Row, Col, Card, Button, Modal } from 'react-bootstrap'
+import { Row, Col, Card, Button, Carousel } from 'react-bootstrap'
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoIosBed } from "react-icons/io";
 import { FaBath } from "react-icons/fa";
-import { MdClose } from "react-icons/md";
+import QuoteHero from '../Common/QuoteHero';
+import ApplyNowHero from '../Common/ApplyNowHero';
 
 
 
@@ -128,16 +129,57 @@ export default function ResidencesInformationPage() {
         setShow(true);
     }
 
-    const handleClose = () => setShow(false);
+    const featuresData = [
+        {
+            title: "Spacious Living Rooms",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            img: require('../../img/residences/residences_1.PNG')
+        },
+        {
+            title: "Modern Kitchen",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            img: require('../../img/residences/residences_2.PNG')
+        },
+        {
+            title: "Luxurious Bathrooms",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            img: require('../../img/residences/residences_3.PNG')
+        },
+        {
+            title: "Private Balconies",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            img: require('../../img/residences/residences_4.PNG')
+        }
+    ];
 
-    console.log(selectedOption)
     return (
         <div className="residences-information-page">
             <FramerSlide text="Residences" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Residences'} img={coverImage} imgStyles={'residences_cover_image'}>
+            <InformationPage pageTitle={'Residences'} subText={"Your Ideal Living Space Awaits"} img={coverImage} imgStyles={'residences_cover_image'}>
                 <div className="building-information-carousel">
                         <p></p>
                 </div>
+                <div className="features-carousel-section">
+                <h3 className="residences-feature-title">Residence Features</h3>
+                <Carousel className='feature-carousel'>
+                    {featuresData.map((feature, index) => (
+                        <Carousel.Item key={index} interval={8000}>
+                            <div className="feature-item">
+                                <div className="feature-caption">
+                                    <h4>{feature.title}</h4>
+                                    <p>{feature.description}</p>
+                                </div>
+                                <img 
+                                    className="d-block w-100 feature-carousel-img" 
+                                    src={feature.img} 
+                                    alt={feature.title} 
+                                />
+                            </div>
+                        </Carousel.Item>
+                    ))}
+                </Carousel>
+            </div>
+            <QuoteHero quote={"Where Luxury Meets Comfort"} />
                 <div className="floorplans-container">
                     <h1 className="floorplans-heading-text">Floor Plans</h1>
                     <p className="floorplan-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -185,29 +227,8 @@ export default function ResidencesInformationPage() {
                         </AnimatePresence>
                     </Row>
                 </div>
-
-                {/* React-Bootstrap Modal for full screen image */}
-                <Modal
-                    show={show}
-                    onHide={handleClose}
-                    size="lg"
-                    centered
-                    aria-labelledby="full-screen-modal"
-                    className="residences-information-modal"
-                >
-                    {/* Modal Header with the "X" close button */}
-                    <Modal.Header className="p-0" closeButton={false}>
-                        <button className="close-btn" onClick={handleClose}><MdClose /></button>
-                    </Modal.Header>
-                    <Modal.Body className="p-0">
-                        <img
-                            src={selectedOption.floorplan}
-                            alt="Full Screen"
-                            className="full-screen-image"
-                        />
-                    </Modal.Body>
-                </Modal>
-
+                {/* Hero Section */}
+                <ApplyNowHero />
             </InformationPage>
         </div>
     );

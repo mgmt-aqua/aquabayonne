@@ -93,7 +93,7 @@ export default function BuildingInformationPage() {
     return (
         <div className="building-information-page">
             <FramerSlide text="Building" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Buidling'} img={coverImage} >
+            <InformationPage pageTitle={'Buidling'} subText={"Explore the Unmatched Elegance of Aqua"} img={coverImage} >
 
                 {/** Intro Section */}
                 <div className="building-information-page-section">
@@ -154,12 +154,12 @@ export default function BuildingInformationPage() {
                         <Row className="building-information-page-grid-blocks-row">
                             {gridBlocksContent.map((data, index) => (
                                 
-                                <Col key={index} xs={12} sm={6} md={4} lg={4} className="mb-4 building-information-page-grid-blocks-col" 
+                                <Col key={index} xs={12} sm={12} md={6} lg={4} className="mb-4 building-information-page-grid-blocks-col" 
                                 onMouseEnter={() => setHoveredGridIndex(index)} // Set the index when hovered
                                 onMouseLeave={() => setHoveredGridIndex(null)} >
                                     <Link to={data.link}>
                                     <img src={data.img} alt={data.title || ""} className="building-information-page-grig-img" />
-                                    {hoveredGridIndex === index && <div className="building-information-page-grid-blocks-overlay-hovered"></div> || <div className="building-information-page-grid-blocks-overlay"></div>}
+                                    {(hoveredGridIndex === index && <div className="building-information-page-grid-blocks-overlay-hovered"></div>) || (<div className="building-information-page-grid-blocks-overlay"></div>)}
                                     {hoveredGridIndex === index ? <h1 className="building-information-page-grid-blocks-description">{data.description}</h1> : <h1 className="building-information-page-grid-blocks-title">{data.title}</h1>}
                                     </Link>
                                 </Col>

@@ -6,16 +6,103 @@
     width: 100%;
 }
 
+.residences-feature-title {
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #AA9580;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.features-carousel-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.feature-item {
+    position: relative;
+}
+
+.feature-caption {
+    padding: 20px;
+    text-align: center;
+}
+
+.feature-caption h4 {
+    color: #AA9580;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+
+.feature-caption p {
+    font-size: 1rem;
+    color: #241C23;
+    width: 50%;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.feature-item img {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    object-fit: cover;
+}
+
+.feature-carousel {
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* Positioning the arrows */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 2;  /* Make sure arrows are above the image */
+}
+
+.carousel-control-prev {
+    left: 0;  /* Move left arrow to the left side of the caption */
+}
+
+.carousel-control-next {
+    right: 0;  /* Move right arrow to the right side of the caption */
+}
+
+/* Optional: Styling the arrows themselves */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: 50%;
+}
+
 .floorplans-heading-text {
-    width: 30%;
-    padding: 50px;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #AA9580;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    /* width: 30%;
     margin: 0 auto;
     margin-bottom: 50px;
     text-align: center;
     font-weight: 700;
     font-size: 2.5rem;
     color: #AA9580;
-    border-bottom: 3px solid #AA9580;
+    text-decoration: underline;
+    text-underline-offset: 10px; */
 }
 
 .floorplan-subtext {

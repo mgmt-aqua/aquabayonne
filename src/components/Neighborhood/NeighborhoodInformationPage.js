@@ -11,7 +11,7 @@ export default function NeighborhoodInformationPage() {
     return (
         <div className="neighborhood-information-page">
             <FramerSlide text="Neighborhood" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Neighborhood'} img={coverImage} imgStyles={'neighborhood-cover-img'}></InformationPage>
+            <InformationPage pageTitle={'Neighborhood'} subText={"Embrace Our Vibrant Energy and Lifestyle"} img={coverImage} imgStyles={'neighborhood-cover-img'}></InformationPage>
         </div>
     );
 }
