@@ -32,7 +32,7 @@
 
 .feature-caption h4 {
     color: #AA9580;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 25px;
@@ -54,7 +54,7 @@
 }
 
 .feature-carousel {
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
 }
 

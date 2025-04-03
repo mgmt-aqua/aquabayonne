@@ -7,6 +7,7 @@ import '../../styles/ContactUs.css'
 import InformationPage from '../Common/InformationPage';
 
 import MapImg from '../../img/AquaMap.png'
+import Footer from '../Footer/Footer';
 function ContactUsForm() {
 
   // Styles for transition page
@@ -99,16 +100,16 @@ function ContactUsForm() {
     <AnimatePresence mode='wait'>
       <FramerSlide text="Contact Us" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
       <Row className="contact-us-container">
-        <Col xs={6} md={6} lg={6} xl={6} className="contact-us-col contact-us-col-left">
-        <h1 className="contact-us-title">Let's Get Acquainted</h1>
-        <h1 className="contact-us-address">54 Flagship Street, Bayonne, NJ 07002</h1>
+        <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-left">
+        <h1 className="contact-us-title">Contact Us</h1>
+        {/* <h1 className="contact-us-address">54 Flagship Street, Bayonne, NJ 07002</h1> */}
          {/* Form */}
          <Form onSubmit={handleSubmit}>
               {/* Name */}
               <Form.Group controlId="Name">
                 <Form.Control
                   type="text"
-                  placeholder="NAME (required)"
+                  placeholder="Name*"
                   name="name"
                   className="contact-us-form-control"
                   value={formData.name}
@@ -121,7 +122,7 @@ function ContactUsForm() {
               <Form.Group controlId="email">
                 <Form.Control
                   type="email"
-                  placeholder="EMAIL (required)"
+                  placeholder="Email*"
                   name="email"
                   className="contact-us-form-control"
                   value={formData.email}
@@ -134,7 +135,7 @@ function ContactUsForm() {
               <Form.Group controlId="phone">
                 <Form.Control
                   type="text"
-                  placeholder="PHONE NUMBER (required)"
+                  placeholder="Phone Number*"
                   name="phone"
                   className="contact-us-form-control"
                   value={formData.phone}
@@ -153,7 +154,7 @@ function ContactUsForm() {
                   onChange={handleInputChange}
                   required
                 >
-                  <option value="">SELECT YOUR BUDGET (required)</option>
+                  <option value="">Select Your Budget*</option>
                   <option value="500">$2,000-$2,500</option>
                   <option value="1000">$2,500-$3,000</option>
                   <option value="1500">$3,000-$3,500</option>
@@ -164,7 +165,7 @@ function ContactUsForm() {
 
               {/* Bedrooms */}
               <Form.Group controlId="bedrooms">
-                <Form.Label className="contact-us-form-label">WHAT APARTMENT ARE YOU INTERESTED IN? (required)</Form.Label>
+                <Form.Label className="contact-us-form-label">What Apartment Are You Interested In?*</Form.Label>
                 <div className="d-flex">
                   <Form.Check
                     type="checkbox"
@@ -199,7 +200,7 @@ function ContactUsForm() {
 
               {/* Pets */}
               <Form.Group controlId="pets">
-                <Form.Label className="contact-us-form-label">DO YOU HAVE ANY PETS?</Form.Label>
+                <Form.Label className="contact-us-form-label">Do You Have Any Pets?</Form.Label>
                 <div className="d-flex">
                   <Form.Check
                     type="checkbox"
@@ -224,7 +225,7 @@ function ContactUsForm() {
 
               {/* Parking */}
               <Form.Group controlId="parking">
-                <Form.Label className="contact-us-form-label">DO YOU NEED PARKING?</Form.Label>
+                <Form.Label className="contact-us-form-label">Do You Need Parking?</Form.Label>
                 <div className="d-flex">
                   <Form.Check
                     type="checkbox"
@@ -249,7 +250,7 @@ function ContactUsForm() {
 
               {/* Lease Start Date */}
               <Form.Group controlId="leaseStartDate">
-                <Form.Label className="contact-us-form-label">PREFERRED MOVE-IN DATE (required)</Form.Label>
+                <Form.Label className="contact-us-form-label">Preferred Move-In Date*</Form.Label>
                 <Form.Control
                   type="date"
                   name="leaseStartDate"
@@ -270,7 +271,7 @@ function ContactUsForm() {
                   onChange={handleInputChange}
                   required
                 >
-                  <option value="">HOW DID YOU HEAR ABOUT US?</option>
+                  <option value="">How Did You Hear About Us?</option>
                   <option value="REFERRAL">REFERRAL</option>
                   <option value="SOCIAL MEDIA">SOCIAL MEDIA</option>
                   <option value="REALTOR">REALTOR</option>
@@ -285,11 +286,13 @@ function ContactUsForm() {
             </Form>
         
         </Col>
-        <Col xs={6} md={6} lg={6} xl={6} className="contact-us-col contact-us-col-right">
-          <img src={MapImg} className="contact-us-img"/>
-          <div className="contact-us-img-overlay"></div>
+        <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-right">
+          <div className="contact-us-map">
+            <iframe width="100%" height="100%" frameborder="0" allowFullScreen="true" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=1000&amp;hl=en&amp;q=54%20Flagship%20Street,%20Bayonne%20NJ+(Aqua)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
         </Col>
       </Row>
+      <Footer />
     </AnimatePresence>
   );
 }

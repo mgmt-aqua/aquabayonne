@@ -8,8 +8,6 @@
     text-transform: uppercase;
     font-weight: 200;
     color: #241C23;
-    /* -webkit-text-stroke: 3px #241C23;
-    text-stroke: 3px #241C23; */
 }
 
 .contanct-us-text-content-container{
@@ -49,6 +47,10 @@
     font-weight: 700;
 }
 
+.form-check-input {
+  text-decoration: none;;
+}
+
 .contact-us-col {
   margin-top: 100px !important;
 }
@@ -59,9 +61,10 @@
 }
 
 .contact-us-title {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 4rem;
+  font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .contact-us-address {
@@ -73,6 +76,11 @@
 .contact-us-img{
   width: 100%;
   object-fit: cover;
+}
+
+.contact-us-map {
+  height: 100%;
+  filter: grayscale(100%);
 }
 
 /* Mobile Styles */
