@@ -72,8 +72,8 @@ export default function BuildingInformationPage() {
         link: '/neighborhood'
     },
     {
-        title: "Explore",
-        description: "Discover all the possibilities.",
+        title: "Food Hall",
+        description: "Savor the Art of Our Kitchen.",
         img: image3,
         link: '/explore'
     },
