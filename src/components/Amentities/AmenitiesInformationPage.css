@@ -10,6 +10,63 @@
     margin-bottom: 75px;
 }
 
+.amenities-information-page-section-1-row {
+    margin-bottom: 50px;
+}
+
+.amenities-information-grid-img-comtainer {
+    padding: 0 !important;
+    min-height: 600px;
+}
+
+.amenities-information-grid-img {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.amenities-information-grid-text-container {
+    padding: 0 !important;
+}
+
+.amenities-information-grid-text {
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #241C23;
+}
+
+.amenities-information-grid-title-text {
+    color: #241C23;
+    border-bottom: 1px solid #241C23;
+    font-family: 'Lato', sans-serif;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    width: 100%;
+    font-weight: 700;
+}
+
+.amenities-information-page-grid-blocks-col {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.amenities-information-page-grig-img {
+    height: 100%;
+    width: 100%;
+}
+
 .amenities-information-highlight-row {
     max-height: 550px;
     margin-bottom: 50px;
@@ -22,7 +79,6 @@
 
 .amenities-highlight-text-left {
     padding: 150px;
-    height: 50%;
 }
 
 .amenities-highlight-text-left h3 {
@@ -86,4 +142,28 @@
     text-decoration: underline;
     text-underline-offset: 10px;
     margin-bottom: 50px; 
+}
+
+.amenities-information-page-list-container {
+    width: 95%;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: #AA9580;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.amenities-information-page-list-row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.amenities-image-gallery-row {
+    padding: 45px;
+}
+
+.amenities-image-gallery-image {
+    border-radius: 0;
 }

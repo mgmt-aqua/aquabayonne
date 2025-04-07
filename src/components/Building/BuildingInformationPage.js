@@ -11,20 +11,10 @@ import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-st
 import './BuildingInformationPage.css'
 
 // Image imports
-import image1 from '../../img/our_building_1.jpg';
-import image2 from '../../img/our_building_2.jpg';
 import image3 from '../../img/our_building_3.jpg';
-import image4 from '../../img/our_building_2.jpg';
-import image5 from '../../img/our_building_1.jpg';
-import image6 from '../../img/our_building_2.jpg';
-import image7 from '../../img/our_building_1.jpg';
-import image8 from '../../img/our_building_2.jpg';
-import image9 from '../../img/our_building_1.jpg';
 
-import apartmentBuilding from '../../img/apartment_building.jpg'
 import buildingGif from '../../img/building.gif'
 import ApplyNowHero from '../Common/ApplyNowHero';
-import Section from '../Common/Section';
 
 import residencesGridImg from '../../img/residences_cover.jpg'
 import amenitiesGridImg from '../../img/amemities/amenities_gym.jpg'
@@ -34,24 +24,6 @@ import { Link } from 'react-router-dom';
 
 export default function BuildingInformationPage() {
     const [hoveredGridIndex, setHoveredGridIndex] = useState(null);
-
-
-    const images = [
-        image1,
-        image1,
-        image1,
-        image1,
-        image1,
-        image1,
-        image1,
-        image1,
-        image1,
-        // image5,
-        // image6,
-        // image7,
-        // image8,
-        // image9,
-    ];
 
     const gridBlocksContent = [{
         title: "Amenities",
