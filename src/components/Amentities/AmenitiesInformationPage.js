@@ -1,8 +1,10 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import FramerSlide from '../Common/FramerSlide'
 import InformationPage from '../Common/InformationPage';
 import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
 import { Row, Col, Card, Image } from 'react-bootstrap'
+import QuoteHero from '../Common/QuoteHero'
+import ApplyNowHero from '../Common/ApplyNowHero'
 
 import coverImage from '../../img/amemities/amenities_club_room.png'
 import amenitiesGymImage from '../../img/amemities/amenities_gym.png'
@@ -14,6 +16,20 @@ import amenitiesGym from '../../img/amemities/amenities_gym.png'
 import amenitiesRendering from '../../img/amemities/amenities_cover.png'
 
 export default function AmenitiesInformationPage() {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+    
+    const size = windowWidth < 576 ? "small" : windowWidth < 1200 ? "medium" : "large";
 
     const amenitiesList = ["Amenities 1", "Amenities 2", "Amenities 3", "Amenities 4", "Amenities 5"]
     const amenitiesList2 = ["Amenities 6", "Amenities 7", "Amenities 8", "Amenities 9", "Amenities 10"]
@@ -58,7 +74,7 @@ return (
         <InformationPage pageTitle={'Amenities'} subText={"Elevate Your Lifestyle With Unmatched Amenities"} img={coverImage} imgStyles={'amenitities-information-page-cover-img'}>
             <Row className="amenities-information-page-section-1-row">
                 {amenitiesHighlightData.map((highlight, index) => {
-                    if(index % 2 === 0) {
+                    if(index % 2 === 0 && (size === 'medium' || size === 'large' )) {
                         return (<><Col key={1} xs={12} sm={12} md={12} lg={6} className="amenities-information-grid-text-container">
                             <div className="amenities-information-grid-text">
                                 <p className='amenities-information-grid-title-text'>{highlight.title}</p>
@@ -101,6 +117,7 @@ return (
                     </div>
                 </Col> */}
             </Row>
+            <QuoteHero quote={"Where Luxury Meets Serenity"} />
             {/* <div className="amenities-information-page-highlight-container">
                 <h1 className="amenities-information-page-highlight-title">Communtity Amenities</h1>
                 <Row className="amenities-information-highlight-row">
@@ -153,7 +170,7 @@ return (
                 <div className="amenities-information-page-list-container">
                     <Row className="amenities-information-page-list-row">
                         {/* First Column */}
-                        <Col md={1}>
+                        <Col xs={6} sm={6} md={2} lg={2} xl={2}>
                             <ul className='list-unstyled'>
                                 {amenitiesList.map((amenity, index) => (
                                     <li key={index} className="mb-3">{amenity}</li>
@@ -162,7 +179,7 @@ return (
                         </Col>
 
                         {/* Second Column */}
-                        <Col md={1}>
+                        <Col xs={6} sm={6} md={2} lg={2} xl={2}>
                             <ul className='list-unstyled'>
                                 {amenitiesList2.map((amenity, index) => (
                                     <li key={index} className="mb-3">{amenity}</li>
@@ -171,7 +188,7 @@ return (
                         </Col>
 
                         {/* Third Column */}
-                        <Col md={1}>
+                        <Col xs={6} sm={6} md={2} lg={2} xl={2}>
                             <ul className='list-unstyled'>
                                 {amenitiesList3.map((amenity, index) => (
                                     <li key={index} className="mb-3">{amenity}</li>
@@ -181,7 +198,7 @@ return (
 
 
                         {/* Fourth Column */}
-                        <Col md={1}>
+                        <Col xs={6} sm={6} md={2} lg={2} xl={2}>
                             <ul className='list-unstyled'>
                                 {amenitiesList4.map((amenity, index) => (
                                     <li key={index} className="mb-3">{amenity}</li>
@@ -200,6 +217,7 @@ return (
                     ))}
                 </Row>
             </div>
+            <ApplyNowHero />
         </InformationPage>
     </div>
 );
