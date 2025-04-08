@@ -65,7 +65,7 @@ export default function BuildingInformationPage() {
     return (
         <div className="building-information-page">
             <FramerSlide text="Building" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Buidling'} subText={"Explore the Unmatched Elegance of Aqua"} img={coverImage} >
+            <InformationPage pageTitle={'Building'} subText={"Explore the Unmatched Elegance of Aqua"} img={coverImage} >
 
                 {/** Intro Section */}
                 <div className="building-information-page-section">
