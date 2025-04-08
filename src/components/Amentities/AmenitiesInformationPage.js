@@ -32,10 +32,10 @@ export default function AmenitiesInformationPage() {
     
     const size = windowWidth < 576 ? "small" : windowWidth < 1200 ? "medium" : "large";
 
-    const amenitiesList = ["Amenities 1", "Amenities 2", "Amenities 3", "Amenities 4", "Amenities 5"]
-    const amenitiesList2 = ["Amenities 6", "Amenities 7", "Amenities 8", "Amenities 9", "Amenities 10"]
-    const amenitiesList3 = ["Amenities 11", "Amenities 12", "Amenities 13", "Amenities 14", "Amenities 15"]
-    const amenitiesList4 = ["Amenities 16", "Amenities 17", "Amenities 18", "Amenities 19", "Amenities 20"]
+    const amenitiesList = ["24/7 Concierge Service", "Fitness Center / Gym", "Rooftop Terrace", "Pet-Friendly", "Clubroom"]
+    const amenitiesList2 = ["Outdoor BBQ Grills / Picnic Area", "Wellness Center", "Co-working Space", "On-Site Parking", "EV Charging Stations"]
+    const amenitiesList3 = ["Package Room", "Bike Storage", "Food Hall", "Pedestrian Walkway", "Rentable Event Space"]
+    const amenitiesList4 = ["Community Garden", "Shuttle Service", "Outdoor Fire Pits", "Resident’s Events", "Pickleball Courts"]
     const images = [
     { src: amenitiesClubRoom, alt: 'Image 1' },
     { src: amenitiesClubRoom, alt: 'Image 2' },
