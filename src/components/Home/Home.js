@@ -43,10 +43,10 @@ export default function Home() {
             >
               <h1 className="home-text">AQUA is</h1>
               <div id="typewriter"></div>
-              <Link as={Link} to="/inquire" >
+              <Link as={Link} to="/inquire" className="book-tour-link" >
                 <Button className="book-tour-home-btn">Book A Tour</Button>
               </Link>
-              <Link as={Link} to="/contact-us" >
+              <Link as={Link} to="/contact-us" className="contact-us-link">
                 <Button className="contact-us-home-btn">Contact Us</Button>
               </Link>
             </motion.div>
