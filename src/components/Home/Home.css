@@ -134,7 +134,7 @@
         text-align: center;
         margin: 0 auto;
         width: 100vw;
-        font-size: 6.5rem;
+        font-size: 5.5rem;
     }
 
     #typewriter {
@@ -142,9 +142,9 @@
         text-align: center;
         margin: 0 auto;
         width: 100vw;
-        font-size: 8.5rem;
+        font-size: 7.5rem;
         white-space: nowrap;
-        line-height: 75px;
+        line-height: 100px;
     }
 
     .book-tour-home-btn {
