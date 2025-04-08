@@ -14,6 +14,7 @@ import './AmenitiesInformationPage.css'
 import amenitiesClubRoom from '../../img/amemities/amenities_club_room.png'
 import amenitiesGym from '../../img/amemities/amenities_gym.png'
 import amenitiesRendering from '../../img/amemities/amenities_cover.png'
+import InformationGrid from '../Common/InformationGrid';
 
 export default function AmenitiesInformationPage() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -48,22 +49,22 @@ export default function AmenitiesInformationPage() {
 
     const amenitiesHighlightData = [{
         title: "Rooftop Terrace with Stunning NYC Skyline Views",
-        content: "Our luxurious rooftop terrace offers an unparalleled experience with breathtaking views of the iconic New York City skyline. Whether you're looking to unwind after a long day or entertain guests, the spacious lounge area provides the perfect setting. With comfortable seating and an inviting atmosphere, you can relax while taking in the sparkling city lights and iconic landmarks that make NYC truly one-of-a-kind. It’s more than just an amenity – it’s your personal retreat in the heart of the city.",
+        content: ["Our luxurious rooftop terrace offers an unparalleled experience with breathtaking views of the iconic New York City skyline. Whether you're looking to unwind after a long day or entertain guests, the spacious lounge area provides the perfect setting. With comfortable seating and an inviting atmosphere, you can relax while taking in the sparkling city lights and iconic landmarks that make NYC truly one-of-a-kind. It’s more than just an amenity – it’s your personal retreat in the heart of the city."],
         image: coverImage,
         imageAlt: 'Some Image Alt'
     },{
         title: "Exclusive Club Room with Full-Service Bar",
-        content: "Step into our stylish club room, where sophistication meets relaxation. This inviting space features a full-service bar, perfect for entertaining guests or enjoying a quiet evening with a drink in hand. Whether you're hosting a gathering or simply unwinding after a busy day, the club room offers a cozy and upscale atmosphere. With modern furnishings and a chic design, it’s the ideal spot to relax, socialize, or celebrate in style.",
+        content: ["Step into our stylish club room, where sophistication meets relaxation. This inviting space features a full-service bar, perfect for entertaining guests or enjoying a quiet evening with a drink in hand. Whether you're hosting a gathering or simply unwinding after a busy day, the club room offers a cozy and upscale atmosphere. With modern furnishings and a chic design, it’s the ideal spot to relax, socialize, or celebrate in style."],
         image: coverImage,
         imageAlt: 'Some Image Alt'
     },{
         title: "Spacious Courtyard with Lawn, BBQ Grills, and TVs",
-        content: "Our vibrant courtyard offers the ultimate outdoor experience with expansive lawn space, perfect for relaxation or recreational activities. Equipped with BBQ grills and plenty of seating, it's an ideal setting for hosting cookouts and enjoying meals with friends and family. Plus, with strategically placed TVs, you can catch your favorite shows or sports games while soaking up the sun. Whether you're grilling, lounging, or simply enjoying the outdoors, the courtyard provides a welcoming and versatile space for all occasions.",
+        content: ["Our vibrant courtyard offers the ultimate outdoor experience with expansive lawn space, perfect for relaxation or recreational activities. Equipped with BBQ grills and plenty of seating, it's an ideal setting for hosting cookouts and enjoying meals with friends and family. Plus, with strategically placed TVs, you can catch your favorite shows or sports games while soaking up the sun. Whether you're grilling, lounging, or simply enjoying the outdoors, the courtyard provides a welcoming and versatile space for all occasions."],
         image: coverImage,
         imageAlt: 'Some Image Alt'
     },{
         title: "State-of-the-Art Luxury Gym",
-        content: "Our luxury gym is designed to elevate your fitness routine with top-of-the-line equipment and a sleek, modern atmosphere. Featuring a wide range of machines, free weights, and specialized workout areas, it's the perfect space for all fitness levels. Whether you're looking to lift, run, or practice yoga, our gym offers the tools and environment you need to stay active and energized. With clean, spacious facilities and a motivating ambiance, you'll feel inspired to achieve your fitness goals every time you work out.",
+        content: ["Our luxury gym is designed to elevate your fitness routine with top-of-the-line equipment and a sleek, modern atmosphere. Featuring a wide range of machines, free weights, and specialized workout areas, it's the perfect space for all fitness levels. Whether you're looking to lift, run, or practice yoga, our gym offers the tools and environment you need to stay active and energized. With clean, spacious facilities and a motivating ambiance, you'll feel inspired to achieve your fitness goals every time you work out."],
         image: coverImage,
         imageAlt: 'Some Image Alt'
     }]
@@ -72,29 +73,7 @@ return (
     <div className="amenities-information-page">
         <FramerSlide text="Amenities" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
         <InformationPage pageTitle={'Amenities'} subText={"Elevate Your Lifestyle With Unmatched Amenities"} img={coverImage} imgStyles={'amenitities-information-page-cover-img'}>
-            <Row className="amenities-information-page-section-1-row">
-                {amenitiesHighlightData.map((highlight, index) => {
-                    if(index % 2 === 0 && (size === 'medium' || size === 'large' )) {
-                        return (<><Col key={1} xs={12} sm={12} md={12} lg={6} className="amenities-information-grid-text-container">
-                            <div className="amenities-information-grid-text">
-                                <p className='amenities-information-grid-title-text'>{highlight.title}</p>
-                                <p>{highlight.content}</p>
-                            </div>
-                        </Col>
-                        <Col key={2} xs={12} sm={12} md={6} lg={6} className="section-1-col amenities-information-grid-img-comtainer">
-                            <Image src={highlight.image} className="amenities-information-grid-img" />
-                        </Col></>)
-                    }
-                    return (<><Col key={3} xs={12} sm={12} md={6} lg={6} className="section-1-col amenities-information-grid-img-comtainer">
-                        <Image src={highlight.image} className="amenities-information-grid-img" />
-                    </Col>
-                    <Col key={1} xs={12} sm={12} md={12} lg={6} className="amenities-information-grid-text-container">
-                        <div className="amenities-information-grid-text">
-                            <p className='amenities-information-grid-title-text'>{highlight.title}</p>
-                            <p>{highlight.content}</p>
-                        </div>
-                    </Col></>)
-                })}
+            <InformationGrid data={amenitiesHighlightData} />
             {/*                
                 <Col key={1} xs={12} sm={12} md={12} lg={6} className="building-information-grid-text-container">
                     <div className="building-information-grid-text">
@@ -116,7 +95,6 @@ return (
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta.</p>
                     </div>
                 </Col> */}
-            </Row>
             <QuoteHero quote={"Where Luxury Meets Serenity"} />
             {/* <div className="amenities-information-page-highlight-container">
                 <h1 className="amenities-information-page-highlight-title">Communtity Amenities</h1>
@@ -217,7 +195,6 @@ return (
                     ))}
                 </Row>
             </div>
-            <ApplyNowHero />
         </InformationPage>
     </div>
 );

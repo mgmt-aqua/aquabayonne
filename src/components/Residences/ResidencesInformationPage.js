@@ -7,9 +7,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { IoIosBed } from "react-icons/io";
 import { FaBath } from "react-icons/fa";
 import QuoteHero from '../Common/QuoteHero';
-import ApplyNowHero from '../Common/ApplyNowHero';
-
-
 
 import './ResidencesInformationPage.css'
 
@@ -227,8 +224,6 @@ export default function ResidencesInformationPage() {
                         </AnimatePresence>
                     </Row>
                 </div>
-                {/* Hero Section */}
-                <ApplyNowHero />
             </InformationPage>
         </div>
     );
