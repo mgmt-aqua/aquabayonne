@@ -8,7 +8,7 @@
 
 .residences-feature-title {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.25rem;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #AA9580;
@@ -86,7 +86,7 @@
 
 .floorplans-heading-text {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.25rem;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #AA9580;
@@ -94,15 +94,6 @@
     text-underline-offset: 10px;
     margin-bottom: 50px;
     margin-top: 50px;
-    /* width: 30%;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 2.5rem;
-    color: #AA9580;
-    text-decoration: underline;
-    text-underline-offset: 10px; */
 }
 
 .floorplan-subtext {

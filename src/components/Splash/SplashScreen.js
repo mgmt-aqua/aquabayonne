@@ -44,7 +44,7 @@ const SplashScreen = ({ duration = 1500, children }) => {
             left: 0,
             width: "100vw",
             height: "100vh",
-            backgroundColor: "#241C23", 
+            backgroundColor: "#21363B", 
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -78,7 +78,7 @@ const SplashScreen = ({ duration = 1500, children }) => {
             <motion.div
               style={{
                 height: "100%",
-                backgroundColor: "#649FB9",  // Custom color for the progress
+                backgroundColor: "#887A5C",  // Custom color for the progress
                 borderRadius: "5px",
               }}
               initial={{ width: `0%`, x: "0%" }}

@@ -23,7 +23,7 @@
   top: 35px;
   left: 0;
   right: 0;
-  background-color: #5F5235;
+  background-color: #AA9D80;
   color: white;
   z-index: 1000;
   font-family: Arial, sans-serif;
@@ -154,13 +154,13 @@
 .navbar-links:hover,
 .navbar-links:active,
 .navbar-links:focus {
-  border-bottom: 3px solid #6B7C80;
+  border-bottom: 3px solid #3A4F54;
   text-transform: uppercase;
   color: white !important;
 }
 
 .navbar-links.active {
-  border-bottom: 3px solid #6B7C80;
+  border-bottom: 3px solid #3A4F54;
   text-transform: uppercase;
   color: white !important;
 }
