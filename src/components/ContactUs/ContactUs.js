@@ -1,33 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import {mobileStyles, desktopStyles} from '../../configuration/framer-slide-styles'
 
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Row, Col, Form, Button } from 'react-bootstrap';
 import FramerSlide from '../Common/FramerSlide'
+
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet-providers';
+
 import '../../styles/ContactUs.css'
-import InformationPage from '../Common/InformationPage';
 
-import MapImg from '../../img/AquaMap.png'
 import Footer from '../Footer/Footer';
-function ContactUsForm() {
+export default function ContactUsForm() {
+  const mapContainer = useRef(null);
 
-  // Styles for transition page
-  const baseStyles = {
-    color: "transparent",
-    textTransform: "uppercase",
-    fontWeight: "700",
-    WebkitTextStroke: "3px #D0D3D4",
-    textStroke: "3px #D0D3D4"
-  }
-
-  const desktopStyles = {
-    ...baseStyles,
-    fontSize: "8rem"
-  }
-
-  const mobileStyles = {
-    ...baseStyles,
-    fontSize: "3rem"
-  }
+  useEffect(() => {
+          // Initialize the map
+          const map = L.map(mapContainer.current, {
+              center: [40.670988, -74.100399],
+              zoom: 16,
+              scrollWheelZoom: false,  // Disable scroll zoom
+          });
+  
+          // Set the tile layer (you can choose a tile provider)
+          L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
+  
+           // Create a custom icon (your logo)
+           const logoIcon = L.icon({
+              iconUrl: require('../../img/aqua-logo-white.png'),
+              iconSize: [70, 20],
+              iconAnchor: [20, 25],
+              popupAnchor: [0, -50]
+          });
+  
+          // Add a permanent marker with the custom logo at a specific position
+          L.marker([40.670988, -74.100399], { icon: logoIcon })
+              .addTo(map)
+              .bindPopup('<b>Aqua Bayonne</b>');
+  
+          map.zoomControl.remove();
+  
+          // Cleanup function to remove map on component unmount
+          return () => {
+              map.remove();
+          };
+      }, []);
 
   // State to hold form values
   const [formData, setFormData] = useState({
@@ -64,9 +82,6 @@ function ContactUsForm() {
   // Handle checkbox changes (bedrooms selection)
   const handleCheckboxChange = (e) => {
     const { name, checked, id } = e.target;
-    console.log(id)
-    console.log(name)
-    console.log(checked)
     setFormData((prevData) => ({
       ...prevData,
       [id]: {
@@ -287,14 +302,10 @@ function ContactUsForm() {
         
         </Col>
         <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-right">
-          <div className="contact-us-map">
-            <iframe width="100%" height="100%" frameborder="0" allowFullScreen="true" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=1000&amp;hl=en&amp;q=54%20Flagship%20Street,%20Bayonne%20NJ+(Aqua)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-            </div>
+          <div className="contact-us-map" ref={mapContainer} style={{ width: '100%', height: '100%' }}></div>
         </Col>
       </Row>
       <Footer />
     </AnimatePresence>
   );
 }
-
-export default ContactUsForm;
