@@ -109,7 +109,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(36, 28, 35, .5);
+    background-color: rgba(33, 54, 59, .4);
     transition: background-color .25s ease-in-out;
 }
 
@@ -119,7 +119,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(36, 28, 35, 1);
+    background-color: rgba(33, 54, 59, 1);
     transition: background-color .25s ease-in-out;
 }
 

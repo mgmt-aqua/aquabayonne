@@ -1,5 +1,5 @@
 .announcement-bar-container {
-    background-color: #649FB9; /* Choose your desired color */
+    background-color: #3A4F54;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999; /* Ensures the bar stays on top */
+    z-index: 999;
   }
   
   .announcement-bar-text {

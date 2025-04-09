@@ -44,7 +44,7 @@ export default function NeighborhoodInformationPage() {
             <FramerSlide text="Neighborhood" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
             <InformationPage pageTitle={'Neighborhood'} subText={"Embrace Our Vibrant Energy and Lifestyle"} img={coverImage} imgStyles={'neighborhood-cover-img'}>
                 <div className="neighborhood-highlights">
-                    <h1 className="neighborhood-highlights-title">Our Neighborhood</h1>
+                    {/* <h1 className="neighborhood-highlights-title">Our Neighborhood</h1> */}
                      <InformationGrid data={neighborhoodHighlights} />
                 </div>
                 <QuoteHero quote={"Where Luxury Meets Serenity"} />
