@@ -1,0 +1,49 @@
+.map-component-legend {
+    background-color: #887A5C;
+}
+
+.map-accordion-item {
+    margin-top: 25px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0 !important;
+}
+
+.map-accordion-header {
+    background-color: transparent;
+}
+
+.map-accordion-header button {
+    font-size: 1rem !important;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #FBF5E5 !important;
+    background-color: transparent;
+}
+
+.accordion-button:not(.collapsed) {
+   background-color: transparent;
+   border-bottom: 1px solid #21363B;
+   color: #21363B !important;
+}
+
+.map-accordion-header button:focus {
+    box-shadow: none !important;
+}
+
+.map-accordion-list-item {
+    font-size: 1rem;
+    padding: 15px;
+    list-style-type: none;
+    color: #21363B;
+    font-weight: 700;
+}
+
+
+.map-accordion-list-item span{
+    margin-right: 25px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #21363B;
+}
