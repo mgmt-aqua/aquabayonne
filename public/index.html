@@ -42,5 +42,42 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- This hidden form is added to handle Netlify forms-->
+    <form name="contact" netlify hidden>
+      <input placeholder="Name*" type="text" name="name">
+      <input placeholder="Email*" type="text" name="email">
+      <input placeholder="Phone Number*" id="phone" type="text" name="phone">
+      <select name="budget">
+              <option value="default">Select Your Budget*</option>
+              <option value="500">$2,000–$2,500</option>
+              <option value="1000">$2,500–$3,000</option>
+              <option value="1500">$3,000–$3,500</option>
+              <option value="2000">$3,500–$4,000</option>
+              <option value="2500">$4,000+</option>
+      </select>
+      <label for="bedrooms">What Apartment Are You Interested In?*</label>
+          <input id="bedrooms" type="checkbox" name="studio"><label title="" for="bedrooms" class="form-check-label">Studio</label>
+          <input id="bedrooms" type="checkbox" name="oneBed"><label title="" for="bedrooms" class="form-check-label">1-Bed</label>
+          <input id="bedrooms" type="checkbox" name="twoBed"><label title="" for="bedrooms" class="form-check-label">2-Bed</label>
+      <label class="contact-us-form-label form-label" for="pets">Do You Have Any Pets?</label>
+          <input type="checkbox" name="yes"><label title="" for="pets" class="form-check-label">Yes</label>
+          <input type="checkbox" name="no"><label title="" for="pets" class="form-check-label">No</label>
+  
+      <label for="parking">Do You Need Parking?</label>
+          <input id="parking" type="checkbox" name="yes"><label title="" for="parking">Yes</label></div>
+          <input id="parking" type="checkbox" name="no"><label title="" for="parking">No</label></div>
+      
+      <label for="leaseStartDate">Preferred Move-In Date*</label><input min="2025-04-10" id="leaseStartDate" type="date" name="leaseStartDate"></div>
+      
+      <select name="attribution" id="attribution">
+              <option value="default">How Did You Hear About Us?</option>
+              <option value="REFERRAL">REFERRAL</option>
+              <option value="SOCIAL MEDIA">SOCIAL MEDIA</option>
+              <option value="REALTOR">REALTOR</option>
+              <option value="OTHER">OTHER</option>
+      </select>
+      <button type="submit">Submit</button>
+  </form>
   </body>
 </html>

@@ -54,6 +54,18 @@ export default function ContactUsForm() {
     e.preventDefault();
     const { isValid, newErrors } = validateForm(formData);
     if (isValid) {
+      const data = new URLSearchParams(new FormData(formData)).toString();
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data,
+      })
+        .then(() => {
+          alert("Succes");
+        })
+        .catch((error) => {
+          alert("Failure: " + error);
+        });
       setFormData(defaultFormOptions);
       setFormErrors(defaultFormErrors);
     } else {
