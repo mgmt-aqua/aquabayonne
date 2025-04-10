@@ -1,9 +1,7 @@
-// React and other libraries
 import React, { useState, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 
-// Custom hooks and components
 import useLeafletMap from '../../hooks/useLeafletMap';
 import TextInput from '../Common/Forms/TextInput';
 import SelectInput from '../Common/Forms/SelectInput';
@@ -12,24 +10,21 @@ import DateInput from '../Common/Forms/DateInput';
 import FramerSlide from '../Common/FramerSlide';
 import Footer from '../Footer/Footer';
 
-// Helpers and configurations
 import { mobileStyles, desktopStyles } from '../../configuration/framer-slide-styles';
 import { defaultFormOptions, validateForm, defaultFormErrors, budgetOptions, attributionOptions } from '../../helpers/form';
 
-// Styles
 import '../../styles/ContactUs.css';
 
 export default function ContactUsForm() {
   const mapContainer = useRef(null);
   useLeafletMap(mapContainer);
-  const [formErrors, setFormErrors] = useState(defaultFormErrors)
+  const [formErrors, setFormErrors] = useState(defaultFormErrors);
   const [formData, setFormData] = useState(defaultFormOptions);
 
-  // Handle input change for text, email, and select fields
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     if (formErrors[name]) {
-      delete formErrors[name]
+      delete formErrors[name];
     }
     setFormData((prevData) => ({
       ...prevData,
@@ -37,7 +32,6 @@ export default function ContactUsForm() {
     }));
   };
 
-  // Handle checkbox changes (bedrooms selection)
   const handleCheckboxChange = (group, name, checked) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -46,7 +40,7 @@ export default function ContactUsForm() {
         [name]: checked,
       },
     }));
-  
+
     if (formErrors[group]) {
       setFormErrors((prev) => {
         const updatedErrors = { ...prev };
@@ -60,11 +54,10 @@ export default function ContactUsForm() {
     e.preventDefault();
     const { isValid, newErrors } = validateForm(formData);
     if (isValid) {
-      console.log(formData)
       setFormData(defaultFormOptions);
       setFormErrors(defaultFormErrors);
     } else {
-      setFormErrors(newErrors)
+      setFormErrors(newErrors);
     }
   };
 
@@ -74,9 +67,17 @@ export default function ContactUsForm() {
       <Row className="contact-us-container">
         <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-left">
           <h1 className="contact-us-title">Contact Us</h1>
-          
+
           {/* Form */}
-          <Form onSubmit={handleSubmit}>
+          <Form
+            name="contact" // Netlify form name
+            method="POST"
+            data-netlify="true" // Netlify form handling
+            onSubmit={handleSubmit}
+          >
+            {/* Hidden input field for form name */}
+            <input type="hidden" name="form-name" value="contact" />
+
             {/* Name */}
             <TextInput
               name="name"
@@ -88,7 +89,6 @@ export default function ContactUsForm() {
               controlClassName="contact-us-form-control"
               errorClassName="contact-us-form-error"
             />
-
 
             {/* Email */}
             <TextInput
@@ -102,7 +102,6 @@ export default function ContactUsForm() {
               errorClassName="contact-us-form-error"
             />
 
-
             {/* Phone */}
             <TextInput
               name="phone"
@@ -114,7 +113,6 @@ export default function ContactUsForm() {
               controlClassName="contact-us-form-control"
               errorClassName="contact-us-form-error"
             />
-
 
             {/* Budget */}
             <SelectInput
@@ -161,7 +159,6 @@ export default function ContactUsForm() {
               controlClassName="contact-us-form-control"
             />
 
-
             {/* Parking */}
             <CheckboxGroup
               label="Do You Need Parking?"
@@ -190,7 +187,6 @@ export default function ContactUsForm() {
               errorClassName="contact-us-form-error"
             />
 
-
             {/* How did you hear about us? */}
             <SelectInput
               name="attribution"
@@ -202,9 +198,10 @@ export default function ContactUsForm() {
             />
 
             {/* Submit Button */}
-            <Button variant="primary" type="submit" className="contact-us-submit-button">Submit</Button>
+            <Button variant="primary" type="submit" className="contact-us-submit-button">
+              Submit
+            </Button>
           </Form>
-
         </Col>
         <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-right">
           <div className="contact-us-map" ref={mapContainer} style={{ width: '100%', height: '100%' }}></div>
