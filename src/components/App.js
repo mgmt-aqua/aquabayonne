@@ -11,10 +11,7 @@ import { homePageSections } from "../configuration/home";
 
 // Styles
 import "../styles/App.css";
-import "../styles/Building.css";
-import "../styles/Amenities.css";
-import "../styles/Residences.css";
-import "../styles/Neighborhood.css";
+import "../styles/Home.css"
 
 export default function App() {
 
