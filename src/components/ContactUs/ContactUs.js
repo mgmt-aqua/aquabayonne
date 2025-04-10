@@ -50,22 +50,23 @@ export default function ContactUsForm() {
     }
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const { isValid, newErrors } = validateForm(formData);
     if (isValid) {
-      const data = new URLSearchParams(new FormData(formData)).toString();
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: data,
+        body: encode({ "form-name": "contact", ...formData })
       })
-        .then(() => {
-          alert("Succes");
-        })
-        .catch((error) => {
-          alert("Failure: " + error);
-        });
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
       setFormData(defaultFormOptions);
       setFormErrors(defaultFormErrors);
     } else {
