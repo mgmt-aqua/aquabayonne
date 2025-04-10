@@ -20,14 +20,13 @@ export const validateForm = (formData) => {
     isValid = false;
   }
 
-  if (!formData.budget) {
+  if (!formData.budget || formData.budget === "default") {
     newErrors.budget = 'Budget is required';
     isValid = false;
   }
 
-  const bedroomSelection = formData.bedrooms;
-  if (!bedroomSelection.oneBed && !bedroomSelection.twoBed && !bedroomSelection.studio) {
-    newErrors.bedrooms = 'Please select which apartment you are interested in';
+  if (!formData.bedrooms || formData.bedrooms === "default") {
+    newErrors.bedrooms = 'Bedrooms is required';
     isValid = false;
   }
 
@@ -45,36 +44,45 @@ export const defaultFormOptions = {
   email: '',
   phone: '',
   budget: '',
-  bedrooms: {
-    studio: false,
-    oneBed: false,
-    twoBed: false,
-  },
+  bedrooms: '',
   leaseStartDate: '',
-  pets: {
-    yes: false,
-    no: false
-  },
-  parking: {
-    yes: false,
-    no: false,
-  },
-  attribution: '',
+  pets: '',
+  parking: '',
+  attribution: ''
 }
 
+export const bedroomOptions = [
+  { label: 'Please choose an option', value: 'default' },
+  { label: 'Studio', value: 'Studio' },
+  { label: '1 Bed', value: '1 Bed' },
+  { label: '2 Bed', value: '2 Bed' },
+]
+
+export const petOptions = [
+  { label: 'Please choose an option', value: 'default' },
+  { label: 'Yes', value: 'Yes' },
+  { label: 'No', value: 'No' },
+]
+
+export const parkingOptions = [
+  { label: 'Please choose an option', value: 'default' },
+  { label: 'Yes', value: 'Yes' },
+  { label: 'No', value: 'No' },
+]
+
 export const budgetOptions = [
-  { label: 'Select Your Budget*', value: 'default' },
-  { label: '$2,000–$2,500', value: '500' },
-  { label: '$2,500–$3,000', value: '1000' },
-  { label: '$3,000–$3,500', value: '1500' },
-  { label: '$3,500–$4,000', value: '2000' },
-  { label: '$4,000+', value: '2500' },
+  { label: 'Please choose an option', value: 'default' },
+  { label: '$2,000–$2,500', value: '$2,000–$2,500' },
+  { label: '$2,500–$3,000', value: '$2,500–$3,000' },
+  { label: '$3,000–$3,500', value: '$3,000–$3,500' },
+  { label: '$3,500–$4,000', value: '$3,500–$4,000' },
+  { label: '$4,000+', value: '$4,000+' },
 ];
 
 export const attributionOptions = [
-  { label: 'How Did You Hear About Us?', value: 'default' },
-  { label: 'REFERRAL', value: 'REFERRAL' },
-  { label: 'SOCIAL MEDIA', value: 'SOCIAL MEDIA' },
-  { label: 'REALTOR', value: 'REALTOR' },
-  { label: 'OTHER', value: 'OTHER' },
+  { label: 'Please choose an option', value: 'default' },
+  { label: 'Referral', value: 'REFERRAL' },
+  { label: 'Social Media', value: 'SOCIAL MEDIA' },
+  { label: 'Realtor', value: 'REALTOR' },
+  { label: 'Other', value: 'OTHER' },
 ];

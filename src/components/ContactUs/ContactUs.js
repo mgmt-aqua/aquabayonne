@@ -5,13 +5,12 @@ import { Row, Col, Form, Button } from 'react-bootstrap';
 import useLeafletMap from '../../hooks/useLeafletMap';
 import TextInput from '../Common/Forms/TextInput';
 import SelectInput from '../Common/Forms/SelectInput';
-import CheckboxGroup from '../Common/Forms/CheckboxGroup';
 import DateInput from '../Common/Forms/DateInput';
 import FramerSlide from '../Common/FramerSlide';
 import Footer from '../Footer/Footer';
 
 import { mobileStyles, desktopStyles } from '../../configuration/framer-slide-styles';
-import { defaultFormOptions, validateForm, defaultFormErrors, budgetOptions, attributionOptions } from '../../helpers/form';
+import { defaultFormOptions, validateForm, defaultFormErrors, budgetOptions, attributionOptions, bedroomOptions, petOptions, parkingOptions } from '../../helpers/form';
 
 import '../../styles/ContactUs.css';
 
@@ -20,34 +19,25 @@ export default function ContactUsForm() {
   useLeafletMap(mapContainer);
   const [formErrors, setFormErrors] = useState(defaultFormErrors);
   const [formData, setFormData] = useState(defaultFormOptions);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     if (formErrors[name]) {
       delete formErrors[name];
     }
+
+    if(formErrors.submit) {
+      delete formErrors.submit;
+    }
+
+    if(successMessage) {
+      setSuccessMessage("")
+    }
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-  };
-
-  const handleCheckboxChange = (group, name, checked) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [group]: {
-        ...prevData[group],
-        [name]: checked,
-      },
-    }));
-
-    if (formErrors[group]) {
-      setFormErrors((prev) => {
-        const updatedErrors = { ...prev };
-        delete updatedErrors[group];
-        return updatedErrors;
-      });
-    }
   };
 
   const encode = (data) => {
@@ -65,8 +55,8 @@ export default function ContactUsForm() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...formData })
       })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
+        .then(() => setSuccessMessage("Thank you for your submission! Our team will review it and get back to you within 24-48 hours."))
+        .catch(() => setFormErrors({...formErrors, submit: 'There was a problem with your request. Please try again at a later time.'}));
       setFormData(defaultFormOptions);
       setFormErrors(defaultFormErrors);
     } else {
@@ -93,63 +83,67 @@ export default function ContactUsForm() {
 
             {/* Name */}
             <TextInput
+              label="Name*"
               name="name"
-              placeholder="Name*"
+              placeholder="e.g. John Smith"
               value={formData.name}
               onChange={handleInputChange}
               error={formErrors.name}
               groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
               errorClassName="contact-us-form-error"
             />
 
             {/* Email */}
             <TextInput
+              label="Email*"
               name="email"
-              placeholder="Email*"
+              placeholder="e.g. johnsmith@example.com"
               value={formData.email}
               onChange={handleInputChange}
               error={formErrors.email}
               groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
               errorClassName="contact-us-form-error"
             />
 
             {/* Phone */}
             <TextInput
+              label="Phone Number*"
               name="phone"
-              placeholder="Phone Number*"
+              placeholder="e.g. 555-555-5555"
               value={formData.phone}
               onChange={handleInputChange}
               error={formErrors.phone}
               groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
               errorClassName="contact-us-form-error"
             />
 
             {/* Budget */}
             <SelectInput
+              label="Select your budget*"
               name="budget"
               options={budgetOptions}
               value={formData.budget}
               onChange={handleInputChange}
               error={formErrors.budget}
               groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
               errorClassName="contact-us-form-error"
             />
 
             {/* Bedrooms */}
-            <CheckboxGroup
-              label="What Apartment Are You Interested In?*"
+            <SelectInput
+              label="What apartment are you interested in?*"
               name="bedrooms"
-              options={[
-                { name: 'studio', label: 'Studio' },
-                { name: 'oneBed', label: '1-Bed' },
-                { name: 'twoBed', label: '2-Bed' },
-              ]}
-              values={formData.bedrooms}
-              onChange={handleCheckboxChange}
+              options={bedroomOptions}
+              value={formData.bedrooms}
+              onChange={handleInputChange}
               error={formErrors.bedrooms}
               groupClassName="contact-us-form-group"
               labelClassName="contact-us-form-label"
@@ -158,30 +152,26 @@ export default function ContactUsForm() {
             />
 
             {/* Pets */}
-            <CheckboxGroup
-              label="Do You Have Any Pets?"
+            <SelectInput
+              label="Do you have any pets?"
               name="pets"
-              options={[
-                { name: 'yes', label: 'Yes' },
-                { name: 'no', label: 'No' },
-              ]}
-              values={formData.pets}
-              onChange={handleCheckboxChange}
+              options={petOptions}
+              value={formData.pets}
+              onChange={handleInputChange}
+              error={formErrors.pets}
               groupClassName="contact-us-form-group"
               labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
             />
 
             {/* Parking */}
-            <CheckboxGroup
-              label="Do You Need Parking?"
+            <SelectInput
+              label="Do you need parking?"
               name="parking"
-              options={[
-                { name: 'yes', label: 'Yes' },
-                { name: 'no', label: 'No' },
-              ]}
-              values={formData.parking}
-              onChange={handleCheckboxChange}
+              options={parkingOptions}
+              value={formData.parking}
+              onChange={handleInputChange}
+              error={formErrors.parking}
               groupClassName="contact-us-form-group"
               labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
@@ -202,11 +192,13 @@ export default function ContactUsForm() {
 
             {/* How did you hear about us? */}
             <SelectInput
+              label="How did you hear about us?"
               name="attribution"
               options={attributionOptions}
               value={formData.attribution}
               onChange={handleInputChange}
               groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
             />
 
@@ -214,6 +206,8 @@ export default function ContactUsForm() {
             <Button variant="primary" type="submit" className="contact-us-submit-button">
               Submit
             </Button>
+            {successMessage && <p className='submit-success'>{successMessage}</p>}
+            {formErrors.submit && <p className='submit-error'>{formErrors.submit}</p>}
           </Form>
         </Col>
         <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-right">

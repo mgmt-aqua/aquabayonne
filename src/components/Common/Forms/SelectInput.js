@@ -1,7 +1,8 @@
 import { Form } from 'react-bootstrap';
 
-const SelectInput = ({ name, options, value, onChange, error, groupClassName, controlClassName, errorClassName }) => (
+const SelectInput = ({ label, name, options, value, onChange, error, groupClassName, labelClassName, controlClassName, errorClassName }) => (
   <Form.Group controlId={name} className={groupClassName}>
+    <Form.Label className={labelClassName}>{label}</Form.Label>
     <Form.Control
       as="select"
       name={name}
