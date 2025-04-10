@@ -50,23 +50,10 @@ export default function ContactUsForm() {
     }
   };
 
-  const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const { isValid, newErrors } = validateForm(formData);
     if (isValid) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...formData })
-      })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
       setFormData(defaultFormOptions);
       setFormErrors(defaultFormErrors);
     } else {
@@ -82,11 +69,11 @@ export default function ContactUsForm() {
           <h1 className="contact-us-title">Contact Us</h1>
 
           {/* Form */}
-          <form
+          <Form
             name="contact" // Netlify form name
             method="POST"
             data-netlify="true" // Netlify form handling
-            // onSubmit={handleSubmit}
+            onSubmit={handleSubmit}
           >
             {/* Hidden input field for form name */}
             <input type="hidden" name="form-name" value="contact" />
@@ -214,7 +201,7 @@ export default function ContactUsForm() {
             <Button variant="primary" type="submit" className="contact-us-submit-button">
               Submit
             </Button>
-          </form>
+          </Form>
         </Col>
         <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-right">
           <div className="contact-us-map" ref={mapContainer} style={{ width: '100%', height: '100%' }}></div>
