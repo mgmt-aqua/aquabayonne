@@ -84,6 +84,45 @@
     background-size: 50%;
 }
 
+.button-wrapper {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.button-filters-btn { 
+    text-transform: uppercase;
+    width: 200px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid #241C23;
+    color: #241C23
+}
+
+.button-filters-btn:hover { 
+    background-color: #649FB9;
+    border: 1px solid white;
+    color: white;
+}
+
+.button-filters-btn:target { 
+    background-color: #241C23;
+    border: 1px solid white;
+    color: white;
+}
+
+.button-filters-btn.active {
+    background-color: #649FB9;
+    border: 1px solid white;
+    color: white;
+}
+
 .floorplans-heading-text {
     text-align: center;
     font-size: 1.25rem;

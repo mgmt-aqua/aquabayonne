@@ -10,7 +10,6 @@ import Navbar from './components/Navbar/Navbar';
 import App from './components/App';
 import ContactUsForm from './components/ContactUs/ContactUs';
 import BookTour from './components/BookTour/BookTour';
-import Availability from './components/Availability/Availability';
 import BuildingInformationPage from './components/Building/BuildingInformationPage';
 import AmenitiesInformationPage from './components/Amentities/AmenitiesInformationPage';
 import ResidencesInformationPage from './components/Residences/ResidencesInformationPage';
@@ -27,7 +26,6 @@ ReactDOM.createRoot(root).render(
             <Route path='/' element={<App />} />
             <Route path="/contact-us" element={<ContactUsForm />} />
             <Route path="/inquire" element={<BookTour />} />
-            <Route path="/availability" element={<Availability />} />
             <Route path="/building" element={<BuildingInformationPage />} />
             <Route path="/amenities" element={<AmenitiesInformationPage />} />
             <Route path="/residences" element={<ResidencesInformationPage />} />
