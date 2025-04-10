@@ -50,6 +50,12 @@ export default function ContactUsForm() {
     }
   };
 
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const { isValid, newErrors } = validateForm(formData);
