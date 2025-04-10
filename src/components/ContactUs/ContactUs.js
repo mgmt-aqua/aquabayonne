@@ -54,6 +54,13 @@ export default function ContactUsForm() {
     e.preventDefault();
     const { isValid, newErrors } = validateForm(formData);
     if (isValid) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formData })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
       setFormData(defaultFormOptions);
       setFormErrors(defaultFormErrors);
     } else {
