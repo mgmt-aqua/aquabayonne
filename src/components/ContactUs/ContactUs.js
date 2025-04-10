@@ -70,6 +70,7 @@ export default function ContactUsForm() {
 
           {/* Form */}
           <Form
+            netlify
             name="contact" // Netlify form name
             method="POST"
             data-netlify="true" // Netlify form handling
