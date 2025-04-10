@@ -82,7 +82,7 @@ export default function ContactUsForm() {
           <h1 className="contact-us-title">Contact Us</h1>
 
           {/* Form */}
-          <Form
+          <form
             name="contact" // Netlify form name
             method="POST"
             data-netlify="true" // Netlify form handling
@@ -214,7 +214,7 @@ export default function ContactUsForm() {
             <Button variant="primary" type="submit" className="contact-us-submit-button">
               Submit
             </Button>
-          </Form>
+          </form>
         </Col>
         <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-right">
           <div className="contact-us-map" ref={mapContainer} style={{ width: '100%', height: '100%' }}></div>
