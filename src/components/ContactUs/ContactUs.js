@@ -1,78 +1,36 @@
-import React, { useState, useEffect, useRef } from 'react';
+// React and other libraries
+import React, { useState, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import {mobileStyles, desktopStyles} from '../../configuration/framer-slide-styles'
-
 import { Row, Col, Form, Button } from 'react-bootstrap';
-import FramerSlide from '../Common/FramerSlide'
 
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-providers';
-
-import '../../styles/ContactUs.css'
-
+// Custom hooks and components
+import useLeafletMap from '../../hooks/useLeafletMap';
+import TextInput from '../Common/Forms/TextInput';
+import SelectInput from '../Common/Forms/SelectInput';
+import CheckboxGroup from '../Common/Forms/CheckboxGroup';
+import DateInput from '../Common/Forms/DateInput';
+import FramerSlide from '../Common/FramerSlide';
 import Footer from '../Footer/Footer';
+
+// Helpers and configurations
+import { mobileStyles, desktopStyles } from '../../configuration/framer-slide-styles';
+import { defaultFormOptions, validateForm, defaultFormErrors, budgetOptions, attributionOptions } from '../../helpers/form';
+
+// Styles
+import '../../styles/ContactUs.css';
+
 export default function ContactUsForm() {
   const mapContainer = useRef(null);
-
-  useEffect(() => {
-          // Initialize the map
-          const map = L.map(mapContainer.current, {
-              center: [40.670988, -74.100399],
-              zoom: 16,
-              scrollWheelZoom: false,  // Disable scroll zoom
-          });
-  
-          // Set the tile layer (you can choose a tile provider)
-          L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
-  
-           // Create a custom icon (your logo)
-           const logoIcon = L.icon({
-              iconUrl: require('../../img/aqua-logo-white.png'),
-              iconSize: [70, 20],
-              iconAnchor: [20, 25],
-              popupAnchor: [0, -50]
-          });
-  
-          // Add a permanent marker with the custom logo at a specific position
-          L.marker([40.670988, -74.100399], { icon: logoIcon })
-              .addTo(map)
-              .bindPopup('<b>Aqua Bayonne</b>');
-  
-          map.zoomControl.remove();
-  
-          // Cleanup function to remove map on component unmount
-          return () => {
-              map.remove();
-          };
-      }, []);
-
-  // State to hold form values
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    budget: '',
-    bedrooms: {
-      studio: false,
-      oneBed: false,
-      twoBed: false,
-    },
-    leaseStartDate: '',
-    pets: {
-      yes: false,
-      no: false
-    },
-    parking: {
-      yes: false,
-      no: false,
-    },
-    attribution: '',
-  });
+  useLeafletMap(mapContainer);
+  const [formErrors, setFormErrors] = useState(defaultFormErrors)
+  const [formData, setFormData] = useState(defaultFormOptions);
 
   // Handle input change for text, email, and select fields
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    if (formErrors[name]) {
+      delete formErrors[name]
+    }
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -80,226 +38,173 @@ export default function ContactUsForm() {
   };
 
   // Handle checkbox changes (bedrooms selection)
-  const handleCheckboxChange = (e) => {
-    const { name, checked, id } = e.target;
+  const handleCheckboxChange = (group, name, checked) => {
     setFormData((prevData) => ({
       ...prevData,
-      [id]: {
-        ...prevData[id],
+      [group]: {
+        ...prevData[group],
         [name]: checked,
       },
     }));
+  
+    if (formErrors[group]) {
+      setFormErrors((prev) => {
+        const updatedErrors = { ...prev };
+        delete updatedErrors[group];
+        return updatedErrors;
+      });
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log(formData);
-    // Reset form after submission (optional)
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      budget: '',
-      bedrooms: {
-        studio: false,
-        oneBed: false,
-        twoBed: false,
-      },
-      leaseStartDate: '',
-    });
+    const { isValid, newErrors } = validateForm(formData);
+    if (isValid) {
+      console.log(formData)
+      setFormData(defaultFormOptions);
+      setFormErrors(defaultFormErrors);
+    } else {
+      setFormErrors(newErrors)
+    }
   };
 
   return (
-    <AnimatePresence mode='wait'>
+    <AnimatePresence>
       <FramerSlide text="Contact Us" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
       <Row className="contact-us-container">
         <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-left">
-        <h1 className="contact-us-title">Contact Us</h1>
-        {/* <h1 className="contact-us-address">54 Flagship Street, Bayonne, NJ 07002</h1> */}
-         {/* Form */}
-         <Form onSubmit={handleSubmit}>
-              {/* Name */}
-              <Form.Group controlId="Name">
-                <Form.Control
-                  type="text"
-                  placeholder="Name*"
-                  name="name"
-                  className="contact-us-form-control"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required={true}
-                />
-              </Form.Group>
+          <h1 className="contact-us-title">Contact Us</h1>
+          
+          {/* Form */}
+          <Form onSubmit={handleSubmit}>
+            {/* Name */}
+            <TextInput
+              name="name"
+              placeholder="Name*"
+              value={formData.name}
+              onChange={handleInputChange}
+              error={formErrors.name}
+              groupClassName="contact-us-form-group"
+              controlClassName="contact-us-form-control"
+              errorClassName="contact-us-form-error"
+            />
 
-              {/* Email */}
-              <Form.Group controlId="email">
-                <Form.Control
-                  type="email"
-                  placeholder="Email*"
-                  name="email"
-                  className="contact-us-form-control"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required={true}
-                />
-              </Form.Group>
 
-              {/* Phone */}
-              <Form.Group controlId="phone">
-                <Form.Control
-                  type="text"
-                  placeholder="Phone Number*"
-                  name="phone"
-                  className="contact-us-form-control"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  required
-                />
-              </Form.Group>
+            {/* Email */}
+            <TextInput
+              name="email"
+              placeholder="Email*"
+              value={formData.email}
+              onChange={handleInputChange}
+              error={formErrors.email}
+              groupClassName="contact-us-form-group"
+              controlClassName="contact-us-form-control"
+              errorClassName="contact-us-form-error"
+            />
 
-              {/* Budget */}
-              <Form.Group controlId="budget">
-                <Form.Control
-                  as="select"
-                  name="budget"
-                  className='contact-us-form-control'
-                  value={formData.budget}
-                  onChange={handleInputChange}
-                  required
-                >
-                  <option value="">Select Your Budget*</option>
-                  <option value="500">$2,000-$2,500</option>
-                  <option value="1000">$2,500-$3,000</option>
-                  <option value="1500">$3,000-$3,500</option>
-                  <option value="2000">$3,500-$4,000</option>
-                  <option value="2000">$4,000+</option>
-                </Form.Control>
-              </Form.Group>
 
-              {/* Bedrooms */}
-              <Form.Group controlId="bedrooms">
-                <Form.Label className="contact-us-form-label">What Apartment Are You Interested In?*</Form.Label>
-                <div className="d-flex">
-                  <Form.Check
-                    type="checkbox"
-                    label="Studio"
-                    name="studio"
-                    className='contact-us-form-control'
-                    checked={formData.bedrooms.studio}
-                    onChange={handleCheckboxChange}
-                    inline
-                    required
-                  />
-                  <Form.Check
-                    type="checkbox"
-                    label="1-Bed"
-                    name="oneBed"
-                    className='contact-us-form-control'
-                    checked={formData.bedrooms.oneBed}
-                    onChange={handleCheckboxChange}
-                    inline
-                  />
-                  <Form.Check
-                    type="checkbox"
-                    label="2-Bed"
-                    name="twoBed"
-                    className='contact-us-form-control'
-                    checked={formData.bedrooms.twoBed}
-                    onChange={handleCheckboxChange}
-                    inline
-                  />
-                </div>
-              </Form.Group>
+            {/* Phone */}
+            <TextInput
+              name="phone"
+              placeholder="Phone Number*"
+              value={formData.phone}
+              onChange={handleInputChange}
+              error={formErrors.phone}
+              groupClassName="contact-us-form-group"
+              controlClassName="contact-us-form-control"
+              errorClassName="contact-us-form-error"
+            />
 
-              {/* Pets */}
-              <Form.Group controlId="pets">
-                <Form.Label className="contact-us-form-label">Do You Have Any Pets?</Form.Label>
-                <div className="d-flex">
-                  <Form.Check
-                    type="checkbox"
-                    label="Yes"
-                    name="yes"
-                    className='contact-us-form-control'
-                    checked={formData.pets.yes}
-                    onChange={handleCheckboxChange}
-                    inline
-                  />
-                  <Form.Check
-                    type="checkbox"
-                    label="No"
-                    name="no"
-                    className='contact-us-form-control'
-                    checked={formData.pets.no}
-                    onChange={handleCheckboxChange}
-                    inline
-                  />
-                </div>
-              </Form.Group>
 
-              {/* Parking */}
-              <Form.Group controlId="parking">
-                <Form.Label className="contact-us-form-label">Do You Need Parking?</Form.Label>
-                <div className="d-flex">
-                  <Form.Check
-                    type="checkbox"
-                    label="Yes"
-                    name="yes"
-                    className='contact-us-form-control'
-                    checked={formData.parking.yes}
-                    onChange={handleCheckboxChange}
-                    inline
-                  />
-                  <Form.Check
-                    type="checkbox"
-                    label="No"
-                    name="no"
-                    className='contact-us-form-control'
-                    checked={formData.parking.no}
-                    onChange={handleCheckboxChange}
-                    inline
-                  />
-                </div>
-              </Form.Group>
+            {/* Budget */}
+            <SelectInput
+              name="budget"
+              options={budgetOptions}
+              value={formData.budget}
+              onChange={handleInputChange}
+              error={formErrors.budget}
+              groupClassName="contact-us-form-group"
+              controlClassName="contact-us-form-control"
+              errorClassName="contact-us-form-error"
+            />
 
-              {/* Lease Start Date */}
-              <Form.Group controlId="leaseStartDate">
-                <Form.Label className="contact-us-form-label">Preferred Move-In Date*</Form.Label>
-                <Form.Control
-                  type="date"
-                  name="leaseStartDate"
-                  className='contact-us-form-control'
-                  value={formData.leaseStartDate}
-                  onChange={handleInputChange}
-                  required
-                />
-              </Form.Group>
+            {/* Bedrooms */}
+            <CheckboxGroup
+              label="What Apartment Are You Interested In?*"
+              name="bedrooms"
+              options={[
+                { name: 'studio', label: 'Studio' },
+                { name: 'oneBed', label: '1-Bed' },
+                { name: 'twoBed', label: '2-Bed' },
+              ]}
+              values={formData.bedrooms}
+              onChange={handleCheckboxChange}
+              error={formErrors.bedrooms}
+              groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
+              controlClassName="contact-us-form-control"
+              errorClassName="contact-us-form-error"
+            />
 
-              {/* How did you hear about us? */}
-              <Form.Group controlId="attribution">
-                <Form.Control
-                  as="select"
-                  name="attribution"
-                  className='contact-us-form-control'
-                  value={formData.attribution}
-                  onChange={handleInputChange}
-                  required
-                >
-                  <option value="">How Did You Hear About Us?</option>
-                  <option value="REFERRAL">REFERRAL</option>
-                  <option value="SOCIAL MEDIA">SOCIAL MEDIA</option>
-                  <option value="REALTOR">REALTOR</option>
-                  <option value="OTHER">OTHER</option>
-                </Form.Control>
-              </Form.Group>
+            {/* Pets */}
+            <CheckboxGroup
+              label="Do You Have Any Pets?"
+              name="pets"
+              options={[
+                { name: 'yes', label: 'Yes' },
+                { name: 'no', label: 'No' },
+              ]}
+              values={formData.pets}
+              onChange={handleCheckboxChange}
+              groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
+              controlClassName="contact-us-form-control"
+            />
 
-              {/* Submit Button */}
-              <Button variant="primary" type="submit" className="contact-us-submit-button">
-                Submit
-              </Button>
-            </Form>
-        
+
+            {/* Parking */}
+            <CheckboxGroup
+              label="Do You Need Parking?"
+              name="parking"
+              options={[
+                { name: 'yes', label: 'Yes' },
+                { name: 'no', label: 'No' },
+              ]}
+              values={formData.parking}
+              onChange={handleCheckboxChange}
+              groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
+              controlClassName="contact-us-form-control"
+            />
+
+            {/* Lease Start Date */}
+            <DateInput
+              name="leaseStartDate"
+              label="Preferred Move-In Date*"
+              value={formData.leaseStartDate}
+              onChange={handleInputChange}
+              error={formErrors.leaseStartDate}
+              groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
+              controlClassName="contact-us-form-control"
+              errorClassName="contact-us-form-error"
+            />
+
+
+            {/* How did you hear about us? */}
+            <SelectInput
+              name="attribution"
+              options={attributionOptions}
+              value={formData.attribution}
+              onChange={handleInputChange}
+              groupClassName="contact-us-form-group"
+              controlClassName="contact-us-form-control"
+            />
+
+            {/* Submit Button */}
+            <Button variant="primary" type="submit" className="contact-us-submit-button">Submit</Button>
+          </Form>
+
         </Col>
         <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-right">
           <div className="contact-us-map" ref={mapContainer} style={{ width: '100%', height: '100%' }}></div>

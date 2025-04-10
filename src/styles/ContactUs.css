@@ -15,12 +15,22 @@
     color: white;
 }
 
+.contact-us-form-group {
+  margin-bottom: 50px;
+}
+
+.contact-us-form-error {
+  color: red;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
 .contact-us-form-control {
     border: none !important;
     border-bottom: 2px solid #241C23 !important;
     border-radius: 0;
     margin-top: 5px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     font-size: 1em;
 }
 
