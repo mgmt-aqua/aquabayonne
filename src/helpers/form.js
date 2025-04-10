@@ -63,7 +63,7 @@ export const defaultFormOptions = {
 }
 
 export const budgetOptions = [
-  { label: 'Select Your Budget*', value: 'default', isDisabled: true },
+  { label: 'Select Your Budget*', value: 'default' },
   { label: '$2,000–$2,500', value: '500' },
   { label: '$2,500–$3,000', value: '1000' },
   { label: '$3,000–$3,500', value: '1500' },
