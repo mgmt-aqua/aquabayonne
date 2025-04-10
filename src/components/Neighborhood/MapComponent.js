@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useContext } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Col, Row } from 'react-bootstrap'
 import { Accordion } from 'react-bootstrap';
 
@@ -190,7 +190,7 @@ export default function MapComponent() {
         });
 
         // Set the tile layer (you can choose a tile provider)
-        L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
+        L.tileLayer.provider('CartoDB.DarkMatter').addTo(map);
 
          // Create a custom icon (your logo)
          const logoIcon = L.icon({

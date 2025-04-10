@@ -14,7 +14,7 @@ export default function useLeafletMap(mapContainerRef) {
             scrollWheelZoom: false,
         });
 
-        L.tileLayer.provider('Stadia.AlidadeSmoothDark').addTo(map);
+        L.tileLayer.provider('CartoDB.DarkMatter').addTo(map);
 
         const logoIcon = L.icon({
             iconUrl: aquaLogo,
