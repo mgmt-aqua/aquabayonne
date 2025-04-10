@@ -86,7 +86,7 @@ export default function ContactUsForm() {
             name="contact" // Netlify form name
             method="POST"
             data-netlify="true" // Netlify form handling
-            onSubmit={handleSubmit}
+            // onSubmit={handleSubmit}
           >
             {/* Hidden input field for form name */}
             <input type="hidden" name="form-name" value="contact" />
