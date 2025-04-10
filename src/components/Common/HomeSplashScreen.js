@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import img from "../../img/aqua-logo-white.png";
 
-const SplashScreen = ({ duration = 1500, children }) => {
+const HomeSplashScreen = ({ duration = 1500, children }) => {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
@@ -37,7 +37,7 @@ const SplashScreen = ({ duration = 1500, children }) => {
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
           exit={{ y: "-100%" }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
           style={{
             position: "fixed",
             top: 0,
@@ -58,7 +58,7 @@ const SplashScreen = ({ duration = 1500, children }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0}}
-            transition={{ duration: 2, delay: .8 }}
+            transition={{ duration: 2, delay: .5 }}
             style={{
               height: "50px",
               display: "block",
@@ -104,4 +104,4 @@ const SplashScreen = ({ duration = 1500, children }) => {
   );
 };
 
-export default SplashScreen;
+export default HomeSplashScreen;
