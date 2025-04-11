@@ -23,7 +23,7 @@
   top: 35px;
   left: 0;
   right: 0;
-  background-color: #AA9D80;
+  background-color: #241C23;
   color: white;
   z-index: 1000;
   font-family: Arial, sans-serif;
@@ -53,8 +53,8 @@
 .book-tour-btn {
   font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
   padding: 0.4rem 1.3rem;
-  background-color: #3A4F54;
-  border: 1px solid white;
+  background-color: #649FB9;
+  border: none;
   color: white;
   font-size: 0.75rem;
   cursor: pointer;
@@ -73,8 +73,8 @@
 .contact-us-btn {
   font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
   padding: 0.4rem 1.3rem;
-  background-color: #3A4F54;
-  border: 1px solid white;
+  background-color: #649FB9;
+  border: none;
   color: white;
   font-size: 0.75rem;
   cursor: pointer;
@@ -154,13 +154,13 @@
 .navbar-links:hover,
 .navbar-links:active,
 .navbar-links:focus {
-  border-bottom: 3px solid #3A4F54;
+  border-bottom: 3px solid #649FB9;
   text-transform: uppercase;
   color: white !important;
 }
 
 .navbar-links.active {
-  border-bottom: 3px solid #3A4F54;
+  border-bottom: 3px solid #649FB9;
   text-transform: uppercase;
   color: white !important;
 }
