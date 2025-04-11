@@ -52,8 +52,6 @@ export default function Footer({ id }) {
                             <p>Mon - Sat: 10 am - 6 pm</p>
                             <p>Sun: 10 am - 5:30 pm</p>
                         </div>
-
-
                     </Col>
 
                     {/* Third Column with Social Icons */}
