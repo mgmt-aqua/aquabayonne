@@ -1,13 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { Navbar, Nav, Container, Button, Offcanvas } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom';
-import img from "../../img/aqua-logo-white.png";
-import './Navbar.css';
-import { AnimatePresence, motion } from 'framer-motion';
-import { MdEmail } from "react-icons/md";
-import { MdPhone } from "react-icons/md";
+import React, { useEffect, useState } from "react";
 
-function ResponsiveCenteredNavbar() {
+// Routing
+import { Link, useLocation } from "react-router-dom";
+
+// Bootstrap Components
+import { Navbar, Nav, Container, Button, Offcanvas } from "react-bootstrap";
+
+// Icons
+import { MdEmail, MdPhone } from "react-icons/md";
+import { AnimatePresence, motion } from "framer-motion";
+
+// Assets
+import img from "../../img/aqua-logo-white.png";
+
+// Styles
+import "./Navbar.css";
+
+export default function ResponsiveCenteredNavbar() {
   const [show, setShow] = useState(false);
   const [activeLink, setActiveLink] = useState('');
   const [navbarStyle, setNavbarStyle] = useState('transparent');
@@ -82,7 +91,7 @@ function ResponsiveCenteredNavbar() {
 
               {/* Buttons on the right */}
               <Nav className="d-none d-xl-flex align-items-center navbar-button-container">
-                <a href="mailto:info@aquabayone.com" className="navbar-email-icon">
+                <a href="mailto:info@aquabayonne.com" className="navbar-email-icon">
                   <MdEmail />
                 </a>
                 <a href="tel:555-555-5555" className="navbar-phone-icon">
@@ -151,5 +160,3 @@ function ResponsiveCenteredNavbar() {
     </AnimatePresence>
   );
 }
-
-export default ResponsiveCenteredNavbar;
