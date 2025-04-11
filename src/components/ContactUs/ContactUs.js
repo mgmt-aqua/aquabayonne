@@ -10,7 +10,18 @@ import FramerSlide from '../Common/FramerSlide';
 import Footer from '../Footer/Footer';
 
 import { mobileStyles, desktopStyles } from '../../configuration/framer-slide-styles';
-import { defaultFormOptions, validateForm, defaultFormErrors, budgetOptions, attributionOptions, bedroomOptions, petOptions, parkingOptions } from '../../helpers/form';
+import { 
+  defaultFormOptions, 
+  validateForm, 
+  defaultFormErrors, 
+  budgetOptions,
+  attributionOptions, 
+  bedroomOptions, 
+  petOptions,
+  parkingOptions,
+  formSuccessMessage,
+  formFailureMessage 
+} from '../../helpers/form';
 
 import '../../styles/ContactUs.css';
 
@@ -21,6 +32,9 @@ export default function ContactUsForm() {
   const [formData, setFormData] = useState(defaultFormOptions);
   const [successMessage, setSuccessMessage] = useState("");
 
+  /* Fucntion that is used to handle any input form changes.
+     If we detect any changes to a form input that has an error, we remove that error
+  */
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     if (formErrors[name]) {
@@ -40,12 +54,14 @@ export default function ContactUsForm() {
     }));
   };
 
+  // Function used to endcode form data to POST for Netlify forms
   const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
   }
 
+  // Function to handle the submit of the form
   const handleSubmit = (e) => {
     e.preventDefault();
     const { isValid, newErrors } = validateForm(formData);
@@ -55,8 +71,8 @@ export default function ContactUsForm() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...formData })
       })
-        .then(() => setSuccessMessage("Thank you for your submission! Our team will review it and get back to you within 24-48 hours."))
-        .catch(() => setFormErrors({...formErrors, submit: 'There was a problem with your request. Please try again at a later time.'}));
+        .then(() => setSuccessMessage(formSuccessMessage))
+        .catch(() => setFormErrors({...formErrors, submit: formFailureMessage }));
       setFormData(defaultFormOptions);
       setFormErrors(defaultFormErrors);
     } else {

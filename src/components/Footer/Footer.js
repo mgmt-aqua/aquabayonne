@@ -1,11 +1,23 @@
 import React from "react";
-import { Container, Row, Col } from 'react-bootstrap';
-import { FaFacebook, FaInstagram, FaTwitter, FaTiktok } from 'react-icons/fa'; // React Icons
-import Section from "../Common/Section";
-import "./Footer.css";
-import logo from "../../img/aqua-logo-white.png";
-import equalHousingLogo from '../../img/equal-housing.png';
+
+// React Router
 import { Link } from "react-router-dom";
+
+// Bootstrap Components
+import { Container, Row, Col } from "react-bootstrap";
+
+// Icons
+import { FaFacebook, FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
+
+// Local Components
+import Section from "../Common/Section";
+
+// Assets
+import logo from "../../img/aqua-logo-white.png";
+import equalHousingLogo from "../../img/equal-housing.png";
+
+// Styles
+import "./Footer.css";
 
 export default function Footer({ id }) {
     const content = (
@@ -41,7 +53,7 @@ export default function Footer({ id }) {
                             <p>Sun: 10 am - 5:30 pm</p>
                         </div>
 
-                       
+
                     </Col>
 
                     {/* Third Column with Social Icons */}
@@ -62,9 +74,9 @@ export default function Footer({ id }) {
                         </div>
                     </Col>
                 </Row>
-                 <p className="footer-rights">
-                            Copyright ©2025 Aqua Bayonne. All Rights Reserved. All trademarks are the property of their respective holders. <Link to="/privacy" className="privacy-policy-link">PRIVACY POLICY.</Link>
-                        </p>
+                <p className="footer-rights">
+                    Copyright ©2025 Aqua Bayonne. All Rights Reserved. All trademarks are the property of their respective holders. <Link to="/privacy" className="privacy-policy-link">PRIVACY POLICY.</Link>
+                </p>
             </Container>
         </footer>
     );

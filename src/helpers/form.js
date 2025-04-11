@@ -86,3 +86,6 @@ export const attributionOptions = [
   { label: 'Realtor', value: 'REALTOR' },
   { label: 'Other', value: 'OTHER' },
 ];
+
+export const formSuccessMessage = "Thank you for your submission! Our team will review it and get back to you within 24-48 hours.";
+export const formFailureMessage = "There was a problem with your request. Please try again at a later time."
