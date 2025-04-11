@@ -55,32 +55,37 @@
 /* Mobile Styles */
 @media (max-width: 1200px) {
     .information-page-title {
-        font-size: 9rem;
+        font-size: 1rem;
     }
 
     .information-page-sub-text {
-        font-size: 2rem;
+        margin-top: 75px;
+        font-size: 1.75rem;
+        width: 50%;
     }
   }
   
   @media (max-width: 992px) {
     .information-page-title {
-        font-size: 6rem;
+        font-size: 1rem;
     }
 
     .information-page-sub-text{
-        margin-top: 125px;
-        font-size: 1.5rem;
+        margin-top: 75px;
+        font-size: 1.75rem;
+        width: 90%;
     }
   }
   
   @media (max-width: 576px) {
     .information-page-title {
-        font-size: 5rem;
+        font-size: 1rem;
     }
 
     .information-page-sub-text{
-        margin-top: 125px;
-        font-size: 1.25rem;
+        margin-top: 75px;
+        font-size: 1.5rem;
+        width: 90%;
+
     }
   }

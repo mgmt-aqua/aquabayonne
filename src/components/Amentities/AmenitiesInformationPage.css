@@ -168,3 +168,16 @@
 .amenities-image-gallery-image {
     border-radius: 0;
 }
+
+/* Mobile Styles */
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 576px) {
+   
+}
