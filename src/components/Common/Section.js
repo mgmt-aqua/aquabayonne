@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';  // useNavigate for React Router v6
-import "../../styles/Section.css";
+import "./Section.css";
 
 const Section = ({ id, children }) => {
   const navigate = useNavigate();

@@ -10,8 +10,7 @@ import Footer from "./Footer/Footer";
 import { homePageSections } from "../configuration/home";
 
 // Styles
-import "../styles/App.css";
-import "../styles/Home.css"
+import "./App.css";
 
 export default function App() {
 

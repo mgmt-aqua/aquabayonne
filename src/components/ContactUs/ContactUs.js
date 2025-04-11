@@ -23,7 +23,7 @@ import {
   formFailureMessage 
 } from '../../helpers/form';
 
-import '../../styles/ContactUs.css';
+import './ContactUs.css';
 
 export default function ContactUsForm() {
   const mapContainer = useRef(null);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Navbar, Nav, Container, Button, Offcanvas } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import img from "../../img/aqua-logo-white.png";
-import '../../styles/Navbar.css';
+import './Navbar.css';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MdEmail } from "react-icons/md";
 import { MdPhone } from "react-icons/md";
