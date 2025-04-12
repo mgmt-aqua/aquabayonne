@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Col, Row } from 'react-bootstrap'
 import { Accordion } from 'react-bootstrap';
+import useWindowSize from '../../hooks/useWindowSize'
 
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css'; // For Leaflet CSS styles
@@ -21,6 +22,8 @@ export default function MapComponent() {
     const mapContainer = useRef(null);
     const [activeKey, setActiveKey] = useState(null);
     const [map, setMap] = useState(null);
+    const { windowSize } = useWindowSize();
+    const mapWidth = windowSize === "mobile" ? '100%' : '75%'
 
     const mapData = [{
         accordionDetails: {
@@ -260,7 +263,7 @@ export default function MapComponent() {
     return (
         <div className="map-component-container">
             <Row className="map-component-row">
-                <Col xs={12} sm={12} md={6} lg={8} xl={9} className="map-component-map" ref={mapContainer} style={{ width: '75%', height: '100vh' }}></Col>
+                <Col xs={12} sm={12} md={6} lg={8} xl={9} className="map-component-map" ref={mapContainer} style={{ width: {mapWidth}, height: '100vh' }}></Col>
                 <Col xs={12} sm={12} md={6} lg={4} xl={3} className="map-component-legend">
                     <Accordion activeKey={activeKey} onSelect={handleAccordionSelect}>
                         {mapData.map((item) => {
