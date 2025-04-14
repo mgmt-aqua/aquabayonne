@@ -1,23 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import useWindowSize from '../../hooks/useWindowSize';
 
 const FullPageSlideAnimation = (props) => {
   const controls = useAnimation();
   const containerRef = useRef(null);
   const mounted = useRef(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+  const { windowWidth } = useWindowSize();
   const size = windowWidth < 600 ? "small" : windowWidth < 1200 ? "medium" : "large";
 
   useEffect(() => {

@@ -17,7 +17,6 @@ L.Icon.Default.mergeOptions({
     shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
 });
 
-
 export default function MapComponent() {
     const mapContainer = useRef(null);
     const [activeKey, setActiveKey] = useState(null);
