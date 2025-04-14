@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col, Image } from 'react-bootstrap'
 import useWindowSize from '../../hooks/useWindowSize'
 import './InformationGrid.css'
+import FramerTextReveal from './Framer/FramerTextReveal';
 
 export default function InformationGrid({ data }) {
     const { windowSize } = useWindowSize();
@@ -13,9 +14,9 @@ export default function InformationGrid({ data }) {
                     if (index % 2 === 0 && windowSize === 'desktop') {
                         return (<><Col key={information.title + 1} xs={12} sm={12} md={12} lg={6} className="information-grid-text-container">
                             <div className="information-grid-text">
-                                <p className='information-grid-title-text'>{information.title}</p>
+                                <FramerTextReveal><p className='information-grid-title-text'>{information.title}</p></FramerTextReveal>
                                 {information.content.map((content, index) => {
-                                    return <p key={index}>{content}</p>
+                                    return <FramerTextReveal delay={.35}><p key={index}>{content}</p></FramerTextReveal>
                                 })}
                             </div>
                         </Col>
@@ -28,9 +29,9 @@ export default function InformationGrid({ data }) {
                     </Col>
                         <Col key={information.title + 4} xs={12} sm={12} md={12} lg={6} className="information-grid-text-container">
                             <div className="information-grid-text">
-                                <p className='information-grid-title-text'>{information.title}</p>
+                            <FramerTextReveal><p className='information-grid-title-text'>{information.title}</p></FramerTextReveal>
                                 {information.content.map((content, index) => {
-                                    return <p key={index}>{content}</p>
+                                    return <FramerTextReveal delay={.35}><p key={index}>{content}</p></FramerTextReveal>
                                 })}
                             </div>
                         </Col></>)

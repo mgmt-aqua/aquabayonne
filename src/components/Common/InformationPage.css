@@ -20,12 +20,15 @@
     background-color: rgba(36, 28, 35, .5);
 }
 
-.information-page-title {
-    width: 100%;
+.information-page-text-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.information-page-title {
+    width: 100%;
     color: white;
     text-align: center;
     font-size: 1rem;
@@ -34,34 +37,28 @@
     text-underline-offset: 10px;
     text-transform: uppercase;
     font-weight: 700;
+    margin-bottom: 25px;
 }
 
 .information-page-sub-text {
-    width: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
     color: white;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: 700;
-    margin-top: 75px;
-    
 }
 
 /* Mobile Styles */
 @media (max-width: 1200px) {
     .information-page-title {
         font-size: 1rem;
+        margin-bottom: 25px;
     }
 
     .information-page-sub-text {
-        margin-top: 75px;
         font-size: 1.75rem;
-        width: 50%;
     }
   }
   
@@ -71,21 +68,16 @@
     }
 
     .information-page-sub-text{
-        margin-top: 75px;
-        font-size: 1.75rem;
-        width: 90%;
+        font-size: 2.5rem;
     }
   }
   
   @media (max-width: 576px) {
     .information-page-title {
-        font-size: 1rem;
+        font-size: .75rem;
     }
 
     .information-page-sub-text{
-        margin-top: 75px;
-        font-size: 1.5rem;
-        width: 90%;
-
+        font-size: 2rem;
     }
   }
