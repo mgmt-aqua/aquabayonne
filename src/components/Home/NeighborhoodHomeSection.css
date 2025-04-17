@@ -61,6 +61,7 @@
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 0.75rem;
+    font-style: italic;
 }
 
 .neighborhood-home-section-description {
@@ -71,7 +72,7 @@
 .neighborhood-home-section-button {
     margin-top: 5px;
     border-radius: 25px;
-    background-color: black;
+    background-color: #4A6670;
     padding: 15px 30px;
     border: none;
     font-weight: 700;
@@ -79,8 +80,8 @@
 
 .neighborhood-home-section-button:hover {
     background-color: transparent;
-    border: 1px solid black;
-    color: black;
+    border: 1px solid #4A6670;
+    color: #4A6670;
 }
 
 /* RESPONSIVE STYLING */

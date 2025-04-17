@@ -25,8 +25,8 @@ export default function FramerTextReveal({ delay, children }) {
                 animate={textControls}
                 transition={{ 
                     type: "spring",
-                    stiffness: 150,
-                    damping: 15,
+                    stiffness: 250,
+                    damping: 50,
                     duration: .5, 
                     delay: delay + .25 || .25 }}
             >

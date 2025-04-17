@@ -41,7 +41,7 @@ export default function ResidencesHomeSection() {
                         }}
                         speed={1000}
                         spaceBetween={25}
-                        slidesPerView={1.2}
+                        slidesPerView={1.1}
                         centeredSlides={false}
                         loop={true}
                         grabCursor={true}
