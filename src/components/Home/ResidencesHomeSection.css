@@ -1,0 +1,166 @@
+#residences {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    padding-top: 100px; /* Space for the navbar */
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.diagonal-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150%;
+    height: 120%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: visible;
+  }
+
+.residences-home-section-row {
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.residences-text-column,
+.residences-home-section-image-column {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.residences-home-section-text-container {
+    padding: 50px;
+    max-width: 700px;
+    text-align: left; /* Default text alignment */
+}
+
+.residences-home-section-main-text {
+    margin-top: 15px;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #C3B59F;
+}
+
+.residences-home-section-main-text span {
+    color: #aaa;
+}
+
+.residences-pre-text {
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+}
+
+.residences-home-section-description {
+    font-size: 1.15rem;
+    margin-top: 15px;
+}
+
+.residences-home-section-button {
+    margin-top: 5px;
+    border-radius: 25px;
+    background-color: black;
+    padding: 15px 30px;
+    border: none;
+    font-weight: 700;
+}
+
+.residences-home-section-button:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
+
+.residence-slide {
+    height: 75vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Vertically center image */
+}
+
+.residence-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* RESPONSIVE STYLING */
+@media (max-width: 991px) {
+    .residences-home-section-text-container {
+        padding: 30px;
+    }
+
+    .residences-home-section-main-text {
+        font-size: 2.5rem;
+    }
+
+    .residences-home-section-description {
+        font-size: 1rem;
+    }
+
+    .residence-slide {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .residences-home-section-row {
+        flex-direction: column;
+    }
+
+    .residences-text-column,
+    .residences-home-section-image-column {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .residences-home-section-main-text {
+        font-size: 2rem;
+    }
+
+    .residences-pre-text {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    .residences-home-section-description {
+        font-size: 0.95rem;
+    }
+
+    .residence-slide {
+        height: 35vh;
+    }
+
+    .swiper {
+        padding-left: 1rem !important; /* Less padding for mobile */
+    }
+
+    /* Add a margin top to offset the navbar on mobile */
+    #residences {
+        padding-top: 125px; /* Adjust this value as needed */
+    }
+
+    /* Center text on mobile */
+    .residences-home-section-text-container {
+        text-align: center; /* Center text on mobile */
+    }
+
+    .residences-home-section-main-text {
+        font-size: 3rem;
+        margin-top: 0;
+    }
+
+    .residences-home-section-description {
+        font-size: 0.95rem;
+        margin-top: 10px;
+    }
+}

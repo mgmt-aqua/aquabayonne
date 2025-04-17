@@ -39,7 +39,7 @@ export default function Home() {
               className="home-overlay-text"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 3, delay: 1.5 }}
+              transition={{ duration: 1, delay: 1.5 }}
             >
               <h1 className="home-text">AQUA is</h1>
               <div id="typewriter"></div>

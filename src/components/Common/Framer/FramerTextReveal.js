@@ -18,7 +18,7 @@ export default function FramerTextReveal({ delay, children }) {
             <motion.div ref={ref}
                 style={{width: "100%"}}
                 variants={{
-                    hidden: { opacity: 0, y: 75 },
+                    hidden: { opacity: 0, y: 100 },
                     visible: { opacity: 1, y: 0 }
                 }}
                 initial="hidden"
@@ -28,7 +28,7 @@ export default function FramerTextReveal({ delay, children }) {
                     stiffness: 150,
                     damping: 15,
                     duration: .5, 
-                    delay: delay || .25 }}
+                    delay: delay + .25 || .25 }}
             >
                 {children}
             </motion.div>

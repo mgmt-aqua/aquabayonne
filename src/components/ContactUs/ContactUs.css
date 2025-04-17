@@ -10,13 +10,19 @@
     color: #241C23;
 }
 
+.contact-us-sub-text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
 .contanct-us-text-content-container{
     background-color: #241C23 !important;
     color: white;
 }
 
 .contact-us-form-group {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .contact-us-form-error {
@@ -65,7 +71,6 @@
   font-size: 4rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 25px;
 }
 
 .contact-us-address {

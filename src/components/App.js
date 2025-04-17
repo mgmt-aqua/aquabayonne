@@ -11,6 +11,10 @@ import { homePageSections } from "../configuration/home";
 
 // Styles
 import "./App.css";
+import ResidencesHomeSection from "./Home/ResidencesHomeSection";
+import AmenitiesHomeSection from "./Home/AmenitiesHomeSection";
+import BuildingHomeSection from "./Home/BuildingHomeSection";
+import NeighborhoodHomeSection from "./Home/NeighborhoodHomeSection";
 
 export default function App() {
 
@@ -18,14 +22,18 @@ export default function App() {
       <HomeSplashScreen duration={4000}>
         <div className="scroll-container">
           <Home />
-          {homePageSections.map((section) => {
+          <BuildingHomeSection />
+          <AmenitiesHomeSection />
+          <ResidencesHomeSection />
+          <NeighborhoodHomeSection />
+          {/* {homePageSections.map((section) => {
             return <HomeSection 
               key={section.id}
               id={section.id} 
               containerClassName={section.containerClassName} 
               text={section.text} 
               link={section.link}/>
-          })}
+          })} */}
           <Footer id="footer"/>  
         </div>
       </HomeSplashScreen>

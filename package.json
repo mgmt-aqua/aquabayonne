@@ -16,6 +16,7 @@
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "^5.0.1",
     "scroll-snap": "^5.0.2",
+    "swiper": "^11.2.6",
     "typewriter-effect": "^2.21.0"
   },
   "scripts": {

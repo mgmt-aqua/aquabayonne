@@ -1,0 +1,135 @@
+#neighborhood {
+    height: 100vh;
+    width: 100vw;
+    padding-top: 100px; /* Space for the navbar */
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.neighborhood-home-section-row {
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.neighborhood-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 2 / 1;
+  }
+
+  
+  .neighborhood-image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.neighborhood-text-column,
+.neighborhood-home-section-image-column {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neighborhood-home-section-text-container {
+    padding: 50px;
+    max-width: 700px;
+    text-align: left;
+}
+
+.neighborhood-home-section-main-text {
+    margin-top: 15px;
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4A6670;
+}
+
+.neighborhood-home-section-main-text span {
+    color: #aaa;
+}
+
+.neighborhood-pre-text {
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+}
+
+.neighborhood-home-section-description {
+    font-size: 1.15rem;
+    margin-top: 15px;
+}
+
+.neighborhood-home-section-button {
+    margin-top: 5px;
+    border-radius: 25px;
+    background-color: black;
+    padding: 15px 30px;
+    border: none;
+    font-weight: 700;
+}
+
+.neighborhood-home-section-button:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+}
+
+/* RESPONSIVE STYLING */
+@media (max-width: 991px) {
+    .neighborhood-home-section-text-container {
+        padding: 30px;
+    }
+
+    .neighborhood-home-section-main-text {
+        font-size: 2.5rem;
+    }
+
+    .neighborhood-home-section-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .neighborhood-home-section-row {
+        flex-direction: column;
+    }
+
+    .neighborhood-text-column,
+    .neighborhood-home-section-image-column {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .neighborhood-home-section-main-text {
+        font-size: 3rem;
+        margin-top: 0;
+    }
+
+    .neighborhood-pre-text {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    .neighborhood-home-section-description {
+        font-size: 0.95rem;
+        margin-top: 10px;
+    }
+
+    .neighborhood-home-section-text-container {
+        text-align: center;
+    }
+
+    #neighborhood {
+        padding-top: 125px;
+    }
+    
+}

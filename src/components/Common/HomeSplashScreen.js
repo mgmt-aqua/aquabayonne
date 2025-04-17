@@ -44,7 +44,7 @@ const HomeSplashScreen = ({ duration = 1500, children }) => {
             left: 0,
             width: "100vw",
             height: "100vh",
-            backgroundColor: "#21363B", 
+            backgroundColor: "#4A6670", 
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -78,7 +78,7 @@ const HomeSplashScreen = ({ duration = 1500, children }) => {
             <motion.div
               style={{
                 height: "100%",
-                backgroundColor: "#887A5C",  // Custom color for the progress
+                backgroundColor: "#649FB9",
                 borderRadius: "5px",
               }}
               initial={{ width: `0%`, x: "0%" }}
