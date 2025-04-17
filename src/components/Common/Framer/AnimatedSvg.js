@@ -24,14 +24,14 @@ export default function AnimatedSvg({ color = "#abb8c3", left, right }) {
         },
         right: {
             initial: {
-                x: '10%',
-                y: '0%',
+                x: '-15%',
+                y: '15%',
                 scale: '1'
             },
             animate: {
-                x: '-15%',
+                x: '10%',
                 y: '10%',
-                scale: '1.3'
+                scale: '1.2'
             },
             viewBox: "0 0 870 430",
             svgPaths: "M549 600L560.2 590C571.3 580 593.7 560 593.7 540C593.7 520 571.3 500 570 480C568.7 460 588.3 440 604.8 420C621.3 400 634.7 380 643.5 360C652.3 340 656.7 320 633.2 300C609.7 280 558.3 260 549.5 240C540.7 220 574.3 200 575.5 180C576.7 160 545.3 140 541 120C536.7 100 559.3 80 564.7 60C570 40 558 20 552 10L546 0L900 0L900 10C900 20 900 40 900 60C900 80 900 100 900 120C900 140 900 160 900 180C900 200 900 220 900 240C900 260 900 280 900 300C900 320 900 340 900 360C900 380 900 400 900 420C900 440 900 460 900 480C900 500 900 520 900 540C900 560 900 580 900 590L900 600Z"
@@ -54,7 +54,7 @@ export default function AnimatedSvg({ color = "#abb8c3", left, right }) {
                         y: (left && variants.left.animate.y) || (right && variants.right.animate.y),
                         scale: (left && variants.left.animate.scale) || (right && variants.right.animate.scale),
                         transition: {
-                            duration: 1.5,
+                            duration: 2,
                             ease: 'easeInOut',
                         }
                     }

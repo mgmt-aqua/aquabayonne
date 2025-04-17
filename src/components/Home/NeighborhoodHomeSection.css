@@ -52,7 +52,8 @@
 }
 
 .neighborhood-home-section-main-text span {
-    color: #aaa;
+    color: transparent;
+    -webkit-text-stroke: 2px #888;
 }
 
 .neighborhood-pre-text {
