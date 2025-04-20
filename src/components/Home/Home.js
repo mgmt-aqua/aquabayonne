@@ -12,15 +12,17 @@ import video from '../../assets/neighborhood_1.mp4'
 export default function Home() {
 
   useEffect(() => {
-    var app = document.getElementById('typewriter');
+    var typewriter = document.getElementById('typewriter');
 
-    new Typewriter(app, {
-      strings: ['serenity.', 'luxury.', 'elegance.', 'comfort.', 'home.'],
-      pauseFor: 2500,
-      loop: true,
-      autoStart: true,
-      delay: 'natural'
-    });
+    if(typewriter) {
+      new Typewriter(typewriter, {
+        strings: ['serenity.', 'luxury.', 'elegance.', 'comfort.', 'home.'],
+        pauseFor: 2500,
+        loop: true,
+        autoStart: true,
+        delay: 'natural'
+      });
+    }
   }, [])
 
   return (
@@ -29,7 +31,7 @@ export default function Home() {
         <AnimatePresence>
           <motion.div className="home-video-container">
             <div className="home-video-wrapper">
-              <video className="home-video" autoPlay loop muted>
+              <video className="home-video" autoPlay loop muted playsInline>
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -43,10 +45,10 @@ export default function Home() {
             >
               <h1 className="home-text">AQUA is</h1>
               <div id="typewriter"></div>
-              <Link as={Link} to="/inquire" className="book-tour-link" >
+              <Link to="/inquire" className="book-tour-link" >
                 <Button className="book-tour-home-btn">Book A Tour</Button>
               </Link>
-              <Link as={Link} to="/contact-us" className="contact-us-link">
+              <Link to="/contact-us" className="contact-us-link">
                 <Button className="contact-us-home-btn">Contact Us</Button>
               </Link>
             </motion.div>
