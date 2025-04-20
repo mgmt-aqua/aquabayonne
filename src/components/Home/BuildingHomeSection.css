@@ -52,7 +52,7 @@
     font-size: 6rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: #48233C;
+    color: #C3B59F;
 }
 
 .building-home-section-main-text span {
@@ -72,12 +72,13 @@
 .building-home-section-description {
     font-size: 1.15rem;
     margin-top: 15px;
+    font-weight: 200;
 }
 
 .building-home-section-button {
     margin-top: 5px;
     border-radius: 25px;
-    background-color: #48233C;
+    background-color: #C3B59F;
     padding: 15px 30px;
     border: none;
     font-weight: 700;
@@ -85,8 +86,8 @@
 
 .building-home-section-button:hover {
     background-color: transparent;
-    border: 1px solid #48233C;
-    color: #48233C;
+    border: 1px solid #C3B59F;
+    color: #C3B59F;
 }
 
 /* RESPONSIVE STYLING */

@@ -53,8 +53,8 @@
 .book-tour-btn {
   font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
   padding: 0.4rem 1.3rem;
-  background-color: #A0C1D1;
-  border: none;
+  background-color: transparent;
+  border: 1px solid white;
   color: white;
   font-size: 0.75rem;
   cursor: pointer;
@@ -65,16 +65,16 @@
 }
 
 .book-tour-btn:hover {
-  background-color: transparent;
-  color: white;
+  background-color: white;
+  color: #4A6670;
   border: 1px solid white;
 }
 
 .contact-us-btn {
   font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
   padding: 0.4rem 1.3rem;
-  background-color: #A0C1D1;
-  border: none;
+  background-color: transparent;
+  border: 1px solid white;
   color: white;
   font-size: 0.75rem;
   cursor: pointer;
@@ -86,8 +86,8 @@
 }
 
 .contact-us-btn:hover {
-  background-color: transparent;
-  color: white;
+  background-color: white;
+  color: #4A6670;
   border: 1px solid white;
 }
 
