@@ -12,6 +12,7 @@ import './BuildingInformationPage.css'
 
 // Image imports
 import image3 from '../../img/our_building_3.jpg';
+import lobbyImage from '../../img/building/lobby_1.jpg'
 
 import buildingGif from '../../img/building.gif'
 
@@ -65,7 +66,7 @@ export default function BuildingInformationPage() {
     const buildingInformationData = [{
         title: "Our Story",
         content: ["Nestled near the picturesque shores of the Hudson River in Bayonne, NJ, AQUA offers an unparalleled living experience that redefines luxury. AQUA is thoughtfully designed to provide residents with a harmonious blend of comfort, elegance, and modernity.", "Our apartment units range from comfortable studios to expansive two-bedroom layouts, our units feature large windows that boast breathtaking views of the Hudson River, the iconic New York City skyline, and the beautiful Bayonne golf course."],
-        image: image3,
+        image: lobbyImage,
         imageAlt: 'Our Story Image'
     }, {
         title: "Our Journey",
