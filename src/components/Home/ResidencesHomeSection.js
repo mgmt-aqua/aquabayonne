@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import FramerTextReveal from '../Common/Framer/FramerTextReveal';
 import AnimatedWaveSvg from '../Common/Framer/AnimatedWaveSvg';
 
-import livingRoomImage from '../../img/residences/Living Room.png'
+import livingRoomImage from '../../img/residences/Living Room 2 Bed.png'
 
 export default function ResidencesHomeSection() {
 

@@ -1,6 +1,6 @@
 .apply-now-hero {
     width: 100vw;
-    background-color: #649FB9;
+    background-color: #A0C1D1;
     text-align: center;
 }
 
@@ -29,12 +29,12 @@
 }
 
 .apply-now-hero-button {
-    width: 15%;
-    background-color: #649FB9;
+    width: 12%;
+    background-color: #A0C1D1;
     color: white;
     text-transform: uppercase;
     border: 1px solid white;
-    border-radius: 0;
+    border-radius: 25px;
     font-size: 1rem;
     font-weight: 700;
     margin: 0 auto;
@@ -43,8 +43,8 @@
 
 .apply-now-hero-button:hover {
     background-color: white;
-    color: #649FB9;
-    border: 1px solid #649FB9;
+    color: #A0C1D1;
+    border: 1px solid #A0C1D1;
 }
 
 /* Mobile Styles */
