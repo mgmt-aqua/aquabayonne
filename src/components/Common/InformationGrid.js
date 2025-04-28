@@ -21,11 +21,11 @@ export default function InformationGrid({ data }) {
                             </div>
                         </Col>
                             <Col key={information.title + 2} xs={12} sm={12} md={6} lg={7} className="information-grid-img-comtainer">
-                                <Image src={information.image} className="information-grid-img" />
+                            <FramerTextReveal><Image src={information.image} className="information-grid-img" /></FramerTextReveal>
                             </Col></>)
                     }
                     return (<><Col key={information.title + 3} xs={12} sm={12} md={6} lg={7} className="information-grid-img-comtainer">
-                        <Image src={information.image} className="information-grid-img" />
+                        <FramerTextReveal><Image src={information.image} className="information-grid-img" /></FramerTextReveal>
                     </Col>
                         <Col key={information.title + 4} xs={12} sm={12} md={12} lg={5} className="information-grid-text-container">
                             <div className="information-grid-text">
