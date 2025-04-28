@@ -51,7 +51,7 @@ export default function AmenitiesHomeSection() {
                             <FramerTextReveal delay={0.45}>
                                 <Link to="/amenities">
                                     <Button className="amenities-home-section-button">
-                                        Explore the Lifestyle
+                                        Explore Our Lifestyle
                                     </Button>
                                 </Link>
                             </FramerTextReveal>

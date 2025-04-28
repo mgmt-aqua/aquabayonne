@@ -52,7 +52,7 @@ export default function NeighborhoodHomeSection() {
                         <FramerTextReveal delay={0.45}>
                             <Link to="/neighborhood">
                                 <Button className="neighborhood-home-section-button">
-                                    Explore the Lifestyle
+                                    Explore Our Neighborhood
                                 </Button>
                             </Link>
                         </FramerTextReveal>
