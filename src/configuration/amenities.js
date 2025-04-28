@@ -3,6 +3,14 @@ import amenitiesGym from "../img/amemities/amenities_gym.png";
 import amenitiesRendering from "../img/amemities/amenities_cover.png";
 import coverImage from "../img/amemities/amenities_club_room.png";
 
+import coworkingSpace from '../img/amemities/Coworking.png'
+import mailRoom from '../img/amemities/Mailroom upscale.png'
+import clubRoom from '../img/amemities/club_room.jpg'
+import clubRoomBar from '../img/amemities/club_room_bar.jpg'
+import roofDeck1 from '../img/amemities/Roofdeck.png'
+import roofDeck2 from '../img/amemities/Roofdeck (1).png'
+import roofDeck3 from '../img/amemities/Roofdeck (2).png'
+
 export const amenitiesList = ["24/7 Concierge Service", "Fitness Center / Gym", "Rooftop Terrace", "Pet-Friendly", "Clubroom"]
 export const amenitiesList2 = ["Outdoor BBQ Grills / Picnic Area", "Wellness Center", "Co-working Space", "On-Site Parking", "EV Charging Stations"]
 export const amenitiesList3 = ["Package Room", "Bike Storage", "Food Hall", "Pedestrian Walkway", "Rentable Event Space"]
@@ -11,13 +19,13 @@ export const allAmenities = [amenitiesList, amenitiesList2, amenitiesList3, amen
 
 export const images = [
     { src: amenitiesClubRoom, alt: 'Image 1' },
-    { src: amenitiesClubRoom, alt: 'Image 2' },
-    { src: amenitiesClubRoom, alt: 'Image 3' },
-    { src: amenitiesGym, alt: 'Image 4' },
-    { src: amenitiesGym, alt: 'Image 5' },
-    { src: amenitiesGym, alt: 'Image 6' },
-    { src: amenitiesRendering, alt: 'Image 7' },
-    { src: amenitiesRendering, alt: 'Image 8' },
+    { src: clubRoom, alt: 'Image 2' },
+    { src: clubRoomBar, alt: 'Image 3' },
+    { src: roofDeck1, alt: 'Roof Deck Full' },
+    { src: roofDeck2, alt: 'Roof Deck Bayonne Bridge' },
+    { src: roofDeck3, alt: 'Roof Deck NYC' },
+    { src: mailRoom, alt: 'Image 7' },
+    { src: coworkingSpace, alt: 'Image 8' },
     { src: amenitiesRendering, alt: 'Image 9' }
 ];
 export const amenitiesHighlightData = [{

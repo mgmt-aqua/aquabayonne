@@ -47,7 +47,7 @@ export default function AmenitiesInformationPage() {
                 {/* Amenities Image Gallery */}
                 <Row className="g-4 amenities-image-gallery-row">
                     {images.map((image, index) => (
-                        <Col xs={12} sm={6} md={4} key={index}>
+                        <Col xs={12} sm={12} md={6} lg={6} xl={4} key={index}>
                             <Card>
                                 <Card.Img variant="top" src={image.src} alt={image.alt} className="amenities-image-gallery-image" />
                             </Card>
