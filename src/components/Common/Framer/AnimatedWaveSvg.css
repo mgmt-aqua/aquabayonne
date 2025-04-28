@@ -1,0 +1,15 @@
+.animated-wave-svg {
+    position: absolute;
+    height: 100vh;
+    z-index: -10;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.animated-wave-svg.left {
+    left: 0;
+}
+
+.animated-wave-svg.right {
+    right: 0;
+}
