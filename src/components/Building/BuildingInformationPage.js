@@ -16,9 +16,12 @@ import lobbyImage from '../../img/building/lobby_1.jpg'
 
 import buildingGif from '../../img/building.gif'
 
-import residencesGridImg from '../../img/residences_cover.jpg'
-import amenitiesGridImg from '../../img/amemities/amenities_gym.jpg'
+import residencesGridImg from '../../img/residences/Livingroom.png'
+import amenitiesGridImg from '../../img/amemities/club_room.jpg'
 import neighborhoodGridImg from '../../img/neighborhood/neighborhood_golf.jpg'
+import foodHallGridImg from '../../img/neighborhood/neighborhood_food_hall.jpg'
+import contactUsGridImg from '../../img/Leasing Office.png'
+import bookTourGridImg from '../../img/Lobby.png'
 import { Link } from 'react-router-dom';
 import InformationGrid from '../Common/InformationGrid';
 
@@ -47,19 +50,19 @@ export default function BuildingInformationPage() {
     {
         title: "Food Hall",
         description: "Savor the Art of Our Kitchen.",
-        img: image3,
+        img: foodHallGridImg,
         link: '/explore'
     },
     {
         title: "Book A Tour",
         description: "See the space in person, schedule now!",
-        img: image3,
+        img: bookTourGridImg,
         link: '/inquire'
     },
     {
         title: "Contact Us",
         description: "We're here to help you anytime.",
-        img: image3,
+        img: contactUsGridImg,
         link: '/contact'
     }]
 
