@@ -1,13 +1,5 @@
 .contact-us-column {
-    width: 40vw;
-}
-
-.contact-us-main-text {
-    margin-top: 125px;
-    font-size: 6rem;
-    text-transform: uppercase;
-    font-weight: 200;
-    color: #241C23;
+  width: 40vw;
 }
 
 .contact-us-sub-text {
@@ -16,9 +8,9 @@
   margin-bottom: 25px;
 }
 
-.contanct-us-text-content-container{
-    background-color: #241C23 !important;
-    color: white;
+.contanct-us-text-content-container {
+  background-color: #241C23 !important;
+  color: white;
 }
 
 .contact-us-form-group {
@@ -32,30 +24,31 @@
 }
 
 .contact-us-submit-button {
-    width: 100%;
-    background-color: #241C23;
-    color: white;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    border: 1px solid white;
-    border-radius: 0;
+  width: 100%;
+  background-color: #C3B59F;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  border: 1px solid white;
+  border-radius: 0;
 }
 
 .contact-us-submit-button:hover {
-  background-color: #649FB9;
-  color: white;
-  border: 1px solid white;
+  background-color: white;
+  color: #C3B59F;
+  border: 1px solid #C3B59F;
 }
 
 .contact-us-form-label {
-    font-size: 1em;
-    font-weight: 700;
+  font-size: 1em;
+  font-weight: 700;
 }
 
 .form-check-input {
-  text-decoration: none;;
+  text-decoration: none;
+  ;
 }
 
 .contact-us-col {
@@ -68,9 +61,11 @@
 }
 
 .contact-us-title {
-  font-size: 4rem;
+  font-size: 5rem;
+  color: #C3B59F;
   font-weight: 700;
   text-transform: uppercase;
+  border-bottom: 3px solid #C3B59F;
 }
 
 .contact-us-address {
@@ -79,7 +74,7 @@
   margin-bottom: 50px;
 }
 
-.contact-us-img{
+.contact-us-img {
   width: 100%;
   object-fit: cover;
 }
@@ -106,32 +101,45 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 1200px) {
-    .contact-us-main-text {
-      font-size: 6rem; /* Adjust size for medium screens */
-    }
-    .contact-us-column {
-        width: 50vw;
-    }
-    
+@media (max-width: 1400px) {
+  .contact-us-title {
+    font-size: 4rem;
   }
-  
-  @media (max-width: 992px) {
-    .contact-us-main-text {
-      font-size: 4rem; /* Adjust size for smaller screens */
-    }
-    .contact-us-column {
-        width: 60vw;
-    }
-    
+
+  .contact-us-column {
+    width: 50vw;
   }
-  
-  @media (max-width: 576px) {
-    .contact-us-main-text {
-      font-size: 4rem; /* Adjust size for mobile screens */
-    }
-    .contact-us-column {
-        width: 80vw;
-    }
-    
+
+}
+
+@media (max-width: 992px) {
+  .contact-us-title {
+    font-size: 4rem;
+    text-align: center;
   }
+
+  .contact-us-sub-text {
+    text-align: center;
+  }
+
+  .contact-us-column {
+    width: 60vw;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .contact-us-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .contact-us-sub-text {
+    text-align: center;
+  }
+
+  .contact-us-column {
+    width: 80vw;
+  }
+
+}
