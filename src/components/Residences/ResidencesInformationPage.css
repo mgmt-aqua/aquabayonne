@@ -85,7 +85,7 @@
 }
 
 .button-wrapper {
-    margin: 0 auto;
+    margin: 50px auto;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -137,17 +137,13 @@
 
 .floorplan-subtext {
     width: 50%;
-    margin: 0 auto;
+    margin: 50px auto;
     text-align: center;
     font-weight: 400;
 }
 
 .floorplans-card {
     border-radius: 0;
-}
-
-.button-wrapper {
-    margin: 50px;
 }
 
 .floorplans-row {
@@ -165,12 +161,6 @@
 .floorplans-card-text {
     text-align: center;
     margin: 25px auto;
-}
-
-.floorplans-card-icon {
-    font-size: 2rem;
-    margin-right: 10px;
-    color: #241C23;
 }
 
 .floorplans-card-icon {
