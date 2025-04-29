@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import FramerTextReveal from '../Common/Framer/FramerTextReveal';
 import AnimatedWaveSvg from '../Common/Framer/AnimatedWaveSvg';
 
-import clubRoomBarImage from '../../img/amemities/club_room.jpg';
+import clubRoomBarImage from '../../img/amemities/Clubroom.png';
 
 export default function AmenitiesHomeSection() {
     return (
