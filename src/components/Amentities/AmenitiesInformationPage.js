@@ -21,13 +21,16 @@ import "./AmenitiesInformationPage.css";
 
 
 export default function AmenitiesInformationPage() {
+    const pageTitle = 'Amenities';
+    const subText = "Elevate Your Lifestyle With Unmatched Amenities";
+    const quote = "Where Luxury Meets Serenity"
 
     return (
         <div className="amenities-information-page">
             <FramerSlide text="Amenities" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Amenities'} subText={"Elevate Your Lifestyle With Unmatched Amenities"} img={coverImage} imgStyles={'amenitities-information-page-cover-img'}>
+            <InformationPage pageTitle={pageTitle} subText={subText} img={coverImage} imgStyles={'amenitities-information-page-cover-img'}>
                 <InformationGrid data={amenitiesHighlightData} />
-                <QuoteHero quote={"Where Luxury Meets Serenity"} />
+                <QuoteHero quote={quote} />
                 {/* Amenities & Services Section */}
                 <h1 className="amenities-information-page-list-title">Amenities & Services</h1>
                 {/* List of Amenities */}

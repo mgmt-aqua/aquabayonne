@@ -14,7 +14,6 @@ export default function BookTour() {
             src="https://calendly.com/ana-aquabayonne"
             width="100%"
             height="100%"
-            frameBorder="0"
             style={{ position: 'absolute', top: 0, left: 0 }}
           ></iframe>
         </div>

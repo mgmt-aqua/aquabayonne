@@ -1,94 +1,16 @@
-.building-information-page-img {
+/* Cover Image */
+.building-information-page-cover-img {
     width: 100%;
-    height: 100%;
-}
-
-.building-information-page-content-container {
-    min-height: 500px;
-    background-color: white;
-}
-
-.building-information-image-gallery-row {
-    background-color: white;
-    padding: 50px;
-}
-
-.our-story-col-left {
-    padding: 25px;
-}
-
-.our-story-col-right {
-    padding: 50px;
-}
-
-.building-information-page-our-story-heading {
-    font-size: 2rem;
-    margin-top: 50px;
-    font-weight: 400;
-}
-
-.our-story-text {
-    font-weight: 400;
-    font-size: 3rem;
-    text-indent: 150px;
-}
-
-.building-information-page-section-title {
-    font-size: 5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    /* position: absolute;
-    bottom: 0; */
-    padding-left: 50px;
-    padding-bottom: 25px;
-    margin-top: 100px;
-    color: #241C23;
-}
-
-.building-information-page-img {
     height: 100vh;
+    object-fit: cover;
 }
 
-.building-information-grid-img-comtainer {
-    padding: 0 !important;
-    min-height: 600px;
+/* Grid Blocks Section */
+.building-information-grid-blocks {
+    background-color: white;
 }
 
-.building-information-grid-img {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-}
-
-.building-information-grid-text-container {
-    padding: 0 !important;
-}
-
-.building-information-grid-text {
-    font-family: 'Lato', sans-serif;
-    height: 100%;
-    /* margin: 5px; */
-    background-color: #EFE6DD;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #241C23;
-}
-
-.building-information-grid-title-text {
-    color: #241C23;
-    border-bottom: 1px solid #241C23;
-    font-family: 'Lato', sans-serif;
-    align-items: flex-start;
-    font-size: 1.5rem;
-    width: 100%;
-    font-weight: 700;
-}
-
+/* Grid Column Block */
 .building-information-page-grid-blocks-col {
     margin: 0 !important;
     padding: 0 !important;
@@ -98,73 +20,65 @@
     cursor: pointer;
 }
 
-.building-information-page-grig-img {
-    height: 100%;
-    width: 100%;
-}
-
-.building-information-page-grid-blocks-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Grid Image */
+.building-information-page-grid-img {
     width: 100%;
     height: 100%;
-    background-color: rgba(33, 54, 59, .4);
-    transition: background-color .25s ease-in-out;
 }
 
+/* Overlay States */
+.building-information-page-grid-blocks-overlay,
 .building-information-page-grid-blocks-overlay-hovered {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.building-information-page-grid-blocks-overlay {
+    background-color: rgba(33, 54, 59, 0.4);
+}
+
+.building-information-page-grid-blocks-overlay-hovered {
     background-color: rgba(33, 54, 59, 1);
-    transition: background-color .25s ease-in-out;
+}
+
+/* Titles and Descriptions */
+.building-information-page-grid-blocks-title,
+.building-information-page-grid-blocks-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    text-transform: uppercase;
 }
 
 .building-information-page-grid-blocks-title {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    font-size: 1rem;
     letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 700;
 }
 
-.building-information-page-grid-blocks-description {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-/* Mobile Styles */
+/* Responsive Image Height Adjustments */
 @media (max-width: 1200px) {
-    .building-information-grid-img-comtainer {
-        min-height: 500px;
+    .building-information-page-grid-blocks-col {
+        height: 350px;
     }
-  }
-  
-  @media (max-width: 992px) {
-    .building-information-grid-img-comtainer {
-        min-height: 400px;
+}
+
+@media (max-width: 992px) {
+    .building-information-page-grid-blocks-col {
+        height: 300px;
     }
-  }
-  
-  @media (max-width: 576px) {
-    .building-information-grid-img-comtainer {
-        min-height: 300px;
+}
+
+@media (max-width: 576px) {
+    .building-information-page-grid-blocks-col {
+        height: 250px;
     }
-  }
+}
