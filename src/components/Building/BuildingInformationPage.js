@@ -16,7 +16,7 @@ import lobbyImage from '../../img/Lobby.png'
 import buildingGif from '../../img/building.gif'
 
 import residencesGridImg from '../../img/residences/Livingroom.png'
-import amenitiesGridImg from '../../img/amemities/club_room.jpg'
+import amenitiesGridImg from '../../img/amemities/Clubroom.png'
 import neighborhoodGridImg from '../../img/neighborhood/neighborhood_golf.jpg'
 import foodHallGridImg from '../../img/neighborhood/neighborhood_food_hall.jpg'
 import contactUsGridImg from '../../img/Leasing Office.png'
