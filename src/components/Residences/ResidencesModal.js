@@ -1,8 +1,14 @@
 import React from "react";
-import { Modal, Carousel, Button, Row, Col } from "react-bootstrap";
+import { Modal, Row, Col, Button } from "react-bootstrap";
+import Gallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 import './ResidencesModal.css';
 
 export default function ResidencesModal({ selectedOption, show, handleClose }) {
+    const images = (selectedOption?.images || [selectedOption.floorplan]).map((img) => ({
+        original: img,
+        thumbnail: img,
+    }));
 
     return (
         <div className="residences-modal-container">
@@ -11,35 +17,24 @@ export default function ResidencesModal({ selectedOption, show, handleClose }) {
                 onHide={handleClose}
                 className="residences-information-modal"
                 size="xl"
-                fullscreen
+                centered
             >
                 <Modal.Body>
                     <Row className="floorplan-modal-grid">
-                        {/* LEFT COLUMN: Floorplan Info */}
-                        <Col md={3} className="floorplan-modal-info">
+                        <Col lg={4} className="floorplan-modal-info">
                             <h2 className="floorplan-info-type">{selectedOption?.type} – {selectedOption?.id}</h2>
                             <p className="floorplan-info-bedrooms"><strong>Bedrooms:</strong> {selectedOption?.bedrooms}</p>
                             <p className="floorplan-info-bathrooms"><strong>Bathrooms:</strong> {selectedOption?.bathrooms}</p>
                             <p className="floorplan-info-sqft"><strong>Square Footage:</strong> {selectedOption?.sqft || 'TBD'}</p>
-                            {/* Add more fields as needed */}
-                            <Button variant="dark" onClick={handleClose} className="floorplan-info-close-button">Close</Button>
+                            <div className="floorplan-info-buttons">
+                                <Button href="/contact" className="residences-modal-apply-now">Apply Now</Button>
+                                <Button href="/inquire" className="residences-modal-book-tour">Book Tour</Button>
+                            </div>
                         </Col>
 
-                        {/* RIGHT COLUMN: Gallery */}
-                        <Col md={9} className="floorplan-modal-gallery">
-                            <Carousel className="w-100 h-100">
-                                {(selectedOption?.images || [selectedOption.floorplan]).map((img, idx) => (
-                                    <Carousel.Item key={idx} className="h-100">
-                                        <img
-                                            className="d-block w-100 h-100"
-                                            src={img}
-                                            alt={`Slide ${idx + 1}`}
-                                        />
-                                    </Carousel.Item>
-                                ))}
-                            </Carousel>
+                        <Col lg={8} className="floorplan-modal-gallery">
+                            <Gallery items={images} showPlayButton={false} renderFullscreenButton={() => null} renderLeftNav={() => null} renderRightNav={() => null}/>
                         </Col>
-
                     </Row>
                 </Modal.Body>
             </Modal>

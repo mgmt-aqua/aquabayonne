@@ -1,125 +1,105 @@
-/* Container for the modal */
-.residences-modal-container {
-    position: relative;
+/* ResidencesModal.css */
+.modal-body {
+    padding: 0;
 }
 
-/* Fullscreen modal body with a grid */
-.residences-information-modal .modal-body {
-    padding: 0;
+.residences-information-modal .modal-dialog {
+    max-width: 1000px;
+    margin: 1.75rem auto;
+    width: 90%;
+}
+
+.residences-information-modal .modal-content {
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .floorplan-modal-grid {
     display: flex;
-    height: 100%;
-    padding: 0;
-    flex-wrap: wrap; /* Allow the columns to stack on smaller screens */
+    flex-wrap: wrap;
 }
 
-/* LEFT COLUMN: Floorplan info */
 .floorplan-modal-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: flex-start; /* Align items to the left */
-    background-color: #f7f7f7;
+    background-color: #4A6670;
+    color: white;
     padding: 2rem;
-    height: 100%;
-    text-align: left;
-    min-height: 100%; /* Prevent shrinking */
-}
-
-.floorplan-info-type {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.floorplan-info-bedrooms,
-.floorplan-info-bathrooms,
-.floorplan-info-sqft {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-.floorplan-info-close-button {
-    margin-top: 1.5rem;
-    align-self: flex-start;
-}
-
-/* RIGHT COLUMN: Gallery */
-.floorplan-modal-gallery {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0;
-    height: 100%;
     min-height: 100%;
+    text-align: center;
 }
 
-.floorplan-modal-gallery .carousel,
-.floorplan-modal-gallery .carousel-item {
-    height: 100%;
+.floorplan-info-type {
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.floorplan-info-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.floorplan-info-buttons .btn {
+    width: 225px;
+}
+
+.floorplan-modal-gallery {
+    padding: 0;
 }
 
 .floorplan-modal-gallery img {
+    object-fit: cover;
+    height: 100%;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure images fill container without distortion */
-    display: block;
 }
 
-/* Fullscreen modal dialog and content */
-.residences-information-modal .modal-dialog {
-    margin: 0;
-    max-width: 100%;
-    height: 100%;
+.image-gallery-image  {
+    max-height: 450px !important;
 }
 
-.residences-information-modal .modal-content {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
+.residences-modal-apply-now {
+    border-radius: 25px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid white;
 }
 
-.residences-information-modal .modal-body {
-    height: 100%;
-    padding: 0;
+.residences-modal-apply-now:hover {
+    background-color: white;
+    border: 1px solid #4A6670;
+    color: #4A6670
 }
 
-/* Make the layout responsive on smaller screens */
-@media (max-width: 1200px) {
-    .floorplan-modal-grid {
-        flex-wrap: wrap; /* Allow stacking */
-    }
-
-    .floorplan-modal-info {
-        min-height: auto; /* Allow the left side to shrink */
-        padding: 1rem;
-    }
-
-    .floorplan-modal-gallery {
-        min-height: 100%; /* Ensure the gallery section fills the right side */
-        padding: 0.5rem;
-    }
+.residences-modal-book-tour {
+    border-radius: 25px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid white;
 }
 
+.residences-modal-book-tour:hover {
+    background-color: white;
+    border: 1px solid #4A6670;
+    color: #4A6670
+}
+
+/* Responsive behavior */
 @media (max-width: 768px) {
-    .floorplan-modal-info {
-        min-height: auto;
-        padding: 1rem;
-    }
-
-    .floorplan-modal-gallery {
-        padding: 0.5rem;
-    }
-
-    /* Stack the columns on smaller screens */
-    .floorplan-modal-grid {
-        flex-direction: column;
-    }
-
+    .floorplan-modal-info,
     .floorplan-modal-gallery {
         width: 100%;
-        height: 300px; /* Fixed height for better responsiveness */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .floorplan-modal-info {
+        padding: 1.5rem;
+        text-align: center;
+        align-items: center;
     }
 }
