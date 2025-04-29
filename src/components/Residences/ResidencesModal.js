@@ -27,7 +27,7 @@ export default function ResidencesModal({ selectedOption, show, handleClose }) {
                             <p className="floorplan-info-bathrooms"><strong>Bathrooms:</strong> {selectedOption?.bathrooms}</p>
                             <p className="floorplan-info-sqft"><strong>Square Footage:</strong> {selectedOption?.sqft || 'TBD'}</p>
                             <div className="floorplan-info-buttons">
-                                <Button href="/contact" className="residences-modal-apply-now">Apply Now</Button>
+                                <Button href="/contact-us" className="residences-modal-apply-now">Apply Now</Button>
                                 <Button href="/inquire" className="residences-modal-book-tour">Book Tour</Button>
                             </div>
                         </Col>
