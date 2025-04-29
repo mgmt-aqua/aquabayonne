@@ -11,7 +11,7 @@ import QuoteHero from '../Common/QuoteHero';
 import './ResidencesInformationPage.css'
 
 // Images
-import coverImage from '../../img/residences_cover.jpg'
+import coverImage from '../../img/residences/Livingroom.png'
 import bedRoom1 from '../../img/residences/Bedroom 1.png'
 import bedRoom2 from '../../img/residences/Bedroom 2.png'
 import bedRoom3 from '../../img/residences/Bedroom Upscale.png'

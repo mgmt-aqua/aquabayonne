@@ -14,7 +14,7 @@ import { desktopStyles, mobileStyles } from "../../configuration/framer-slide-st
 import { allAmenities, images, amenitiesHighlightData } from '../../configuration/amenities'
 
 // Assets
-import coverImage from "../../img/amemities/amenities_club_room.png";
+import coverImage from "../../img/amemities/Clubroom.png";
 
 // Styles
 import "./AmenitiesInformationPage.css";
