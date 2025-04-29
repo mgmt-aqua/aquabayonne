@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import FramerTextReveal from '../Common/Framer/FramerTextReveal';
 import AnimatedWaveSvg from '../Common/Framer/AnimatedWaveSvg';
 
-import clubRoomBarImage from '../../img/amemities/club_room_bar.jpg';
+import clubRoomBarImage from '../../img/amemities/club_room.jpg';
 
 export default function AmenitiesHomeSection() {
     return (
@@ -21,7 +21,7 @@ export default function AmenitiesHomeSection() {
                             src={clubRoomBarImage}
                             className="amenities-home-section-image"
                             alt="Club room and bar"
-                            initial={{ x: -500, opacity: 0.5 }}
+                            initial={{ x: -300, opacity: 0.5 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{
                                 type: "spring",
@@ -29,7 +29,7 @@ export default function AmenitiesHomeSection() {
                                 damping: 15,
                                 delay: 0.2
                             }}
-                            viewport={{ once: true, amount: 0.2 }}
+                            viewport={{ once: true, amount: 0.1 }}
                         />
                     </Col>
                     <Col md={12} lg={6} className="amenities-text-column">

@@ -5,14 +5,13 @@ import FramerSlide from '../Common/FramerSlide'
 import InformationPage from '../Common/InformationPage';
 import QuoteHero from '../Common/QuoteHero'
 
-import coverImage from '../../img/our_building_1.jpg'
+import coverImage from '../../img/building/building_background.png'
 import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
 
 import './BuildingInformationPage.css'
 
 // Image imports
-import image3 from '../../img/our_building_3.jpg';
-import lobbyImage from '../../img/building/lobby_1.jpg'
+import lobbyImage from '../../img/Lobby.png'
 
 import buildingGif from '../../img/building.gif'
 
@@ -21,7 +20,8 @@ import amenitiesGridImg from '../../img/amemities/club_room.jpg'
 import neighborhoodGridImg from '../../img/neighborhood/neighborhood_golf.jpg'
 import foodHallGridImg from '../../img/neighborhood/neighborhood_food_hall.jpg'
 import contactUsGridImg from '../../img/Leasing Office.png'
-import bookTourGridImg from '../../img/Lobby.png'
+import bookTourGridImg from '../../img/building/front_desk.png'
+
 import { Link } from 'react-router-dom';
 import InformationGrid from '../Common/InformationGrid';
 
@@ -81,7 +81,7 @@ export default function BuildingInformationPage() {
     return (
         <div className="building-information-page">
             <FramerSlide text="Building" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Building'} subText={"Explore the Unmatched Elegance of Aqua"} img={coverImage} >
+            <InformationPage pageTitle={'Building'} subText={"Explore the Unmatched Elegance of Aqua"} img={coverImage} imgStyles={"building-information-page-img"} >
                 {/** Intro Section */}
                 <InformationGrid data={buildingInformationData} />
                 {/** Quote Hero */}

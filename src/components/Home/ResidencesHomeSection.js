@@ -24,7 +24,7 @@ export default function ResidencesHomeSection() {
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.25}>
                                 <h1 className="residences-home-section-main-text">
-                                    <span>01</span>Residences
+                                    <span>03</span>Residences
                                 </h1>
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.35}>
