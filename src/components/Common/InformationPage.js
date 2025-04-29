@@ -2,13 +2,13 @@ import * as React from 'react';
 import PropTypes from 'prop-types'
 import './InformationPage.css'
 import { motion, AnimatePresence } from 'framer-motion';
-import ScrollToTop from '../Common/ScrollToTop'
 import ApplyNowHero from './ApplyNowHero';
 import Footer from '../Footer/Footer'
+import useScrollToTop from '../../hooks/useScrollToTop'
 
 
 export default function InformationPage({pageTitle, subText, img, imgStyles, children}) {
-    
+    useScrollToTop();
     InformationPage.propTypes = {
         pageTitle: PropTypes.string.isRequired,
         subText: PropTypes.string,
@@ -20,7 +20,6 @@ export default function InformationPage({pageTitle, subText, img, imgStyles, chi
     return (
         
         <div className="information-page">
-            <ScrollToTop/>
             <AnimatePresence>
             <div className="information-page-hero-container">
                 <motion.img src={img} className={imgStyles} alt={pageTitle || ""} initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration:1, delay: 1}}/>

@@ -1,16 +1,7 @@
-.contact-us-column {
-  width: 40vw;
-}
-
 .contact-us-sub-text {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 25px;
-}
-
-.contanct-us-text-content-container {
-  background-color: #241C23 !important;
-  color: white;
 }
 
 .contact-us-form-group {
@@ -19,7 +10,7 @@
 
 .contact-us-form-error {
   color: red;
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
@@ -46,11 +37,6 @@
   font-weight: 700;
 }
 
-.form-check-input {
-  text-decoration: none;
-  ;
-}
-
 .contact-us-col {
   margin-top: 100px !important;
 }
@@ -66,17 +52,6 @@
   font-weight: 700;
   text-transform: uppercase;
   border-bottom: 3px solid #C3B59F;
-}
-
-.contact-us-address {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 50px;
-}
-
-.contact-us-img {
-  width: 100%;
-  object-fit: cover;
 }
 
 .contact-us-map {
@@ -105,11 +80,6 @@
   .contact-us-title {
     font-size: 4rem;
   }
-
-  .contact-us-column {
-    width: 50vw;
-  }
-
 }
 
 @media (max-width: 992px) {
@@ -121,11 +91,6 @@
   .contact-us-sub-text {
     text-align: center;
   }
-
-  .contact-us-column {
-    width: 60vw;
-  }
-
 }
 
 @media (max-width: 576px) {
@@ -137,9 +102,4 @@
   .contact-us-sub-text {
     text-align: center;
   }
-
-  .contact-us-column {
-    width: 80vw;
-  }
-
 }

@@ -1,14 +1,15 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import ScrollToTop from '../Common/ScrollToTop'
 import Section from "../Common/Section"; // Assuming you have a Section component for structure
 import "./Privacy.css";
 import Footer from "./Footer";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 export default function Privacy({ id }) {
+  useScrollToTop();
+  
   const content = (
     <div className="privacy-container">
-      <ScrollToTop/>
       <Row className="justify-content-center privacy-container-row">
         <Col xs={12} sm={10} md={8} lg={6}>
           <h1 className="privacy-heading">Privacy Policy</h1>

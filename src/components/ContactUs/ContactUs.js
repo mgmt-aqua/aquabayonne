@@ -22,10 +22,12 @@ import {
   formSuccessMessage,
   formFailureMessage 
 } from '../../helpers/form';
+import useScrollToTop from '../../hooks/useScrollToTop';
 
 import './ContactUs.css';
 
 export default function ContactUsForm() {
+  useScrollToTop();
   const mapContainer = useRef(null);
   useLeafletMap(mapContainer);
   const [formErrors, setFormErrors] = useState(defaultFormErrors);
@@ -90,12 +92,12 @@ export default function ContactUsForm() {
 
           {/* Form */}
           <Form
-            name="contact" // Netlify form name
+            name="contact"
             method="POST"
-            data-netlify="true" // Netlify form handling
+            data-netlify="true"
             onSubmit={handleSubmit}
           >
-            {/* Hidden input field for form name */}
+            {/* Hidden input field for form name. This is needed for Netlify forms */}
             <input type="hidden" name="form-name" value="contact" />
 
             {/* Name */}
