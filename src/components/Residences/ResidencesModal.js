@@ -33,7 +33,7 @@ export default function ResidencesModal({ selectedOption, show, handleClose }) {
                         </Col>
 
                         <Col lg={8} className="floorplan-modal-gallery">
-                            <Gallery items={images} showPlayButton={false} renderFullscreenButton={() => null} renderLeftNav={() => null} renderRightNav={() => null}/>
+                            <Gallery items={images} showPlayButton={false} renderFullscreenButton={() => null} />
                         </Col>
                     </Row>
                 </Modal.Body>

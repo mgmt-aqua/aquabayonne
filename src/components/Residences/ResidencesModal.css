@@ -58,7 +58,7 @@
 }
 
 .image-gallery-image  {
-    max-height: 450px !important;
+    max-height: 515px !important;
 }
 
 .residences-modal-apply-now {
@@ -85,6 +85,11 @@
     background-color: white;
     border: 1px solid #4A6670;
     color: #4A6670
+}
+
+.image-gallery-svg {
+    height: 60px !important;
+    width: 60px !important;
 }
 
 /* Responsive behavior */
