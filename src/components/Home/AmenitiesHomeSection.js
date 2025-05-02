@@ -38,7 +38,7 @@ export default function AmenitiesHomeSection() {
                                 <h4 className="amenities-pre-text">Modern Conveniences with a Touch of Luxury</h4>
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.25}>
-                                <h1 className="amenities-home-section-main-text"><span>02</span>Amenities</h1>
+                                <h1 className="amenities-home-section-main-text">Amenities</h1>
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.35}>
                                 <p className="amenities-home-section-description">

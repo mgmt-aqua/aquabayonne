@@ -1,7 +1,6 @@
 import amenitiesClubRoom from "../img/amemities/amenities_club_room.png";
 import amenitiesGym from "../img/amemities/amenities_gym.png";
 import amenitiesRendering from "../img/amemities/amenities_cover.png";
-import coverImage from "../img/amemities/amenities_club_room.png";
 
 import coworkingSpace from '../img/amemities/Coworking.png'
 import mailRoom from '../img/amemities/Mailroom upscale.png'
@@ -14,7 +13,7 @@ import roofDeckRender from '../img/amemities/Roofdeck Render.png'
 import pedestrianWalkwayRender from '../img/amemities/Walkway Render.png'
 import pickleball from '../img/amemities/pickleball.jpg'
 import basketball from '../img/amemities/basketball.jpg'
-import foodHall from '../img/neighborhood/neighborhood_food_hall.jpg'
+import foodHall from '../img/neighborhood/food_hall_bar.jpg'
 
 export const amenitiesList = ["24/7 Concierge Service", "Fitness Center / Gym", "Rooftop Terrace", "Pet-Friendly", "Clubroom"]
 export const amenitiesList2 = ["Outdoor BBQ Grills / Picnic Area", "Wellness Center", "Co-working Space", "On-Site Parking", "EV Charging Stations"]
@@ -49,10 +48,10 @@ export const amenitiesHighlightData = [{
     image: roofDeckRender,
     imageAlt: 'Roof Deck'
 }, {
-    title: "Second Floor Roof Deck",
+    title: "Amenity Terrace",
     content: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta."],
     image: amenitiesRendering,
-    imageAlt: "Second Floor Roof Deck",
+    imageAlt: "Amenity Terrace",
 },{
     title: "Gym",
     content: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta."],

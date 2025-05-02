@@ -1,7 +1,11 @@
 import neighborhoodGolf from '../img/neighborhood/neighborhood_golf.jpg';
 import neighborhoodWaterfront from '../img/neighborhood/neighborhood_waterfront.jpg';
-import neighborhoodFoodHall from '../img/neighborhood/neighborhood_food_hall.jpg';
+import neighborhoodFoodHall from '../img/neighborhood/food_hall_bar.jpg';
 import neighborhoodCostco from '../img/neighborhood/neighborhood_costco.jpeg';
+import neighborhoodFerry from '../img/neighborhood_cover.jpg'
+import tearDropMemorial from '../img/neighborhood/tear_drop_memorial.png'
+import lightrail from '../img/neighborhood/lightrail.jpg'
+import shuttleBus from '../img/neighborhood/shuttle_bus.jpg'
 
 export const neighborhoodHighlights = [
   {
@@ -35,5 +39,37 @@ export const neighborhoodHighlights = [
     ],
     image: neighborhoodCostco,
     imageAlt: 'Neighborhood Costco'
+  },
+  {
+    title: "Upcoming Ferry",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
+    ],
+    image: neighborhoodFerry,
+    imageAlt: 'Upcoming Ferry'
+  },
+  {
+    title: "The Tear Drop Memorial",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
+    ],
+    image: tearDropMemorial,
+    imageAlt: 'The Tear Drop Memorial'
+  },
+  {
+    title: "LightRail Station",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
+    ],
+    image: lightrail,
+    imageAlt: 'LightRail Station'
+  },
+  {
+    title: "Shuttle to Path Station",
+    content: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
+    ],
+    image: shuttleBus,
+    imageAlt: 'Shuttle to Path Station'
   }
 ];

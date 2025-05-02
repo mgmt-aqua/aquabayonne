@@ -32,7 +32,7 @@ export default function BuildingInformationPage() {
             >
                 <InformationGrid data={buildingInformationData} />
 
-                <QuoteHero quote="Where Luxury Meets Serenity" />
+                <QuoteHero quote="Luxury Meets Serenity" />
 
                 <div className="building-information-grid-blocks">
                     <Row>

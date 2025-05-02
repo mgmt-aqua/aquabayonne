@@ -27,7 +27,7 @@ export default function NeighborhoodInformationPage() {
                 <div className="neighborhood-highlights">
                     <InformationGrid data={neighborhoodHighlights} />
                 </div>
-                <QuoteHero quote={"Where Luxury Meets Serenity"} />
+                <QuoteHero quote={"Luxury Meets Serenity"} />
                 <div className='neighborhood-map-container'>
                     <MapComponent />
                 </div>

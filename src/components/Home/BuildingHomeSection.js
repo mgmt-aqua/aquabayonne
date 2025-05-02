@@ -23,9 +23,7 @@ export default function BuildingHomeSection() {
                                 <h4 className="building-pre-text">Designed to Impress. Built to Last.</h4>
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.25}>
-                                <h1 className="building-home-section-main-text">
-                                    <span>01</span>Building
-                                </h1>
+                                <h1 className="building-home-section-main-text">Building</h1>
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.35}>
                                 <p className="building-home-section-description">

@@ -14,7 +14,7 @@ import { desktopStyles, mobileStyles } from "../../configuration/framer-slide-st
 import { allAmenities, images, amenitiesHighlightData } from '../../configuration/amenities'
 
 // Assets
-import coverImage from "../../img/amemities/Clubroom.png";
+import coverImage from "../../img/amemities/Coworking.png";
 
 // Styles
 import "./AmenitiesInformationPage.css";
@@ -23,7 +23,7 @@ import "./AmenitiesInformationPage.css";
 export default function AmenitiesInformationPage() {
     const pageTitle = 'Amenities';
     const subText = "Elevate Your Lifestyle With Unmatched Amenities";
-    const quote = "Where Luxury Meets Serenity"
+    const quote = "Luxury Meets Serenity"
 
     return (
         <div className="amenities-information-page">

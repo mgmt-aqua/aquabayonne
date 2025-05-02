@@ -39,7 +39,7 @@ export default function NeighborhoodHomeSection() {
                             <h4 className="neighborhood-pre-text">Modern Conveniences with a Touch of Luxury</h4>
                         </FramerTextReveal>
                         <FramerTextReveal delay={0.25}>
-                            <h1 className="neighborhood-home-section-main-text"><span>04</span>Neighborhood</h1>
+                            <h1 className="neighborhood-home-section-main-text">Neighborhood</h1>
                         </FramerTextReveal>
                         <FramerTextReveal delay={0.35}>
                             <p className="neighborhood-home-section-description">

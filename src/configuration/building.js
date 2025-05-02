@@ -1,10 +1,10 @@
 import lobbyImage from '../img/building/Lobby.png'
 import buildingGif from '../img/building/building.gif'
 
-import amenitiesGridImg from '../img/amemities/Clubroom.png'
-import residencesGridImg from '../img/residences/Livingroom.png'
+import amenitiesGridImg from '../img/amemities/Coworking.png'
+import residencesGridImg from '../img/residences/Living Room 2 Bed.png'
 import neighborhoodGridImg from '../img/neighborhood/neighborhood_golf.jpg'
-import foodHallGridImg from '../img/neighborhood/neighborhood_food_hall.jpg'
+import foodHallGridImg from '../img/neighborhood/food_hall_bar.jpg'
 import contactUsGridImg from '../img/Leasing Office.png'
 import bookTourGridImg from '../img/building/front_desk.png'
 

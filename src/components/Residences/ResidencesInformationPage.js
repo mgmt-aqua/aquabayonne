@@ -22,7 +22,7 @@ import {
 import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
 
 // Assets
-import coverImage from '../../img/residences/Livingroom.png';
+import coverImage from '../../img/residences/Living Room 2 Bed.png';
 
 // Styles
 import './ResidencesInformationPage.css';
