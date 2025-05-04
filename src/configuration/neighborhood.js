@@ -1,5 +1,5 @@
 import neighborhoodGolf from '../img/neighborhood/neighborhood_golf.jpg';
-import neighborhoodWaterfront from '../img/neighborhood/neighborhood_waterfront.jpg';
+import neighborhoodWaterfront from '../img/neighborhood/waterfront.png';
 import neighborhoodFoodHall from '../img/neighborhood/food_hall_bar.jpg';
 import neighborhoodCostco from '../img/neighborhood/neighborhood_costco.jpeg';
 import neighborhoodFerry from '../img/neighborhood_cover.jpg'
