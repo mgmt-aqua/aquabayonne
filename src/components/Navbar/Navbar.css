@@ -185,6 +185,19 @@
 }
 
 /* For mobile responsiveness */
+@media (max-width: 1300px)  {
+  .navbar-links {
+    font-size: .65rem;
+  }
+
+  .book-tour-btn {
+    font-size: .5rem
+  }
+
+  .contact-us-btn {
+    font-size: .5rem
+  }
+}
 @media (max-width: 1199px) {
   .navbar-container {
     padding: 15px !important;
@@ -195,4 +208,5 @@
   .navbar-logo img {
     height: 30px;
   }
+
 }
