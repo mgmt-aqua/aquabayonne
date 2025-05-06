@@ -49,20 +49,18 @@ export const neighborhoodHighlights = [
     imageAlt: 'Upcoming Ferry'
   },
   {
-    title: "The Tear Drop Memorial",
+    title: "Historic Landmarks",
     content: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
+      "The Tear Drop Memorial, officially titled \"To the Struggle Against World Terrorism\", is a 100-foot monument gifted to the United States by Russia in 2006. Standing solemnly on Bayonne’s waterfront, it honors the victims of the September 11 attacks and the 1993 World Trade Center bombing. The sculpture features a massive bronze teardrop suspended within a cracked tower, symbolizing shared grief and international solidarity against terrorism."
     ],
     image: tearDropMemorial,
-    imageAlt: 'The Tear Drop Memorial'
+    imageAlt: 'Historic Landmarks'
   },
   {
-    title: "LightRail Station",
-    content: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
-    ],
+    title: "Hudson-Bergen Light Rail Access",
+    content: ["45th Street Station – Just a 3-Minute Walk Away", "Located a mere 3-minute walk from 54 Flagship Street, the 45th Street Station on the Hudson-Bergen Light Rail offers residents seamless connectivity to key destinations across Hudson County and into Manhattan."],
     image: lightrail,
-    imageAlt: 'LightRail Station'
+    imageAlt: 'Hudson-Bergen Light Rail Access'
   },
   {
     title: "Shuttle to Path Station",

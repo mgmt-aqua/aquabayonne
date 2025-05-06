@@ -28,7 +28,7 @@ import TwoBed3 from '../assets/Floor Plans/B3.jpg'
 import TwoBed4 from '../assets/Floor Plans/B4.jpg'
 
 export const pageTitle = "Residences";
-export const subText = "Your Ideal Living Space Awaits";
+export const subText = "Designed to Frame Every Moment—and Every View.";
 export const quote = "Where Luxury Meets Comfort";
 export const filterOptions = ['All', 'Studio', '1 Bed', '2 Bed'];
 export const inventoryOptions = [{
@@ -136,23 +136,23 @@ export const inventoryOptions = [{
 
 export const residencesHighlightData = [
     {
-        title: "Spacious Living Rooms",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        title: "Interiors",
+        description: " At AQUA, interiors are more than just beautiful—they’re intentional. Every layout, finish, and window is thoughtfully curated to enhance how you live, relax, and connect. Expansive windows frame picture-perfect views of the waterfront and skyline, while the neutral palette and elegant furnishings create a canvas that adapts to your lifestyle. Whether you’re savoring a quiet sunrise, entertaining guests, or simply unwinding at the end of the day, these interiors are designed to elevate every moment—and make everyone feel like it belongs in a frame.",
         img: livingRoom2Bed
     },
     {
-        title: "Chef Inspired Kitchens",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        title: "Chef Inspired Elegance",
+        description: "This chef-inspired kitchen is the perfect fusion of form and function, crafted for both everyday elegance and elevated entertaining. The striking quartz marble island offers a central gathering point, ideal for morning coffee, casual dining, or hosting with style. Matte black cabinetry paired with sleek stainless steel appliances creates a bold yet balanced aesthetic, while the full-height subway tile backsplash adds timeless character. Every detail has been thoughtfully selected to inspire creativity, comfort, and culinary moments worth savoring.",
         img: resideneces2
     },
     {
-        title: "Luxurious Bathrooms",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        title: "Your Personal Spa Retreat",
+        description: "Step into your own private sanctuary where everyday routines feel like rituals. This beautifully designed full bath offers more than just functionality—it delivers a sense of serenity with clean lines, warm wood finishes, and soft, neutral tones. Whether you’re soaking in a long bath with a glass of wine or letting your favorite fragrance drift through the steam, this is your space to pause, reset, and indulge in the simple luxury of feeling at home.",
         img: resideneces3
     },
     {
-        title: "Private Balconies",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        title: "Spacious Living, Thoughtfully Designed",
+        description: "At AQUA, generous living rooms provide the perfect canvas for entertaining, relaxing, or simply enjoying the view, while intelligently planned closets offer abundant space to keep life beautifully organized. It’s a harmonious blend of openness and order, where comfort meets convenience in every square foot.",
         img: resideneces4
     }
 ];

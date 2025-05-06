@@ -23,7 +23,7 @@ export default function NeighborhoodInformationPage() {
     return (
         <div className="neighborhood-information-page">
             <FramerSlide text="Neighborhood" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-            <InformationPage pageTitle={'Neighborhood'} subText={"Embrace Our Vibrant Energy and Lifestyle"} img={coverImage} imgStyles={'neighborhood-cover-img'}>
+            <InformationPage pageTitle={'Neighborhood'} subText={"Steps from Nature. Moments from Manhattan"} img={coverImage} imgStyles={'neighborhood-cover-img'}>
                 <div className="neighborhood-highlights">
                     <InformationGrid data={neighborhoodHighlights} />
                 </div>

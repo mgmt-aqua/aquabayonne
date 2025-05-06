@@ -75,6 +75,7 @@
 .amenitities-information-page-cover-img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .amenities-highlight-text-left {
