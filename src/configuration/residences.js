@@ -29,7 +29,7 @@ import TwoBed4 from '../assets/Floor Plans/B4.jpg'
 
 export const pageTitle = "Residences";
 export const subText = "Designed to Frame Every Moment—and Every View.";
-export const quote = "Where Luxury Meets Comfort";
+export const quote = "Designed to Frame Every Moment—and Every View.";
 export const filterOptions = ['All', 'Studio', '1 Bed', '2 Bed'];
 export const inventoryOptions = [{
     id: "S1",

@@ -9,7 +9,7 @@ import FramerTextReveal from '../Common/Framer/FramerTextReveal'
 
 import './NeighborhoodHomeSection.css'
 
-import waterfrontImage from '../../img/neighborhood/neighborhood_waterfront.jpg'
+import coverImage from '../../img/neighborhood/waterfront.png'
 
 export default function NeighborhoodHomeSection() {
     return (
@@ -19,7 +19,7 @@ export default function NeighborhoodHomeSection() {
         <Row className="neighborhood-home-section-row flex-column-reverse flex-lg-row">
                 <Col md={12} lg={6} className="neighborhood-home-section-content-container">
                     <motion.img
-                        src={waterfrontImage}
+                        src={coverImage}
                         className="neighborhood-home-section-image"
                         alt="Club room and bar"
                         initial={{ x: -500, opacity: 0.5 }}

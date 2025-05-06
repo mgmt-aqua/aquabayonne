@@ -4,18 +4,10 @@ import neighborhoodFoodHall from '../img/neighborhood/food_hall_bar.jpg';
 import neighborhoodCostco from '../img/neighborhood/neighborhood_costco.jpeg';
 import neighborhoodFerry from '../img/neighborhood_cover.jpg'
 import tearDropMemorial from '../img/neighborhood/tear_drop_memorial.png'
-import lightrail from '../img/neighborhood/lightrail.jpg'
-import shuttleBus from '../img/neighborhood/shuttle_bus.jpg'
+import lightrail from '../img/neighborhood/lightrail.png'
+import shuttleBus from '../img/neighborhood/path.png'
 
 export const neighborhoodHighlights = [
-  {
-    title: "A Golfer’s Paradise, Just Minutes Away",
-    content: [
-      "Elevate your lifestyle with exclusive access to a world-class championship golf course just moments from your doorstep. Immerse yourself in lush fairways and scenic greens, offering not only a premier golfing experience but also a serene backdrop for relaxation. Perfect for weekend rounds or casual strolls, this prestigious course blends luxury and leisure seamlessly."
-    ],
-    image: neighborhoodGolf,
-    imageAlt: 'Neighborhood Golf Course'
-  },
   {
     title: "Stunning Waterfront Retreat",
     content: [
@@ -39,6 +31,14 @@ export const neighborhoodHighlights = [
     ],
     image: neighborhoodCostco,
     imageAlt: 'Neighborhood Costco'
+  },
+  {
+    title: "A Golfer’s Paradise, Just Minutes Away",
+    content: [
+      "Elevate your lifestyle with exclusive access to a world-class championship golf course just moments from your doorstep. Immerse yourself in lush fairways and scenic greens, offering not only a premier golfing experience but also a serene backdrop for relaxation. Perfect for weekend rounds or casual strolls, this prestigious course blends luxury and leisure seamlessly."
+    ],
+    image: neighborhoodGolf,
+    imageAlt: 'Neighborhood Golf Course'
   },
   {
     title: "Upcoming Ferry",

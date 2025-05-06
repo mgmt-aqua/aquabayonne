@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import FramerTextReveal from '../Common/Framer/FramerTextReveal';
 import AnimatedWaveSvg from '../Common/Framer/AnimatedWaveSvg';
 
-import clubRoomBarImage from '../../img/amemities/Clubroom.png';
+import coverImage from '../../img/amemities/Coworking.png';
 
 export default function AmenitiesHomeSection() {
     return (
@@ -18,7 +18,7 @@ export default function AmenitiesHomeSection() {
             <Row className="amenities-home-section-row flex-column-reverse flex-lg-row">
                     <Col md={12} lg={6} className="amenities-home-section-content-container">
                         <motion.img
-                            src={clubRoomBarImage}
+                            src={coverImage}
                             className="amenities-home-section-image"
                             alt="Club room and bar"
                             initial={{ x: -300, opacity: 0.5 }}

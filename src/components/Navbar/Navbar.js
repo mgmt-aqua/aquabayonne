@@ -91,10 +91,10 @@ export default function ResponsiveCenteredNavbar() {
 
               {/* Buttons on the right */}
               <Nav className="d-none d-xl-flex align-items-center navbar-button-container">
-                <a href="mailto:info@aquabayonne.com" className="navbar-email-icon">
+                <a href="mailto:leasing@aquabayonne.com" className="navbar-email-icon">
                   <MdEmail />
                 </a>
-                <a href="tel:555-555-5555" className="navbar-phone-icon">
+                <a href="tel:2013222999" className="navbar-phone-icon">
                   <MdPhone />
                 </a>
                 <Nav.Link as={Link} to="/inquire" className="book-tour-link">
