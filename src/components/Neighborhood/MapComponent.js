@@ -158,6 +158,12 @@ export default function MapComponent() {
             centerCoordinates: [40.670988, -74.100399],
             zoom: 14,
             locations: [{
+                name: "AQUA Shuttle to Path",
+                coordinates: [40.671888, -74.100544],
+                highlight: true
+            },
+                
+                {
                 name: "34 St/Hoboken Light Rail Station",
                 coordinates: [40.671105, -74.107041],
                 highlight: true,
@@ -174,6 +180,78 @@ export default function MapComponent() {
             {
                 name: "45th Street Light Rail Station",
                 coordinates: [40.678921, -74.102109],
+                highlight: true,
+            }]
+        }
+    },
+    {
+        accordionDetails: {
+            id: "schools",
+            title: "Schools",
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+        },
+        mapDetails: {
+            centerCoordinates: [40.670988, -74.100399],
+            zoom: 13,
+            locations: [{
+                name: "Bayonne High School",
+                coordinates: [40.671461, -74.121588],
+                highlight: true
+            },
+                
+                {
+                name: "Horace Mann Elementary School",
+                coordinates: [40.676018, -74.108885],
+                highlight: true,
+            },
+            {
+                name: "Philip G. Vroom Elementary School",
+                coordinates: [40.666500, -74.116598],
+                highlight: true,
+            }, {
+                name: "Lincoln Community School",
+                coordinates: [40.666874, -74.110199],
+                highlight: true,
+            },
+            {
+                name: "Washington Elementary School",
+                coordinates: [40.683520, -74.108311],
+                highlight: true,
+            }]
+        }
+    },
+    {
+        accordionDetails: {
+            id: "healthcare",
+            title: "Healthcare",
+            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+        },
+        mapDetails: {
+            centerCoordinates: [40.670988, -74.100399],
+            zoom: 14,
+            locations: [{
+                name: "CityMD Bayonne Urgent Care",
+                coordinates: [40.660522, -74.108488],
+                highlight: true
+            },
+                
+            {
+                name: "Garden State Healthcare",
+                coordinates: [40.668041, -74.112951],
+                highlight: true,
+            },
+            {
+                name: "Redefine Healthcare",
+                coordinates: [40.675430, -74.107586],
+                highlight: true,
+            }, {
+                name: "Optum Primary Care - Bayonne",
+                coordinates: [40.665271, -74.116613],
+                highlight: true,
+            },
+            {
+                name: "Broadway Pediatric Center",
+                coordinates: [40.662332, -74.119887],
                 highlight: true,
             }]
         }
