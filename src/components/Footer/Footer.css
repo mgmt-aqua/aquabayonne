@@ -11,7 +11,7 @@
 
 .footer-address {
     font-family: -apple-system, BlinkMacSystemFont, "ofelia-text", sans-serif;
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 400;
     text-transform: uppercase;
     font-weight: 700;
@@ -22,13 +22,8 @@
 
 .footer-contact-information a {
     color: white;
-    font-size: .8rem;
+    font-size: 1rem;
     text-decoration: none;
-}
-
-.footer-hours p {
-    margin: 0;
-    font-size: .8rem;
 }
 
 .privacy-policy-link {

@@ -47,11 +47,6 @@ export default function Footer({ id }) {
                         <p className="footer-contact-information">
                             <a href="tel:+12015610066">(201) 561-0066</a> | <a href="mailto:leasing@aquabayonne.com">leasing@aquabayonne.com</a>
                         </p>
-
-                        <div className="footer-hours">
-                            <p>Mon - Sat: 10 am - 6 pm</p>
-                            <p>Sun: 10 am - 5:30 pm</p>
-                        </div>
                     </Col>
 
                     {/* Third Column with Social Icons */}
@@ -62,9 +57,6 @@ export default function Footer({ id }) {
                             </a>
                             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <FaInstagram size={30} className="footer-icon" />
-                            </a>
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                                <FaTwitter size={30} className="footer-icon" />
                             </a>
                             <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                                 <FaTiktok size={30} className="footer-icon" />
