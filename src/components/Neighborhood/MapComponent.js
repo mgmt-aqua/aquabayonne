@@ -51,14 +51,14 @@ export default function MapComponent() {
                 name: "Stephen R. Greg Park",
                 coordinates: [40.682526, -74.114650],
                 highlight: true,
-            }, 
+            },
             {
                 name: "Liberty State Park",
                 coordinates: [40.705805, -74.055368],
                 highlight: false
             }]
         }
-    },{
+    }, {
         accordionDetails: {
             id: "restaurants",
             title: "Restaurants",
@@ -68,25 +68,51 @@ export default function MapComponent() {
             centerCoordinates: [40.670988, -74.100399],
             zoom: 14,
             locations: [
-            {
-                name: "Houlihan's",
-                coordinates: [40.668299, -74.104428],
-                highlight: true,
-            }, {
-                name: "Wendy's",
-                coordinates: [40.668504, -74.106489],
-                highlight: true,
-            },
-            {
-                name: "Bubbakoo's Burritos",
-                coordinates: [40.667666, -74.105202],
-                highlight: true,
-            },
-            {
-                name: "Starbucks",
-                coordinates: [40.671992, -74.104402],
-                highlight: true,
-            }]
+                {
+                    name: "Houlihan's",
+                    coordinates: [40.668299, -74.104428],
+                    highlight: true,
+                }, {
+                    name: "Wendy's",
+                    coordinates: [40.668504, -74.106489],
+                    highlight: true,
+                },
+                {
+                    name: "Bubbakoo's Burritos",
+                    coordinates: [40.667666, -74.105202],
+                    highlight: true,
+                },
+                {
+                    name: "Starbucks",
+                    coordinates: [40.671992, -74.104402],
+                    highlight: true,
+                }, {
+                    name: "Dunkin Donutes",
+                    coordinates: [40.668641, -74.106984],
+                    highlight: true,
+                }, {
+                    name: "Panda Express",
+                    coordinates: [40.662962, -74.106648],
+                    highlight: false,
+                }, {
+                    name: "Five Guys",
+                    coordinates: [40.662884, -74.106266],
+                    highlight: false,
+                }, {
+                    name: "Wonder Bagels",
+                    coordinates: [40.662426, -74.105979],
+                    highlight: false,
+                },
+                {
+                    name: "Qdoba Mexican Eats",
+                    coordinates: [40.660931, -74.108453],
+                    highlight: false,
+                },
+                {
+                    name: "Jersey Mike's Subs",
+                    coordinates: [40.660541, -74.107895],
+                    highlight: false
+                }]
         }
     },
     {
@@ -115,6 +141,11 @@ export default function MapComponent() {
             {
                 name: "Stop and Shop",
                 coordinates: [40.666865, -74.104591],
+                highlight: true,
+            },
+            {
+                name: "Walmart",
+                coordinates: [40.660329, -74.106909],
                 highlight: true,
             }]
         }
@@ -148,7 +179,7 @@ export default function MapComponent() {
                 highlight: true,
             }]
         }
-    },{
+    }, {
         accordionDetails: {
             id: "transit",
             title: "Transit",
@@ -162,14 +193,14 @@ export default function MapComponent() {
                 coordinates: [40.671888, -74.100544],
                 highlight: true
             },
-                
-                {
+
+            {
                 name: "34 St/Hoboken Light Rail Station",
                 coordinates: [40.671105, -74.107041],
                 highlight: true,
             },
             {
-                name: "Port Authority of NY & NJ",
+                name: "Upcoming Ferry",
                 coordinates: [40.667004, -74.086441],
                 highlight: true,
             }, {
@@ -198,8 +229,8 @@ export default function MapComponent() {
                 coordinates: [40.671461, -74.121588],
                 highlight: true
             },
-                
-                {
+
+            {
                 name: "Horace Mann Elementary School",
                 coordinates: [40.676018, -74.108885],
                 highlight: true,
@@ -234,7 +265,7 @@ export default function MapComponent() {
                 coordinates: [40.660522, -74.108488],
                 highlight: true
             },
-                
+
             {
                 name: "Garden State Healthcare",
                 coordinates: [40.668041, -74.112951],
@@ -268,8 +299,8 @@ export default function MapComponent() {
         // Set the tile layer (you can choose a tile provider)
         L.tileLayer.provider('CartoDB.DarkMatter').addTo(map);
 
-         // Create a custom icon (your logo)
-         const logoIcon = L.icon({
+        // Create a custom icon (your logo)
+        const logoIcon = L.icon({
             iconUrl: require('../../img/aqua-logo-white.png'),
             iconSize: [70, 20],
             iconAnchor: [20, 25],
@@ -314,43 +345,43 @@ export default function MapComponent() {
                 L.marker(location.coordinates).addTo(map).bindPopup(location.name);
             });
 
-             // Create a custom icon (your logo)
-         const logoIcon = L.icon({
-            iconUrl: require('../../img/aqua-logo-white.png'),
-            iconSize: [70, 20],
-            iconAnchor: [20, 25],
-            popupAnchor: [0, -50]
-        });
+            // Create a custom icon (your logo)
+            const logoIcon = L.icon({
+                iconUrl: require('../../img/aqua-logo-white.png'),
+                iconSize: [70, 20],
+                iconAnchor: [20, 25],
+                popupAnchor: [0, -50]
+            });
 
-        // Add a permanent marker with the custom logo at a specific position
-        L.marker([40.670988, -74.100399], { icon: logoIcon })
-            .addTo(map)
-            .bindPopup('<b>Aqua Bayonne</b>');
+            // Add a permanent marker with the custom logo at a specific position
+            L.marker([40.670988, -74.100399], { icon: logoIcon })
+                .addTo(map)
+                .bindPopup('<b>Aqua Bayonne</b>');
 
-        map.zoomControl.setPosition('bottomright');
+            map.zoomControl.setPosition('bottomright');
         }
 
-     
+
     };
 
     return (
         <div className="map-component-container">
             <Row className="map-component-row">
-                <Col xs={12} sm={12} md={6} lg={8} xl={9} className="map-component-map" ref={mapContainer} style={{ width: {mapWidth}, height: '100vh' }}></Col>
+                <Col xs={12} sm={12} md={6} lg={8} xl={9} className="map-component-map" ref={mapContainer} style={{ width: { mapWidth }, height: '100vh' }}></Col>
                 <Col xs={12} sm={12} md={6} lg={4} xl={3} className="map-component-legend">
                     <Accordion activeKey={activeKey} onSelect={handleAccordionSelect}>
                         {mapData.map((item) => {
-                            return(
-                            <Accordion.Item eventKey={item.accordionDetails.id} className='map-accordion-item'>
-                            <Accordion.Header className='map-accordion-header'>{item.accordionDetails.title}</Accordion.Header>
-                            <Accordion.Body className='map-accordion-body'>
-                                <ul className="map-accordion-list">
-                                    {item.mapDetails.locations?.filter((location) => location.highlight).map((location, index) => {
-                                        return (<li className="map-accordion-list-item"><span>0{index+1}</span> {location.name}</li>)
-                                    })}
-                                </ul>
-                            </Accordion.Body>
-                        </Accordion.Item>);
+                            return (
+                                <Accordion.Item eventKey={item.accordionDetails.id} className='map-accordion-item'>
+                                    <Accordion.Header className='map-accordion-header'>{item.accordionDetails.title}</Accordion.Header>
+                                    <Accordion.Body className='map-accordion-body'>
+                                        <ul className="map-accordion-list">
+                                            {item.mapDetails.locations?.filter((location) => location.highlight).map((location, index) => {
+                                                return (<li className="map-accordion-list-item"><span>0{index + 1}</span> {location.name}</li>)
+                                            })}
+                                        </ul>
+                                    </Accordion.Body>
+                                </Accordion.Item>);
                         })}
                     </Accordion>
                 </Col>

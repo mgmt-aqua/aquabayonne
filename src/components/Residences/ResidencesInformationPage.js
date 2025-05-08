@@ -22,7 +22,7 @@ import {
 import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
 
 // Assets
-import coverImage from '../../img/residences/Living Room 2 Bed.png';
+import coverImage from '../../img/residences/Livingroom Studio.png';
 
 // Styles
 import './ResidencesInformationPage.css';
@@ -89,9 +89,7 @@ export default function ResidencesInformationPage() {
         {/* Floorplans Section */}
         <section className="floorplans-container">
           <h1 className="floorplans-heading-text">Floor Plans</h1>
-          <p className="floorplan-subtext">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
-          </p>
+          <p className="floorplan-subtext">Your private oasis, designed for modern living.</p>
 
           {/* Filter Buttons */}
           <div className="button-wrapper">

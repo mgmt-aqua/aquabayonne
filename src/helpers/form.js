@@ -88,6 +88,9 @@ export const attributionOptions = [
   { label: 'Referral', value: 'REFERRAL' },
   { label: 'Social Media', value: 'SOCIAL MEDIA' },
   { label: 'Realtor', value: 'REALTOR' },
+  { label: 'Zillow', value: 'ZILLOW' },
+  { label: 'Apartments.com', value: 'APARTMENTS.COM' },
+  { label: 'Website', value: 'Website' },
   { label: 'Other', value: 'OTHER' },
 ];
 

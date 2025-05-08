@@ -137,7 +137,7 @@ export const inventoryOptions = [{
 export const residencesHighlightData = [
     {
         title: "Interiors",
-        description: " At AQUA, interiors are more than just beautiful—they’re intentional. Every layout, finish, and window is thoughtfully curated to enhance how you live, relax, and connect. Expansive windows frame picture-perfect views of the waterfront and skyline, while the neutral palette and elegant furnishings create a canvas that adapts to your lifestyle. Whether you’re savoring a quiet sunrise, entertaining guests, or simply unwinding at the end of the day, these interiors are designed to elevate every moment—and make everyone feel like it belongs in a frame.",
+        description: "At AQUA, interiors are more than just beautiful—they’re intentional. Every layout and finish is thoughtfully curated to enhance how you live, relax, and connect. Whether you’re savoring a quiet sunrise, entertaining guests, or simply unwinding at the end of the day, these interiors are designed to elevate every moment.",
         img: livingRoom2Bed
     },
     {

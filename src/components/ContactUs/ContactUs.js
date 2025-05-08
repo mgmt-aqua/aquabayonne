@@ -241,7 +241,7 @@ export default function ContactUsForm() {
 
             {/* Opt-in */}
             <RadioButtonGroup
-              label="Opt-in to receive text communication?*"
+              label="Opt-in to receive SMS communication?*"
               name="optIn"
               options={optInOptions}
               value={formData.optIn}

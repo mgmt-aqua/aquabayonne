@@ -16,7 +16,7 @@ export const buildingInformationData = [{
     imageAlt: 'Our Story Image'
 }, {
     title: "Our Journey",
-    content: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta."],
+    content: ["Aqua has been a true labor of love—born from a desire to create more than just a place to live. We set out to build a home that brings people together, where design meets purpose, and every space invites both comfort and connection. From the earliest sketches to the finishing touches, we carefully considered how residents would live, gather, and unwind here. The result is a building that feels warm, welcoming, and deeply rooted in its surroundings—an everyday retreat on the Bayonne waterfront, made for real life and shared moments."],
     image: buildingGif,
     imageAlt: 'Our Journey Image'
 }]

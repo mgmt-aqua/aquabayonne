@@ -5,9 +5,27 @@ import neighborhoodCostco from '../img/neighborhood/neighborhood_costco.jpeg';
 import neighborhoodFerry from '../img/neighborhood_cover.jpg'
 import tearDropMemorial from '../img/neighborhood/tear_drop_memorial.png'
 import lightrail from '../img/neighborhood/lightrail.png'
-import shuttleBus from '../img/neighborhood/path.png'
+import shuttleBus from '../img/neighborhood/path.jpg'
 
 export const neighborhoodHighlights = [
+  {
+    title: "Upcoming Ferry",
+    content: ["The upcoming ferry will provide easy access to NYC without the hustle and bustle of the morning traffic. Positioned at a close proximity to aqua, our shuttle service will offer stops to the ferry, making it a simple commute into the city."],
+    image: neighborhoodFerry,
+    imageAlt: 'Upcoming Ferry'
+  },
+  {
+    title: "Hudson-Bergen Light Rail Access",
+    content: ["45th Street Station – Just a 3-Minute Walk Away", "Located a mere 3-minute walk from 54 Flagship Street, the 45th Street Station on the Hudson-Bergen Light Rail offers residents seamless connectivity to key destinations across Hudson County and into Manhattan."],
+    image: lightrail,
+    imageAlt: 'Hudson-Bergen Light Rail Access'
+  },
+  {
+    title: "Shuttle to Path Station",
+    content: ["Aqua’s weekday shuttle offers direct service to the Light Rail and ferry, making your daily commute simple and seamless."],
+    image: shuttleBus,
+    imageAlt: 'Shuttle to Path Station'
+  },
   {
     title: "Stunning Waterfront Retreat",
     content: [
@@ -41,29 +59,11 @@ export const neighborhoodHighlights = [
     imageAlt: 'Neighborhood Golf Course'
   },
   {
-    title: "Upcoming Ferry",
-    content: ["The upcoming ferry will provide easy access to NYC without the hustle and bustle of the morning traffic. Positioned at a close proximity to aqua, our shuttle service will offer stops to the ferry, making it a simple commute into the city."],
-    image: neighborhoodFerry,
-    imageAlt: 'Upcoming Ferry'
-  },
-  {
     title: "Historic Landmarks",
     content: [
       "The Tear Drop Memorial, officially titled \"To the Struggle Against World Terrorism\", is a 100-foot monument gifted to the United States by Russia in 2006. Standing solemnly on Bayonne’s waterfront, it honors the victims of the September 11 attacks and the 1993 World Trade Center bombing. The sculpture features a massive bronze teardrop suspended within a cracked tower, symbolizing shared grief and international solidarity against terrorism."
     ],
     image: tearDropMemorial,
     imageAlt: 'Historic Landmarks'
-  },
-  {
-    title: "Hudson-Bergen Light Rail Access",
-    content: ["45th Street Station – Just a 3-Minute Walk Away", "Located a mere 3-minute walk from 54 Flagship Street, the 45th Street Station on the Hudson-Bergen Light Rail offers residents seamless connectivity to key destinations across Hudson County and into Manhattan."],
-    image: lightrail,
-    imageAlt: 'Hudson-Bergen Light Rail Access'
-  },
-  {
-    title: "Shuttle to Path Station",
-    content: ["Aqua’s weekday shuttle offers direct service to the Light Rail and ferry, making your daily commute simple and seamless."],
-    image: shuttleBus,
-    imageAlt: 'Shuttle to Path Station'
   }
 ];

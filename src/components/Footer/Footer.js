@@ -45,7 +45,7 @@ export default function Footer({ id }) {
                         <p className="footer-address">54 Flagship Street, Bayonne, NJ 07002</p>
 
                         <p className="footer-contact-information">
-                            <a href="tel:+12015610066">(201) 561-0066</a> | <a href="mailto:leasing@aquabayonne.com">leasing@aquabayonne.com</a>
+                            <a href="tel:+12015610066">(201) 322-2999</a> | <a href="mailto:leasing@aquabayonne.com">leasing@aquabayonne.com</a>
                         </p>
                     </Col>
 

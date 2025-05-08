@@ -20,7 +20,7 @@ import Privacy from './components/Footer/Privacy';
 const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
     <BrowserRouter>
-        <AnnouncementBar text={"Sign a 13-month lease today and get your first month on us! Don’t miss out on this exclusive offer — only available for a limited time."}/>
+        <AnnouncementBar text={"For a limited time, get one month free on a 13-month lease."} link={'/contact-us'}/>
         <Navbar />
         <Routes>
             <Route path='/' element={<App />} />
