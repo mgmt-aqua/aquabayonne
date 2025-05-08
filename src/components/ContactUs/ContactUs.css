@@ -45,6 +45,11 @@
 .contact-us-col-left {
   margin: 0 auto;
   padding: 100px;
+  background-color: #eee;
+}
+
+.contact-us-col-right {
+  padding-left: 0;
 }
 
 .contact-us-title {
