@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Row, Col, Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 
 import useLeafletMap from '../../hooks/useLeafletMap';
 import TextInput from '../Common/Forms/TextInput';
@@ -241,6 +242,8 @@ export default function ContactUsForm() {
               radioClassName="contact-us-form-control-radio"
               errorClassName="contact-us-form-error"
             />
+
+            <div className="contact-us-privacy-policy-link"><Link to="/privacy">Privacy Policy</Link></div>
 
             {/* Submit Button */}
             <Button variant="primary" type="submit" className="contact-us-submit-button">
