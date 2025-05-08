@@ -6,21 +6,23 @@ import useLeafletMap from '../../hooks/useLeafletMap';
 import TextInput from '../Common/Forms/TextInput';
 import SelectInput from '../Common/Forms/SelectInput';
 import DateInput from '../Common/Forms/DateInput';
+import RadioButtonGroup from '../Common/Forms/RadioButtonGroup'
 import FramerSlide from '../Common/FramerSlide';
 import Footer from '../Footer/Footer';
 
 import { mobileStyles, desktopStyles } from '../../configuration/framer-slide-styles';
-import { 
-  defaultFormOptions, 
-  validateForm, 
-  defaultFormErrors, 
+import {
+  defaultFormOptions,
+  validateForm,
+  defaultFormErrors,
   budgetOptions,
-  attributionOptions, 
-  bedroomOptions, 
+  attributionOptions,
+  bedroomOptions,
+  optInOptions,
   petOptions,
   parkingOptions,
   formSuccessMessage,
-  formFailureMessage 
+  formFailureMessage
 } from '../../helpers/form';
 import useScrollToTop from '../../hooks/useScrollToTop';
 
@@ -39,28 +41,32 @@ export default function ContactUsForm() {
   */
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    console.log(e)
+    console.log(name)
+    console.log(value)
     if (formErrors[name]) {
       delete formErrors[name];
     }
 
-    if(formErrors.submit) {
+    if (formErrors.submit) {
       delete formErrors.submit;
     }
 
-    if(successMessage) {
+    if (successMessage) {
       setSuccessMessage("")
     }
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+    console.log(formData)
   };
 
   // Function used to endcode form data to POST for Netlify forms
   const encode = (data) => {
     return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
   }
 
   // Function to handle the submit of the form
@@ -74,7 +80,7 @@ export default function ContactUsForm() {
         body: encode({ "form-name": "contact", ...formData })
       })
         .then(() => setSuccessMessage(formSuccessMessage))
-        .catch(() => setFormErrors({...formErrors, submit: formFailureMessage }));
+        .catch(() => setFormErrors({ ...formErrors, submit: formFailureMessage }));
       setFormData(defaultFormOptions);
       setFormErrors(defaultFormErrors);
     } else {
@@ -114,6 +120,20 @@ export default function ContactUsForm() {
               errorClassName="contact-us-form-error"
             />
 
+            {/* Phone */}
+            <TextInput
+              label="Phone Number*"
+              name="phone"
+              placeholder="e.g. 555-555-5555"
+              value={formData.phone}
+              onChange={handleInputChange}
+              error={formErrors.phone}
+              groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
+              controlClassName="contact-us-form-control"
+              errorClassName="contact-us-form-error"
+            />
+
             {/* Email */}
             <TextInput
               label="Email*"
@@ -128,19 +148,33 @@ export default function ContactUsForm() {
               errorClassName="contact-us-form-error"
             />
 
-            {/* Phone */}
-            <TextInput
-              label="Phone Number*"
-              name="phone"
-              placeholder="e.g. 555-555-5555"
-              value={formData.phone}
+            {/* Bedrooms */}
+            <SelectInput
+              label="Desired Unit Size*"
+              name="bedrooms"
+              options={bedroomOptions}
+              value={formData.bedrooms}
               onChange={handleInputChange}
-              error={formErrors.phone}
+              error={formErrors.bedrooms}
               groupClassName="contact-us-form-group"
               labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
               errorClassName="contact-us-form-error"
             />
+
+            {/* Lease Start Date */}
+            <DateInput
+              name="leaseStartDate"
+              label="Desired Move-in Date*"
+              value={formData.leaseStartDate}
+              onChange={handleInputChange}
+              error={formErrors.leaseStartDate}
+              groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
+              controlClassName="contact-us-form-control"
+              errorClassName="contact-us-form-error"
+            />
+
 
             {/* Budget */}
             <SelectInput
@@ -156,18 +190,17 @@ export default function ContactUsForm() {
               errorClassName="contact-us-form-error"
             />
 
-            {/* Bedrooms */}
-            <SelectInput
-              label="What apartment are you interested in?*"
-              name="bedrooms"
-              options={bedroomOptions}
-              value={formData.bedrooms}
+             {/* Parking */}
+             <SelectInput
+              label="Are you looking to secure parking?"
+              name="parking"
+              options={parkingOptions}
+              value={formData.parking}
               onChange={handleInputChange}
-              error={formErrors.bedrooms}
+              error={formErrors.parking}
               groupClassName="contact-us-form-group"
               labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
-              errorClassName="contact-us-form-error"
             />
 
             {/* Pets */}
@@ -183,32 +216,6 @@ export default function ContactUsForm() {
               controlClassName="contact-us-form-control"
             />
 
-            {/* Parking */}
-            <SelectInput
-              label="Do you need parking?"
-              name="parking"
-              options={parkingOptions}
-              value={formData.parking}
-              onChange={handleInputChange}
-              error={formErrors.parking}
-              groupClassName="contact-us-form-group"
-              labelClassName="contact-us-form-label"
-              controlClassName="contact-us-form-control"
-            />
-
-            {/* Lease Start Date */}
-            <DateInput
-              name="leaseStartDate"
-              label="Preferred Move-In Date*"
-              value={formData.leaseStartDate}
-              onChange={handleInputChange}
-              error={formErrors.leaseStartDate}
-              groupClassName="contact-us-form-group"
-              labelClassName="contact-us-form-label"
-              controlClassName="contact-us-form-control"
-              errorClassName="contact-us-form-error"
-            />
-
             {/* How did you hear about us? */}
             <SelectInput
               label="How did you hear about us?"
@@ -219,6 +226,20 @@ export default function ContactUsForm() {
               groupClassName="contact-us-form-group"
               labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
+            />
+
+            {/* Opt-in */}
+            <RadioButtonGroup
+              label="Opt-in to receive communication?*"
+              name="optIn"
+              options={optInOptions}
+              value={formData.optIn}
+              onChange={handleInputChange}
+              error={formErrors.optIn}
+              groupClassName="contact-us-form-group"
+              labelClassName="contact-us-form-label"
+              radioClassName="contact-us-form-control-radio"
+              errorClassName="contact-us-form-error"
             />
 
             {/* Submit Button */}

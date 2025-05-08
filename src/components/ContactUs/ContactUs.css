@@ -75,6 +75,10 @@
   text-align: center;
 }
 
+.contact-us-form-control-radio {
+  margin-bottom: 15px;
+}
+
 /* Mobile Styles */
 @media (max-width: 1400px) {
   .contact-us-title {

@@ -35,6 +35,11 @@ export const validateForm = (formData) => {
     isValid = false;
   }
 
+  if(!formData.optIn) {
+    newErrors.optIn = 'Opt-in to receive communication is required';
+    isValid = false;
+  }
+
   return { isValid, newErrors };
 };
 
@@ -48,7 +53,8 @@ export const defaultFormOptions = {
   leaseStartDate: '',
   pets: '',
   parking: '',
-  attribution: ''
+  attribution: '',
+  optIn: '',
 }
 
 export const bedroomOptions = [
@@ -86,6 +92,11 @@ export const attributionOptions = [
   { label: 'Realtor', value: 'REALTOR' },
   { label: 'Other', value: 'OTHER' },
 ];
+
+export const optInOptions = [
+  { label: 'Yes, I agree to receive text messages from Aqua. Message frequency varies and may include appointment reminders and showing details.', value: 'Yes' },
+  { label: 'No, I do not want to receive text messages from Aqua.', value: 'No' },
+]
 
 export const formSuccessMessage = "Thank you for your submission! Our team will review it and get back to you within 24-48 hours.";
 export const formFailureMessage = "There was a problem with your request. Please try again at a later time."
