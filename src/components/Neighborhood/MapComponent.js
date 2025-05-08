@@ -67,11 +67,7 @@ export default function MapComponent() {
         mapDetails: {
             centerCoordinates: [40.670988, -74.100399],
             zoom: 14,
-            locations: [{
-                name: "Taverna on the Hudson",
-                coordinates: [40.670219, -74.100768],
-                highlight: true,
-            },
+            locations: [
             {
                 name: "Houlihan's",
                 coordinates: [40.668299, -74.104428],

@@ -34,7 +34,7 @@ export const images = [
 ];
 export const amenitiesHighlightData = [{
     title: "Club Room",
-    content: ["The club room at AQUA is a masterclass in refined design and sophisticated ambiance. Thoughtfully curated with rich, tufted leather seating, a sleek stone-accented bar, and moody charcoal walls, the space exudes timeless elegance and masculine charm. Warm lighting highlights the architectural details while the contemporary furnishings offer both comfort and prestige. From the sculptural centerpiece to the iconic red telephone booth, every element in this lounge speaks to a cultivated aesthetic, perfect for intimate gatherings, relaxed work-from-home days, or unwinding in style."],
+    content: ["AQUA’s club room blends classic style with a modern edge, offering a sophisticated setting curated for both comfort and character. Tufted leather seating, a sleek stone-accented bar, and a pool table anchor the space in timeless elegance, while expansive windows fill it with natural light. Sculptural details, contemporary furnishings, and an iconic red telephone booth add a distinct sense of style—ideal for quiet workdays, intimate gatherings, or unwinding in good company."],
     image: clubRoom,
     imageAlt: 'Club Room'
 }, {
@@ -44,7 +44,7 @@ export const amenitiesHighlightData = [{
     imageAlt: 'The Co-Working Lounge'
 }, {
     title: "The Rooftop at AQUA",
-    content: ["Perched high above Bayonne, AQUA’s rooftop deck is a panoramic sanctuary unlike any other. With unobstructed, sweeping views of the Manhattan skyline, the Hudson River, and the dynamic port landscape, this expansive space sets the stage for unforgettable moments—whether you're unwinding with a cocktail or hosting an elegant event under the stars.", "Designed to impress, the rooftop features a sleek full-service wet bar, plush lounge seating, and shaded daybeds for day-to-night enjoyment. With a generous capacity of up to 300 guests, the space can effortlessly transform into a breathtaking venue for private gatherings, curated social events, or resident celebrations—all framed by one of the most iconic skylines in New Jersey."],
+    content: ["Overlooking Bayonne and the Manhattan skyline, AQUA’s rooftop deck is a spacious escape designed for both relaxation and gathering.With unobstructed, sweeping views of the Manhattan skyline, the Hudson River, and the dynamic port landscape, this expansive space sets the stage for unforgettable moments—whether you're unwinding with a cocktail or hosting an elegant event under the stars.", "Thoughtfully designed with a full-service wet bar, plush lounge seating, and shaded daybeds, the rooftop invites day-to-night relaxation and celebration. With space for up to 300 guests, it easily transforms into a stunning venue for private events, social gatherings, or community occasions—all set against one of New Jersey’s most iconic backdrops."],
     image: roofDeckRender,
     imageAlt: 'The Rooftop at AQUA'
 }, {
@@ -54,17 +54,17 @@ export const amenitiesHighlightData = [{
     imageAlt: "The Second Floor Amenity Deck",
 },{
     title: "The Fitness Center",
-    content: ["Step into AQUA’s state-of-the-art fitness center, and feel the energy shift. With its sleek, futuristic design, dynamic lighting, and wall-to-wall equipment, this isn’t just a gym—it’s a catalyst for becoming your best self. Every detail, from the powerful ambiance to the panoramic windows that flood the space with natural light, is designed to motivate, energize, and inspire.", "Whether you're powering through cardio, sculpting with strength training, or stretching into a new rhythm, this immersive environment pushes you to go further, train harder, and stay consistent. It’s not just a place to work out—it’s a space that works on you."],
+    content: ["Step into AQUA’s state-of-the-art fitness center, and experience. With its sleek, futuristic design, dynamic lighting, and wall-to-wall equipment, this isn’t just a gym—it’s a catalyst for becoming your best self. Every detail, from the powerful ambiance to the panoramic windows that flood the space with natural light, is designed to motivate, energize, and inspire. The fitness center is also connected to the amenity terrace, where you can practice your yoga or just take in some sun.", "Whether you're powering through cardio, sculpting with strength training, or stretching into a new rhythm, this immersive environment allows you to push yourself to go further, train harder, and stay consistent."],
     image: amenitiesGym,
     imageAlt: "The Fitness Center",
 },{
     title: "Pickleball",
-    content: ["AQUA is proud to offer a rare luxury—the only dedicated pickleball court among neighboring residential communities. Whether you're a seasoned player or a curious beginner, this vibrant and fast-growing sport finds its perfect match in our professionally designed court.", "Set within a beautifully landscaped environment, the court invites residents to engage, connect, and stay active—all just steps from their front door. It’s not just a perk—it’s a statement. At AQUA, we don’t just follow trends—we lead with amenities that energize community and wellness in ways others simply can’t match."],
+    content: ["AQUA is proud to offer a rare luxury—the only dedicated pickleball court among neighboring residential communities. Whether you're a seasoned player or a curious beginner, this vibrant and fast-growing sport finds its perfect match in our professionally designed court.", "Set within a beautifully landscaped environment, the court invites residents to engage, connect, and stay active—all just steps from their front door. At AQUA, we care about offering amenities that energize the community and wellness in ways others simply can’t match."],
     image: pickleball,
     imageAlt: "Pickleball",
 },{
     title: "The Basketball Court",
-    content: ["AQUA raises the game—literally—with the only private basketball court among neighboring residential communities. Whether you're shooting solo, running drills, or hosting a friendly match, this full-size indoor court delivers the perfect space to play hard, stay active, and build community.", "Designed for both recreational fun and serious fitness, the court offers residents a unique amenity that combines athleticism with convenience—no gym memberships or crowded parks required. It’s more than just a game—it’s your own personal arena, right at home."],
+    content: ["Aqua offers the only private half-court basketball court in the area—perfect for solo practice, casual games, or staying fit. Whether you're playing for fun or focused on fitness, this exclusive outdoor amenity brings the game home—no gym required."],
     image: basketball,
     imageAlt: "The Basketball Court",
 },{
@@ -74,7 +74,7 @@ export const amenitiesHighlightData = [{
     imageAlt: "OT Social – Your All-Day Culinary Lounge",
 },{
     title: "The Pedestrian Plaza – Your Everyday Escape",
-    content: ["Framing the perfect balance between movement and pause, AQUA’s pedestrian plaza is a beautifully sculpted outdoor retreat designed to connect, unwind, and savor. Lined with curated landscaping and architectural curves, the space offers a seamless indoor-outdoor extension of OT Social, inviting you to enjoy your morning coffee or evening cocktail in the fresh air.", "Whether you're taking a stroll, enjoying casual conversations with neighbors, or simply soaking in the serenity, this plaza is the community’s go-to destination. With integrated seating and direct access to the food hall, it transforms into a welcoming social lounge by day and a charming hangout by night."],
+    content: ["AQUA’s pedestrian plaza is a calm, open-air retreat designed for everyday moments—morning coffee, evening drinks, or casual time with neighbors. Thoughtful landscaping and flowing architecture extend the energy of OT Social outdoors, blending comfort with connection.", "With built-in seating and food hall access, it’s an easy place to unwind, any time of day."],
     image: pedestrianWalkwayRender,
     imageAlt: "The Pedestrian Plaza – Your Everyday Escape",
 }]

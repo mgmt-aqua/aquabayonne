@@ -36,17 +36,14 @@ export default function NeighborhoodHomeSection() {
                 <Col md={12} lg={6} className="neighborhood-text-column">
                     <div className="neighborhood-home-section-text-container">
                         <FramerTextReveal>
-                            <h4 className="neighborhood-pre-text">Modern Conveniences with a Touch of Luxury</h4>
+                            <h4 className="neighborhood-pre-text">Effortless Access to It All</h4>
                         </FramerTextReveal>
                         <FramerTextReveal delay={0.25}>
                             <h1 className="neighborhood-home-section-main-text">Neighborhood</h1>
                         </FramerTextReveal>
                         <FramerTextReveal delay={0.35}>
                             <p className="neighborhood-home-section-description">
-                                Discover a collection of sophisticated neighborhood designed to complement your lifestyle.
-                                Whether you're unwinding in the resident lounge, focusing in a serene co-working space,
-                                or staying active in the fitness center, every detail has been considered to offer comfort,
-                                convenience, and connection. Experience a community where everyday moments feel effortlessly luxurious.
+                            Aqua offers the perfect balance of neighborhood charm and metropolitan access. Ideally located in Bayonne’s waterfront district, Ocean Terminal, residents enjoy a relaxed, community-focused setting with seamless connections to Manhattan via nearby Light Rail and ferry. From local parks and shoreline paths to vibrant dining and cultural spots, Aqua places you at the crossroads of comfort, convenience, and city energy—just minutes from the heart of NYC.
                             </p>
                         </FramerTextReveal>
                         <FramerTextReveal delay={0.45}>

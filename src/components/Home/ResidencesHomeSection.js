@@ -20,16 +20,14 @@ export default function ResidencesHomeSection() {
                     <Col md={12} lg={6} className="residences-text-column">
                         <div className="residences-home-section-text-container">
                             <FramerTextReveal>
-                                <h4 className="residences-pre-text">Designed to Impress. Built to Last.</h4>
+                                <h4 className="residences-pre-text">Where Comfort Meets Style</h4>
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.25}>
                                 <h1 className="residences-home-section-main-text">Residences</h1>
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.35}>
                                 <p className="residences-home-section-description">
-                                    From the moment you arrive, Aqua commands attention—where striking architecture
-                                    meets timeless design. Crafted with meticulous detail, every corner reflects an
-                                    uncompromising commitment to quality, security, and refined urban living.
+                                    Designed for modern living, Aqua’s residences blend clean lines, natural light, and thoughtful finishes. Choose from studios, one-, and two-bedroom layouts—each offering spacious interiors, oversized windows, and elevated views of the Hudson River, Manhattan skyline, or Bayonne’s lush green spaces. It’s comfort, style, and function—brought together seamlessly.
                                 </p>
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.45}>

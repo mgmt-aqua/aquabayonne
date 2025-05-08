@@ -42,9 +42,7 @@ export const neighborhoodHighlights = [
   },
   {
     title: "Upcoming Ferry",
-    content: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
-    ],
+    content: ["The upcoming ferry will provide easy access to NYC without the hustle and bustle of the morning traffic. Positioned at a close proximity to aqua, our shuttle service will offer stops to the ferry, making it a simple commute into the city."],
     image: neighborhoodFerry,
     imageAlt: 'Upcoming Ferry'
   },
@@ -64,9 +62,7 @@ export const neighborhoodHighlights = [
   },
   {
     title: "Shuttle to Path Station",
-    content: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut."
-    ],
+    content: ["Aqua’s weekday shuttle offers direct service to the Light Rail and ferry, making your daily commute simple and seamless."],
     image: shuttleBus,
     imageAlt: 'Shuttle to Path Station'
   }
