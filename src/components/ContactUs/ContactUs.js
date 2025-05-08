@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Row, Col, Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
 
 import useLeafletMap from '../../hooks/useLeafletMap';
 import TextInput from '../Common/Forms/TextInput';
@@ -16,7 +15,6 @@ import {
   defaultFormOptions,
   validateForm,
   defaultFormErrors,
-  budgetOptions,
   attributionOptions,
   bedroomOptions,
   optInOptions,
@@ -191,8 +189,8 @@ export default function ContactUsForm() {
               errorClassName="contact-us-form-error"
             />
 
-             {/* Parking */}
-             <RadioButtonGroup
+            {/* Parking */}
+            <RadioButtonGroup
               label="Are you looking to secure parking?"
               name="parking"
               options={parkingOptions}
@@ -228,6 +226,18 @@ export default function ContactUsForm() {
               labelClassName="contact-us-form-label"
               controlClassName="contact-us-form-control"
             />
+
+            {formData.attribution === 'OTHER' &&
+              <TextInput
+                label="Please specify how you heard about us:"
+                name="attributionOther"
+                value={formData.attributionOther}
+                onChange={handleInputChange}
+                groupClassName="contact-us-form-group"
+                labelClassName="contact-us-form-label"
+                controlClassName="contact-us-form-control"
+              />
+            }
 
             {/* Opt-in */}
             <RadioButtonGroup

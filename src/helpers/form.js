@@ -54,6 +54,7 @@ export const defaultFormOptions = {
   pets: '',
   parking: '',
   attribution: '',
+  attributionOther: '',
   optIn: '',
 }
 
