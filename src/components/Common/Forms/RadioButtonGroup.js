@@ -16,6 +16,7 @@ const RadioButtonGroup = ({
     <Form.Label className={labelClassName}>{label}</Form.Label>
     {options.map((opt) => (
       <Form.Check
+        inline
         key={opt.value}
         type="radio"
         id={`${name}-${opt.value}`}

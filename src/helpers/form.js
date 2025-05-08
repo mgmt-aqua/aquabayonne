@@ -58,20 +58,17 @@ export const defaultFormOptions = {
 }
 
 export const bedroomOptions = [
-  { label: 'Please choose an option', value: 'default' },
   { label: 'Studio', value: 'Studio' },
   { label: '1 Bed', value: '1 Bed' },
   { label: '2 Bed', value: '2 Bed' },
 ]
 
 export const petOptions = [
-  { label: 'Please choose an option', value: 'default' },
   { label: 'Yes', value: 'Yes' },
   { label: 'No', value: 'No' },
 ]
 
 export const parkingOptions = [
-  { label: 'Please choose an option', value: 'default' },
   { label: 'Yes', value: 'Yes' },
   { label: 'No', value: 'No' },
 ]
@@ -94,8 +91,8 @@ export const attributionOptions = [
 ];
 
 export const optInOptions = [
-  { label: 'Yes, I agree to receive text messages from Aqua. Message frequency varies and may include appointment reminders and showing details.', value: 'Yes' },
-  { label: 'No, I do not want to receive text messages from Aqua.', value: 'No' },
+  { label: 'Yes', value: 'Yes' },
+  { label: 'No', value: 'No' },
 ]
 
 export const formSuccessMessage = "Thank you for your submission! Our team will review it and get back to you within 24-48 hours.";

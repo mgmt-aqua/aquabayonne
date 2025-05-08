@@ -27,7 +27,7 @@ export const neighborhoodHighlights = [
   {
     title: "Luxury Meets Everyday Convenience",
     content: [
-      "Enjoy the ultimate convenience with Costco just a short walk from your front door. Stock up on everything you need for both everyday essentials and indulgent luxuries, all within walking distance. Whether you’re preparing for a dinner party or simply running errands, this easy access to one of the world’s most trusted retailers brings practical luxury to your lifestyle."
+      "Enjoy unmatched convenience with Costco, Aldi, and Starbucks just a short walk from your front door, along with LA Fitness to help you stay energized and active. From everyday essentials to indulgent luxuries, everything you need is within easy reach. Whether you're hosting a dinner party or just running errands, this access to trusted brands adds a touch of practical luxury to your daily life."
     ],
     image: neighborhoodCostco,
     imageAlt: 'Neighborhood Costco'

@@ -150,7 +150,7 @@ export default function ContactUsForm() {
             />
 
             {/* Bedrooms */}
-            <SelectInput
+            <RadioButtonGroup
               label="Desired Unit Size*"
               name="bedrooms"
               options={bedroomOptions}
@@ -178,10 +178,10 @@ export default function ContactUsForm() {
 
 
             {/* Budget */}
-            <SelectInput
-              label="Select your budget*"
+            <TextInput
+              label="Enter your budget*"
               name="budget"
-              options={budgetOptions}
+              placeholder="e.g. $2,500"
               value={formData.budget}
               onChange={handleInputChange}
               error={formErrors.budget}
@@ -192,7 +192,7 @@ export default function ContactUsForm() {
             />
 
              {/* Parking */}
-             <SelectInput
+             <RadioButtonGroup
               label="Are you looking to secure parking?"
               name="parking"
               options={parkingOptions}
@@ -205,7 +205,7 @@ export default function ContactUsForm() {
             />
 
             {/* Pets */}
-            <SelectInput
+            <RadioButtonGroup
               label="Do you have any pets?"
               name="pets"
               options={petOptions}
@@ -231,7 +231,7 @@ export default function ContactUsForm() {
 
             {/* Opt-in */}
             <RadioButtonGroup
-              label="Opt-in to receive communication?*"
+              label="Opt-in to receive text communication?*"
               name="optIn"
               options={optInOptions}
               value={formData.optIn}
@@ -242,8 +242,6 @@ export default function ContactUsForm() {
               radioClassName="contact-us-form-control-radio"
               errorClassName="contact-us-form-error"
             />
-
-            <div className="contact-us-privacy-policy-link"><Link to="/privacy">Privacy Policy</Link></div>
 
             {/* Submit Button */}
             <Button variant="primary" type="submit" className="contact-us-submit-button">

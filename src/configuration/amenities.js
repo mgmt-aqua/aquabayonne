@@ -48,25 +48,25 @@ export const amenitiesHighlightData = [{
     image: roofDeckRender,
     imageAlt: 'The Rooftop at AQUA'
 }, {
-    title: "The Second Floor Amenity Deck",
+    title: "Terrace at AQUA",
     content: ["AQUA’s exclusive second-floor amenity deck is a seamless extension of elevated living, blurring the lines between indoor elegance and outdoor serenity. Connected directly to the resident Club Room, this beautifully landscaped retreat offers an intimate, resort-like escape just steps from home.", "Designed with wellness and community in mind, the deck features lush greenery, cozy lounge seating, social firepit nooks, and entertainment-ready spaces, including game tables and dining zones. For health enthusiasts, a dedicated yoga corner offers the perfect setting to stretch, breathe, and move in the open air—all while enjoying the comfort of privacy. Direct access to the fitness center makes it effortless to transition between indoor workouts and revitalizing outdoor flows, creating a holistic wellness experience unlike any other."],
     image: amenitiesRendering,
-    imageAlt: "The Second Floor Amenity Deck",
+    imageAlt: "Terrace at AQUA",
 },{
     title: "The Fitness Center",
     content: ["Step into AQUA’s state-of-the-art fitness center, and experience. With its sleek, futuristic design, dynamic lighting, and wall-to-wall equipment, this isn’t just a gym—it’s a catalyst for becoming your best self. Every detail, from the powerful ambiance to the panoramic windows that flood the space with natural light, is designed to motivate, energize, and inspire. The fitness center is also connected to the amenity terrace, where you can practice your yoga or just take in some sun.", "Whether you're powering through cardio, sculpting with strength training, or stretching into a new rhythm, this immersive environment allows you to push yourself to go further, train harder, and stay consistent."],
     image: amenitiesGym,
     imageAlt: "The Fitness Center",
 },{
-    title: "Pickleball",
+    title: "Pickleball at AQUA",
     content: ["AQUA is proud to offer a rare luxury—the only dedicated pickleball court among neighboring residential communities. Whether you're a seasoned player or a curious beginner, this vibrant and fast-growing sport finds its perfect match in our professionally designed court.", "Set within a beautifully landscaped environment, the court invites residents to engage, connect, and stay active—all just steps from their front door. At AQUA, we care about offering amenities that energize the community and wellness in ways others simply can’t match."],
     image: pickleball,
-    imageAlt: "Pickleball",
+    imageAlt: "Pickleball at AQUA",
 },{
-    title: "The Basketball Court",
+    title: "Basketball at AQUA",
     content: ["Aqua offers the only private half-court basketball court in the area—perfect for solo practice, casual games, or staying fit. Whether you're playing for fun or focused on fitness, this exclusive outdoor amenity brings the game home—no gym required."],
     image: basketball,
-    imageAlt: "The Basketball Court",
+    imageAlt: "Basketball at AQUA",
 },{
     title: "OT Social – Your All-Day Culinary Lounge",
     content: ["Welcome to OT Social, AQUA’s exclusive on-site food hall and full-service bar—a vibrant social hub just steps from your front door. From morning cappuccinos to evening aperitifs, OT Social is designed to serve your every craving, any time of day.", "Featuring a curated mix of multi-cuisine offerings, artisanal bites, and craft beverages, this stylish space blends convenience with community. Whether you're grabbing a quick coffee before work, meeting friends for wood-fired pizza, or winding down with a signature cocktail at the bar, OT Social brings the energy of a boutique dining experience right to your doorstep."],
