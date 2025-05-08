@@ -46,8 +46,16 @@
     <!-- This hidden form is added to handle Netlify forms-->
     <form name="contact" netlify hidden>
       <label for="name">Name*</label><input placeholder="e.g. John Smith" id="name" type="text" value="" name="name">
-      <label for="email">Email*</label><input placeholder="e.g. johnsmith@example.com" id="email" type="text" name="email">
-      <label for="phone">Phone Number*</label><input placeholder="e.g. 555-555-5555" id="phone" type="text" name="phone">
+      <label for="phone">Phone Number*</label><input placeholder="e.g. 555-555-5555" id="phone" type="text" value="" name="phone">
+      <label for="email">Email*</label><input placeholder="e.g. johnsmith@example.com" id="email" type="text" value="" name="email">
+      <label for="bedrooms">Desired Unit Size*</label>
+          <select name="bedrooms" id="bedrooms">
+              <option value="default">Please choose an option</option>
+              <option value="Studio">Studio</option>
+              <option value="1 Bed">1 Bed</option>
+              <option value="2 Bed">2 Bed</option>
+          </select>
+      <label for="leaseStartDate">Desired Move-in Date*</label><input min="2025-05-08" id="leaseStartDate" type="date" value="" name="leaseStartDate">
       <label for="budget">Select your budget*</label>
           <select name="budget" id="budget">
               <option value="default">Please choose an option</option>
@@ -57,26 +65,18 @@
               <option value="$3,500–$4,000">$3,500–$4,000</option>
               <option value="$4,000+">$4,000+</option>
           </select>
-      <label for="bedrooms">What apartment are you interested in?*</label>
-          <select name="bedrooms" id="bedrooms">
+      <label for="parking">Are you looking to secure parking?</label>
+          <select name="parking" id="parking">
               <option value="default">Please choose an option</option>
-              <option value="Studio">Studio</option>
-              <option value="1 Bed">1 Bed</option>
-              <option value="2 Bed">2 Bed</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
           </select>
       <label for="pets">Do you have any pets?</label>
-          <select name="pets" id="pets" >
+          <select name="pets" id="pets">
               <option value="default">Please choose an option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
           </select>
-      <label for="parking">Do you need parking?</label>
-          <select name="parking" id="parking" >
-              <option value="default">Please choose an option</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-          </select>
-      <label for="leaseStartDate">Preferred Move-In Date*</label><input min="2025-04-10" id="leaseStartDate" type="date" name="leaseStartDate">
       <label for="attribution">How did you hear about us?</label>
           <select name="attribution" id="attribution">
               <option value="default">Please choose an option</option>
@@ -85,6 +85,12 @@
               <option value="REALTOR">Realtor</option>
               <option value="OTHER">Other</option>
           </select>
+      <label>Opt-in to receive communication?*</label>
+          <input id="optIn-Yes" class="form-check-input" type="radio" value="Yes" name="optIn"><label title="" for="optIn-Yes">Yes, I
+                  agree to receive text messages from Aqua. Message frequency varies and may include appointment reminders
+                  and showing details.</label>
+          <input id="optIn-No" type="radio" value="No" name="optIn"><label title="" for="optIn-No">No, I do not want to
+                  receive text messages from Aqua.</label>
       <button type="submit">Submit</button>
   </form>
   </body>
