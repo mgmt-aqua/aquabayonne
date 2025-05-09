@@ -229,7 +229,6 @@ export default function MapComponent() {
                 coordinates: [40.671461, -74.121588],
                 highlight: true
             },
-
             {
                 name: "Horace Mann Elementary School",
                 coordinates: [40.676018, -74.108885],
@@ -248,7 +247,23 @@ export default function MapComponent() {
                 name: "Washington Elementary School",
                 coordinates: [40.683520, -74.108311],
                 highlight: true,
-            }]
+            },
+            {
+                name: "Beacon Christian Academy",
+                coordinates: [40.660438, -74.115847],
+                highlight: false,
+            },
+            {
+                name: "Nicholas Oresko School PS 14",
+                coordinates: [40.663758, -74.115384],
+                highlight: false,
+            },
+            {
+                name: "William Shemin Midtown Community School",
+                coordinates: [40.667435, -74.123056],
+                highlight: false,
+            },
+        ]
         }
     },
     {
@@ -265,24 +280,19 @@ export default function MapComponent() {
                 coordinates: [40.660522, -74.108488],
                 highlight: true
             },
-
             {
-                name: "Garden State Healthcare",
-                coordinates: [40.668041, -74.112951],
-                highlight: true,
+                name: "Bayonne Medical Center: Emergency Room",
+                coordinates: [40.667633, -74.111955],
+                highlight: true
             },
             {
-                name: "Redefine Healthcare",
-                coordinates: [40.675430, -74.107586],
-                highlight: true,
-            }, {
-                name: "Optum Primary Care - Bayonne",
-                coordinates: [40.665271, -74.116613],
-                highlight: true,
+                name: "Barnabas Health Medical Group United Medical",
+                coordinates: [40.681217, -74.103090],
+                highlight: true
             },
             {
-                name: "Broadway Pediatric Center",
-                coordinates: [40.662332, -74.119887],
+                name: "RWJ Barnabas Health at Bayonne",
+                coordinates: [40.664251, -74.118115],
                 highlight: true,
             }]
         }

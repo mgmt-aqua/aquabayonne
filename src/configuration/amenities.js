@@ -1,4 +1,3 @@
-import amenitiesClubRoom from "../img/amemities/amenities_club_room.png";
 import amenitiesGym from "../img/amemities/amenities_gym.png";
 import amenitiesRendering from "../img/amemities/amenities_cover.png";
 
@@ -6,31 +5,25 @@ import coworkingSpace from '../img/amemities/Coworking.png'
 import mailRoom from '../img/amemities/Mailroom upscale.png'
 import clubRoom from '../img/amemities/Clubroom.png'
 import clubRoomBar from '../img/amemities/club_room_bar.jpg'
-import roofDeck1 from '../img/amemities/Roofdeck.png'
-import roofDeck2 from '../img/amemities/Roofdeck (1).png'
-import roofDeck3 from '../img/amemities/Roofdeck (2).png'
 import roofDeckRender from '../img/amemities/Roofdeck Render.png'
 import pedestrianWalkwayRender from '../img/amemities/Walkway Render.png'
 import pickleball from '../img/amemities/pickleball.jpg'
 import basketball from '../img/amemities/basketball.jpg'
 import foodHall from '../img/neighborhood/food_hall_bar.jpg'
 
-export const amenitiesList = ["24/7 Concierge Service", "Fitness Center / Gym", "Rooftop Terrace", "Pet-Friendly", "Clubroom"]
-export const amenitiesList2 = ["Outdoor BBQ Grills / Picnic Area", "Wellness Center", "Co-working Space", "On-Site Parking", "EV Charging Stations"]
-export const amenitiesList3 = ["Package Room", "Bike Storage", "Food Hall", "Pedestrian Walkway", "Rentable Event Space"]
-export const amenitiesList4 = ["Community Garden", "Shuttle Service", "Outdoor Fire Pits", "Resident’s Events", "Pickleball Courts"]
+export const amenitiesList = ["Fitness Center/Gym", "Pickle Ball Court", "Half-Size Basketball Court", "Comunnity Garden", "Pedestrian Walkway"]
+export const amenitiesList2 = ["Food Hall", "Club Room", "Rooftop Deck", "Amenity Terrace", "Co-Working Space"]
+export const amenitiesList3 = ["Bike Storage", "Package Room", "On-Site Parking", "EV-Charging Stations", "Outdoor BBQ Grills/Picnic Area"]
+export const amenitiesList4 = ["Pet Friendly", "Shuttle Service", "Outdoor Fire Pits", "Resident’s Events", "Rentable Event Space"]
 export const allAmenities = [amenitiesList, amenitiesList2, amenitiesList3, amenitiesList4]
 
 export const images = [
-    { src: amenitiesClubRoom, alt: 'Image 1' },
-    { src: clubRoom, alt: 'Image 2' },
-    { src: clubRoomBar, alt: 'Image 3' },
-    { src: roofDeck1, alt: 'Roof Deck Full' },
-    { src: roofDeck2, alt: 'Roof Deck Bayonne Bridge' },
-    { src: roofDeck3, alt: 'Roof Deck NYC' },
-    { src: mailRoom, alt: 'Image 7' },
-    { src: coworkingSpace, alt: 'Image 8' },
-    { src: amenitiesRendering, alt: 'Image 9' }
+    { src: clubRoom, alt: 'Club Room Amenity' },
+    { src: clubRoomBar, alt: 'Club Room Bar Amenity' },
+    { src: mailRoom, alt: 'Package Room Amenity' },
+    { src: coworkingSpace, alt: 'Co Working Space Amenity' },
+    { src: amenitiesRendering, alt: 'Terrace Amenity' },
+    { src: foodHall, alt: 'Food Hall Amenity' },
 ];
 export const amenitiesHighlightData = [{
     title: "Club Room",
@@ -48,13 +41,13 @@ export const amenitiesHighlightData = [{
     image: roofDeckRender,
     imageAlt: 'The Rooftop at AQUA'
 }, {
-    title: "Terrace at AQUA",
+    title: "The Terrace at AQUA",
     content: ["AQUA’s exclusive second-floor amenity deck is a seamless extension of elevated living, blurring the lines between indoor elegance and outdoor serenity. Connected directly to the resident Club Room, this beautifully landscaped retreat offers an intimate, resort-like escape just steps from home.", "Designed with wellness and community in mind, the deck features lush greenery, cozy lounge seating, social firepit nooks, and entertainment-ready spaces, including game tables and dining zones. For health enthusiasts, a dedicated yoga corner offers the perfect setting to stretch, breathe, and move in the open air—all while enjoying the comfort of privacy. Direct access to the fitness center makes it effortless to transition between indoor workouts and revitalizing outdoor flows, creating a holistic wellness experience unlike any other."],
     image: amenitiesRendering,
     imageAlt: "Terrace at AQUA",
 },{
     title: "The Fitness Center",
-    content: ["Step into AQUA’s state-of-the-art fitness center, and experience. With its sleek, futuristic design, dynamic lighting, and wall-to-wall equipment, this isn’t just a gym—it’s a catalyst for becoming your best self. Every detail, from the powerful ambiance to the panoramic windows that flood the space with natural light, is designed to motivate, energize, and inspire. The fitness center is also connected to the amenity terrace, where you can practice your yoga or just take in some sun.", "Whether you're powering through cardio, sculpting with strength training, or stretching into a new rhythm, this immersive environment allows you to push yourself to go further, train harder, and stay consistent."],
+    content: ["Step into AQUA’s state-of-the-art fitness center, and experience. With its sleek, futuristic design, dynamic lighting, and wall-to-wall equipment, this isn’t just a gym—it’s a catalyst for becoming your best self. Every detail, from the powerful ambiance to the panoramic windows that flood the space with natural light, is designed to motivate, energize, and inspire. The fitness center is also connected to the amenity terrace, where you can practice your yoga or just take in some sun."],
     image: amenitiesGym,
     imageAlt: "The Fitness Center",
 },{
