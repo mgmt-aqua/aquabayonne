@@ -1,13 +1,15 @@
 import React from "react";
 
+// Third Party
+import ReactGA from 'react-ga4';
+
+// Hooks
+import usePageTracking from '../hooks/usePageTracking'
+
 // Components
 import Home from "./Home/Home";
-import HomeSection from "./Home/HomeSection";
 import HomeSplashScreen from "./Common/HomeSplashScreen";
 import Footer from "./Footer/Footer";
-
-// Configuration
-import { homePageSections } from "../configuration/home";
 
 // Styles
 import "./App.css";
@@ -16,8 +18,10 @@ import AmenitiesHomeSection from "./Home/AmenitiesHomeSection";
 import BuildingHomeSection from "./Home/BuildingHomeSection";
 import NeighborhoodHomeSection from "./Home/NeighborhoodHomeSection";
 
-export default function App() {
+ReactGA.initialize('G-F4TXE4KJ98');
 
+export default function App() {
+    usePageTracking();
     return (
       <HomeSplashScreen duration={4000}>
         <div className="scroll-container">
@@ -26,14 +30,6 @@ export default function App() {
           <AmenitiesHomeSection />
           <ResidencesHomeSection />
           <NeighborhoodHomeSection />
-          {/* {homePageSections.map((section) => {
-            return <HomeSection 
-              key={section.id}
-              id={section.id} 
-              containerClassName={section.containerClassName} 
-              text={section.text} 
-              link={section.link}/>
-          })} */}
           <Footer id="footer"/>  
         </div>
       </HomeSplashScreen>
