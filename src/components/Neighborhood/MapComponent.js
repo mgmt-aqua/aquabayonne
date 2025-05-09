@@ -268,8 +268,8 @@ export default function MapComponent() {
     },
     {
         accordionDetails: {
-            id: "healthcare",
-            title: "Healthcare",
+            id: "medicalServices",
+            title: "Medical Services",
             body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
         },
         mapDetails: {
