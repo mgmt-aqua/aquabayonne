@@ -137,12 +137,12 @@ export const inventoryOptions = [{
 export const residencesHighlightData = [
     {
         title: "Interiors",
-        description: "At AQUA, interiors are more than just beautiful—they’re intentional. Every layout and finish is thoughtfully curated to enhance how you live, relax, and connect. Whether you’re savoring a quiet sunrise, entertaining guests, or simply unwinding at the end of the day, these interiors are designed to elevate every moment.",
+        description: "At AQUA, interiors are more than just beautiful—they’re intentional. Every layout and finish is thoughtfully curated to enhance how you live, relax, and connect. Whether you’re savoring a quiet sunrise, entertaining guests, or simply unwinding at the end of the day, these spaces are designed to elevate every moment.",
         img: livingRoom2Bed
     },
     {
         title: "Chef Inspired Elegance",
-        description: "This chef-inspired kitchen is the perfect fusion of form and function, crafted for both everyday elegance and elevated entertaining. The striking quartz marble island offers a central gathering point, ideal for morning coffee, casual dining, or hosting with style. Matte black cabinetry paired with sleek stainless steel appliances creates a bold yet balanced aesthetic, while the full-height subway tile backsplash adds timeless character. Every detail has been thoughtfully selected to inspire creativity, comfort, and culinary moments worth savoring.",
+        description: "This chef-inspired kitchen is the perfect fusion of form and function, crafted for both everyday elegance and elevated entertaining. The striking quartz marble island offers a central gathering point, ideal for morning coffee, casual dining, or hosting with style. Matte naval blue cabinetry paired with sleek stainless steel appliances creates a bold yet balanced aesthetic. Every detail has been thoughtfully selected to inspire creativity, comfort, and culinary moments worth savoring.",
         img: resideneces2
     },
     {

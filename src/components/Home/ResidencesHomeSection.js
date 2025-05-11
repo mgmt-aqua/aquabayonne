@@ -27,7 +27,7 @@ export default function ResidencesHomeSection() {
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.35}>
                                 <p className="residences-home-section-description">
-                                    Designed for modern living, Aqua’s residences blend clean lines, natural light, and thoughtful finishes. Choose from studios, one-, and two-bedroom layouts—each offering spacious interiors, oversized windows, and elevated views of the Hudson River, Manhattan skyline, or Bayonne’s lush green spaces. It’s comfort, style, and function—brought together seamlessly.
+                                    Designed for modern living, AQUA's residences blend clean lines, natural light, and thoughtful finishes. Choose from studios, one-, and two-bedroom layouts—each offering spacious interiors, oversized windows, and elevated views of the Hudson River, Manhattan skyline, or Bayonne’s lush green spaces. It’s comfort, style, and function—brought together seamlessly.
                                 </p>
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.45}>

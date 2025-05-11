@@ -43,7 +43,7 @@ export default function NeighborhoodHomeSection() {
                         </FramerTextReveal>
                         <FramerTextReveal delay={0.35}>
                             <p className="neighborhood-home-section-description">
-                            Aqua offers the perfect balance of neighborhood charm and metropolitan access. Ideally located in Bayonne’s waterfront district, Ocean Terminal, residents enjoy a relaxed, community-focused setting with seamless connections to Manhattan via nearby Light Rail and ferry. From local parks and shoreline paths to vibrant dining and cultural spots, Aqua places you at the crossroads of comfort, convenience, and city energy—just minutes from the heart of NYC.
+                            AQUA offers the perfect balance of neighborhood charm and metropolitan access. Ideally located in Bayonne’s waterfront district, Ocean Terminal, residents enjoy a relaxed, community-focused setting with seamless connections to Manhattan via nearby Light Rail and ferry. From local parks and shoreline paths to vibrant dining and cultural spots, AQUA places you at the crossroads of comfort, convenience, and city energy—just minutes from the heart of NYC.
                             </p>
                         </FramerTextReveal>
                         <FramerTextReveal delay={0.45}>

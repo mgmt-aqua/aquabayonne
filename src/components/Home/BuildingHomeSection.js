@@ -27,7 +27,7 @@ export default function BuildingHomeSection() {
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.35}>
                                 <p className="building-home-section-description">
-                                    From the moment you arrive, Aqua commands attention—where striking architecture
+                                    From the moment you arrive, AQUA commands attention—where striking architecture
                                     meets timeless design. Crafted with meticulous detail, every corner reflects an
                                     uncompromising commitment to quality, security, and refined urban living.
                                 </p>

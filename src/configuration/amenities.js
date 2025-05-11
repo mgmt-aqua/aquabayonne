@@ -20,7 +20,7 @@ export const allAmenities = [amenitiesList, amenitiesList2, amenitiesList3, amen
 export const images = [
     { src: clubRoom, alt: 'Club Room Amenity' },
     { src: clubRoomBar, alt: 'Club Room Bar Amenity' },
-    { src: mailRoom, alt: 'Package Room Amenity' },
+    { src: roofDeckRender, alt: 'Roof Top Deck' },
     { src: coworkingSpace, alt: 'Co Working Space Amenity' },
     { src: amenitiesRendering, alt: 'Terrace Amenity' },
     { src: foodHall, alt: 'Food Hall Amenity' },
@@ -42,7 +42,7 @@ export const amenitiesHighlightData = [{
     imageAlt: 'The Rooftop at AQUA'
 }, {
     title: "The Terrace at AQUA",
-    content: ["AQUA’s exclusive second-floor amenity deck is a seamless extension of elevated living, blurring the lines between indoor elegance and outdoor serenity. Connected directly to the resident Club Room, this beautifully landscaped retreat offers an intimate, resort-like escape just steps from home.", "Designed with wellness and community in mind, the deck features lush greenery, cozy lounge seating, social firepit nooks, and entertainment-ready spaces, including game tables and dining zones. For health enthusiasts, a dedicated yoga corner offers the perfect setting to stretch, breathe, and move in the open air—all while enjoying the comfort of privacy. Direct access to the fitness center makes it effortless to transition between indoor workouts and revitalizing outdoor flows, creating a holistic wellness experience unlike any other."],
+    content: ["AQUA’s exclusive second-floor amenity deck is a seamless extension of elevated living, blurring the lines between indoor elegance and outdoor serenity. Connected directly to the resident Club Room and fitness center, this beautifully landscaped retreat offers an intimate, resort-like escape just steps from home.", "Designed with wellness and community in mind, the deck features lush greenery, cozy lounge seating, social firepit nooks, and entertainment-ready spaces. For health enthusiasts, a dedicated yoga corner offers the perfect setting to stretch, breathe, and move in the open air—all while enjoying the comfort of privacy. Direct access to the fitness center makes it effortless to transition between indoor workouts and revitalizing outdoor flows, creating a holistic wellness experience unlike any other."],
     image: amenitiesRendering,
     imageAlt: "Terrace at AQUA",
 },{

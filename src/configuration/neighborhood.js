@@ -53,7 +53,7 @@ export const neighborhoodHighlights = [
   {
     title: "A Golfer’s Paradise, Just Minutes Away",
     content: [
-      "Elevate your lifestyle with exclusive access to a world-class championship golf course just moments from your doorstep. Immerse yourself in lush fairways and scenic greens, offering not only a premier golfing experience but also a serene backdrop for relaxation. Perfect for weekend rounds or casual strolls, this prestigious course blends luxury and leisure seamlessly."
+      "Enjoy stunning views of a world-class championship golf course right outside your door. The lush fairways and manicured greens provide a peaceful, picturesque backdrop that brings a sense of luxury and tranquility to everyday life."
     ],
     image: neighborhoodGolf,
     imageAlt: 'Neighborhood Golf Course'
@@ -61,7 +61,7 @@ export const neighborhoodHighlights = [
   {
     title: "Historic Landmarks",
     content: [
-      "The Tear Drop Memorial, officially titled \"To the Struggle Against World Terrorism\", is a 100-foot monument gifted to the United States by Russia in 2006. Standing solemnly on Bayonne’s waterfront, it honors the victims of the September 11 attacks and the 1993 World Trade Center bombing. The sculpture features a massive bronze teardrop suspended within a cracked tower, symbolizing shared grief and international solidarity against terrorism."
+      "Situated nearby along Bayonne’s waterfront, the Tear Drop Memorial—officially titled To the Struggle Against World Terrorism—stands as a powerful and moving tribute. This 100-foot monument, gifted to the United States by Russia in 2006, honors the victims of the September 11 attacks and the 1993 World Trade Center bombing. A massive bronze teardrop suspended within a fractured tower symbolizes shared grief and global solidarity."
     ],
     image: tearDropMemorial,
     imageAlt: 'Historic Landmarks'

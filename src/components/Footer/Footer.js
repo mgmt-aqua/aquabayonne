@@ -65,7 +65,7 @@ export default function Footer({ id }) {
                     </Col>
                 </Row>
                 <p className="footer-rights">
-                    Copyright ©2025 Aqua Bayonne. All Rights Reserved. All trademarks are the property of their respective holders. <Link to="/privacy" className="privacy-policy-link">PRIVACY POLICY.</Link>
+                    Copyright ©2025 AQUA Bayonne. All Rights Reserved. All trademarks are the property of their respective holders. <Link to="/privacy" className="privacy-policy-link">PRIVACY POLICY.</Link>
                 </p>
             </Container>
         </footer>
