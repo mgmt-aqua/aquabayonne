@@ -57,7 +57,7 @@ export const amenitiesHighlightData = [{
     imageAlt: "Pickleball at AQUA",
 },{
     title: "Basketball at AQUA",
-    content: ["Aqua offers the only private half-court basketball court in the area—perfect for solo practice, casual games, or staying fit. Whether you're playing for fun or focused on fitness, this exclusive outdoor amenity brings the game home—no gym required."],
+    content: ["AQUA offers the only private half-court basketball court in the area—perfect for solo practice, casual games, or staying fit. Whether you're playing for fun or focused on fitness, this exclusive outdoor amenity brings the game home—no gym required."],
     image: basketball,
     imageAlt: "Basketball at AQUA",
 },{

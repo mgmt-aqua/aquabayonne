@@ -16,7 +16,7 @@ export const buildingInformationData = [{
     imageAlt: 'Our Story Image'
 }, {
     title: "Our Journey",
-    content: ["Aqua has been a true labor of love—born from a desire to create more than just a place to live. We set out to build a home that brings people together, where design meets purpose, and every space invites both comfort and connection. From the earliest sketches to the finishing touches, we carefully considered how residents would live, gather, and unwind here. The result is a building that feels warm, welcoming, and deeply rooted in its surroundings—an everyday retreat on the Bayonne waterfront, made for real life and shared moments."],
+    content: ["AQUA has been a true labor of love—born from a desire to create more than just a place to live. We set out to build a home that brings people together, where design meets purpose, and every space invites both comfort and connection. From the earliest sketches to the finishing touches, we carefully considered how residents would live, gather, and unwind here. The result is a building that feels warm, welcoming, and deeply rooted in its surroundings—an everyday retreat on the Bayonne waterfront, made for real life and shared moments."],
     image: buildingGif,
     imageAlt: 'Our Journey Image'
 }]
