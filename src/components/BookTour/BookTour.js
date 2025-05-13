@@ -8,7 +8,7 @@ export default function BookTour() {
   return (
     <div style={{ textAlign: 'center' }}>
       <FramerSlide text="Book A Tour" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
-        <div className="book-a-tour-container" style={{ position: 'relative', paddingBottom: '50%', height: 0, overflow: 'hidden' }}>
+        <div className="book-a-tour-container" style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
           <iframe
             title="Calendly"
             src="https://calendly.com/ana-aquabayonne"
