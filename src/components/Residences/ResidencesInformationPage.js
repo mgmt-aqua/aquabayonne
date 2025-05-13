@@ -9,10 +9,12 @@ import FramerSlide from '../Common/FramerSlide';
 import InformationPage from '../Common/InformationPage';
 import QuoteHero from '../Common/QuoteHero';
 import ResidencesModal from './ResidencesModal';
+import InventoryCarousel from './InventoryCarousel';
 
 // Configuration
 import {
   filterOptions,
+  inventoryCarousel,
   inventoryOptions,
   residencesHighlightData,
   quote,
@@ -28,7 +30,7 @@ import coverImage from '../../img/residences/Livingroom Studio.png';
 import './ResidencesInformationPage.css';
 
 export default function ResidencesInformationPage() {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState('Studio');
   const [activeInventory, setActiveInventory] = useState(inventoryOptions);
   const [showModal, setShowModal] = useState(false);
   const [selectedResidence, setSelectedResidence] = useState({});
@@ -91,6 +93,30 @@ export default function ResidencesInformationPage() {
           <h1 className="floorplans-heading-text">Floor Plans</h1>
           <p className="floorplan-subtext">Your private oasis, designed for modern living.</p>
 
+        {/* Features Carousel */}
+        {/* <section className="inventory-carousel-section">
+          <Carousel className="inventory-carousel">
+            {inventoryCarousel.map((item, index) => (
+              <Carousel.Item key={index} interval={8000}>
+                <p className="inventory-carousel-title">Our {item.type} Collection</p>
+                <Row className="inventory-item row">
+                  {item.floorplans.map((floorplan, index) => (
+                  <Col md={6} lg={3} className='inventory-item-col'>
+                  <img
+                    className="d-block w-100 feature-carousel-img"
+                    key={index}
+                    src={floorplan.floorplan}
+                    alt={"text"}
+                  />
+                  <h1>{floorplan.type}</h1>
+                  </Col>
+                  ))}
+                </Row>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </section> */}
+      
           {/* Filter Buttons */}
           <div className="button-wrapper">
             {filterOptions.map(option => (
@@ -104,8 +130,10 @@ export default function ResidencesInformationPage() {
             ))}
           </div>
 
+        <InventoryCarousel floorPlan={activeFilter}/> 
+        
           {/* Inventory Grid */}
-          <Row className="floorplans-row">
+          {/* <Row className="floorplans-row">
             <AnimatePresence>
               {activeInventory.map((item, index) => (
                 <Col sm={12} md={4} key={item.id || index}>
@@ -148,7 +176,7 @@ export default function ResidencesInformationPage() {
                 </Col>
               ))}
             </AnimatePresence>
-          </Row>
+          </Row> */}
 
           {/* Modal */}
           <ResidencesModal

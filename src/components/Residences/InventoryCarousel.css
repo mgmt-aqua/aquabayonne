@@ -1,0 +1,86 @@
+.inventory-carousel-container {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.inventory-carousel-title {
+    font-size: 2rem;
+    margin-bottom: 25px !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #AA9580;
+}
+
+.inventory-carousel-floor-plan-type {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Carousel arrows */
+.custom-carousel-icon {
+    font-size: 2rem;
+    color: black;
+  }
+  
+  /* Move control buttons (the containers) outside */
+  .carousel-control-prev {
+    left: -100px !important;
+    top: 45% !important;
+  }
+  
+  .carousel-control-next {
+    right: -100px !important;
+    top: 45% !important;
+  }
+  
+  /* Ensure icons don’t get clipped */
+  .carousel {
+    overflow: visible;
+  }
+
+
+.inventory-starting-price {
+    text-align: center;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.residences-appfolio {
+    margin-top: 50px;
+    width: 90%;
+    height: 100vh;
+}
+
+.appfolio-container {
+    width: 100%;
+}
+
+/* Mobile Styles */
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 992px) {
+    .inventory-carousel-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    .inventory-carousel-title {
+        font-size: 2rem;
+    }
+
+    .inventory-starting-price {
+        font-size: 1rem;
+    }
+    .residences-appfolio {
+        width: 100%;
+    }
+    .inventory-carousel-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

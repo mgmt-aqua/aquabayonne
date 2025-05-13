@@ -31,6 +31,84 @@ export const pageTitle = "Residences";
 export const subText = "Luxury Meets Comfort";
 export const quote = "Luxury Meets Serenity";
 export const filterOptions = ['All', 'Studio', '1 Bed', '2 Bed'];
+export const floorplanMap = {
+    'All':  {
+        startingPrice: "$1,850",
+        filterOptions: {
+            bedrooms: '0'
+        },
+        floorplans: [{
+            type: "Studio 4",
+            floorplan: Studio4
+        },{
+            type: "One Bed 4",
+            floorplan: OneBed4
+        },{
+            type: "Two Bed 3",
+            floorplan: TwoBed3
+        },{
+            type: "Two Bed 4",
+            floorplan: TwoBed3
+        }]
+    },
+    'Studio':  {
+        startingPrice: "$1,850",
+        filterOptions: {
+            bedrooms: '0'
+        },
+        floorplans: [{
+            type: "Studio 1",
+            floorplan: Studio1
+        },{
+            type: "Studio 2",
+            floorplan: Studio2
+        },{
+            type: "Studio 3",
+            floorplan: Studio3
+        },{
+            type: "Studio 4",
+            floorplan: Studio4
+        }]
+    },
+    '1 Bed': {
+        startingPrice: "$2,450",
+        filterOptions: {
+            bedrooms: '1'
+        },
+        floorplans: [{
+            type: "One Bed 1",
+            floorplan: OneBed1
+        },{
+            type: "One Bed 2",
+            floorplan: OneBed2
+        },{
+            type: "One Bed 3",
+            floorplan: OneBed3
+        },{
+            type: "One Bed 4",
+            floorplan: OneBed4
+        }]
+    },
+    '2 Bed': {
+        startingPrice: "$2,950",
+        filterOptions: {
+            bedrooms: '2'
+        },
+        floorplans: [{
+            type: "Two Bed 1",
+            floorplan: TwoBed1
+        },{
+            type: "Two Bed 2",
+            floorplan: TwoBed2
+        },{
+            type: "Two Bed 3",
+            floorplan: TwoBed3
+        },{
+            type: "Two Bed 4",
+            floorplan: TwoBed4
+        }]
+    }
+}
 export const inventoryOptions = [{
     id: "S1",
     type: "Studio",
