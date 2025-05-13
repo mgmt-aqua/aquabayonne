@@ -215,4 +215,7 @@
     .floorplan-subtext {
         width: 75%;
     }
+    .feature-caption p {
+        width: 100%;
+    }
 }

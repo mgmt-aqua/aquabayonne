@@ -43,7 +43,7 @@ export const buildingGridBlocksContent = [{
     title: "Food Hall",
     description: "Savor the Art of Our Kitchen.",
     img: foodHallGridImg,
-    link: '/explore'
+    link: 'https://otsocialnj.com'
 },
 {
     title: "Book A Tour",
