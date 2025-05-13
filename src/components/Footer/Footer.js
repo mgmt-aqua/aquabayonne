@@ -29,7 +29,7 @@ export default function Footer({ id }) {
                         <div className="d-flex justify-content-center gap-5">
                             <img
                                 src={logo}
-                                alt="Aqua Bayonne logo"
+                                alt="AQUA Bayonne logo"
                                 className="mb-3 footer-logo"
                             />
                             <img

@@ -56,7 +56,7 @@ export default function ResponsiveCenteredNavbar() {
             {/* Logo on the left */}
             <Navbar.Brand className="navbar-logo me-0 me-lg-4">
               <Link to={{ pathname: '/', hash: '#home' }}>
-                <img src={img} alt="Aqua Bayonne" />
+                <img src={img} alt="AQUA Bayonne" />
               </Link>
             </Navbar.Brand>
 
@@ -124,7 +124,7 @@ export default function ResponsiveCenteredNavbar() {
               >
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title id="offcanvasNavbarLabel" className="mobile-menu-title">
-                    Aqua Bayonne
+                    AQUA Bayonne
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>

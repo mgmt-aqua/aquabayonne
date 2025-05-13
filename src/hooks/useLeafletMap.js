@@ -5,7 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-providers';
 
 export default function useLeafletMap(mapContainerRef) {
-    const title = '<b>Aqua Bayonne</b>'
+    const title = '<b>AQUA Bayonne</b>'
 
     useEffect(() => {
         const map = L.map(mapContainerRef.current, {

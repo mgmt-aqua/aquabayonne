@@ -26,7 +26,7 @@ export default function BuildingInformationPage() {
 
             <InformationPage
                 pageTitle="Building"
-                subText="Explore the Unmatched Elegance of Aqua"
+                subText="Explore the Unmatched Elegance of AQUA"
                 img={coverImage}
                 imgStyles="building-information-page-cover-img"
             >

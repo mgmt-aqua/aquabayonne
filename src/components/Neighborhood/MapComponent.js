@@ -320,7 +320,7 @@ export default function MapComponent() {
         // Add a permanent marker with the custom logo at a specific position
         L.marker([40.670988, -74.100399], { icon: logoIcon })
             .addTo(map)
-            .bindPopup('<b>Aqua Bayonne</b>');
+            .bindPopup('<b>AQUA Bayonne</b>');
 
         map.zoomControl.setPosition('bottomright');
 
@@ -366,7 +366,7 @@ export default function MapComponent() {
             // Add a permanent marker with the custom logo at a specific position
             L.marker([40.670988, -74.100399], { icon: logoIcon })
                 .addTo(map)
-                .bindPopup('<b>Aqua Bayonne</b>');
+                .bindPopup('<b>AQUA Bayonne</b>');
 
             map.zoomControl.setPosition('bottomright');
         }
