@@ -52,14 +52,11 @@ export default function Footer({ id }) {
                     {/* Third Column with Social Icons */}
                     <Col xs={12} sm={12} md={12} lg={4} className="footer-col d-flex flex-column align-items-center justify-content-center">
                         <div className="d-flex justify-content-center gap-3">
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <a href="https://www.facebook.com/profile.php?id=61573854461494" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                                 <FaFacebook size={30} className="footer-icon" />
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <a href="https://www.instagram.com/aquabayonne/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                                 <FaInstagram size={30} className="footer-icon" />
-                            </a>
-                            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                                <FaTiktok size={30} className="footer-icon" />
                             </a>
                         </div>
                     </Col>
