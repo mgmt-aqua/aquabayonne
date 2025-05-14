@@ -135,7 +135,19 @@
 
 @media (max-width: 768px) {
     #building {
-        padding-top: 200px;
+        padding-top: 140px;
+    }
+
+    .building-pre-text {
+        font-size: .5rem;
+    }
+
+    .building-home-section-description {
+        font-size: .75rem;
+    }
+
+    .building-home-section-button {
+        padding: 10px 15px;
     }
 
     .building-home-section {
@@ -154,6 +166,6 @@
     }
 
     .building-home-section-main-text {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }

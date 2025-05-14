@@ -21,7 +21,7 @@ export default function AmenitiesHomeSection() {
                             src={coverImage}
                             className="amenities-home-section-image"
                             alt="Club room and bar"
-                            initial={{ x: -300, opacity: 0.5 }}
+                            initial={{ x: -100, opacity: 0.5 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{
                                 type: "spring",

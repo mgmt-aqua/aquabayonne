@@ -156,12 +156,24 @@
 
 @media (max-width: 768px) {
     #residences {
-        padding-top: 200px;
+        padding-top: 140px;
+    }
+
+    .residences-pre-text {
+        font-size: .5rem;
     }
 
     .residences-home-section {
         height: auto;
         overflow-y: auto;
+    }
+
+    .residences-home-section-description {
+        font-size: .75rem;
+    }
+
+    .residences-home-section-button {
+        padding: 10px 15px;
     }
 
     .residences-content-wrapper {
@@ -175,6 +187,6 @@
     }
 
     .residences-home-section-main-text {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }

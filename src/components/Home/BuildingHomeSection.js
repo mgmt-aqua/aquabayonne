@@ -14,7 +14,7 @@ import lobbyImage from '../../img/building/Lobby.png';
 export default function BuildingHomeSection() {
     return (
         <Section id="building" className="building-home-section">
-                <AnimatedWaveSvg direction="left" />
+            <AnimatedWaveSvg direction="left" />
             <div className="building-content-wrapper">
                 <Row className="building-home-section-row">
                     <Col md={12} lg={6} className="building-text-column">
@@ -49,7 +49,7 @@ export default function BuildingHomeSection() {
                             src={lobbyImage}
                             className="building-home-section-image"
                             alt="Lobby view of the building"
-                            initial={{ x: 500, opacity: 0.5 }}
+                            initial={{ x: 0, opacity: 0.5 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{
                                 type: "spring",
@@ -57,7 +57,7 @@ export default function BuildingHomeSection() {
                                 damping: 15,
                                 delay: 0.2
                             }}
-                            viewport={{ once: true, amount: 0.2 }}
+                            viewport={{ once: true, amount: 0.9 }}
                         />
                     </Col>
                 </Row>

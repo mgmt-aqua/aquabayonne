@@ -22,7 +22,7 @@ export default function NeighborhoodHomeSection() {
                         src={coverImage}
                         className="neighborhood-home-section-image"
                         alt="Club room and bar"
-                        initial={{ x: -500, opacity: 0.5 }}
+                        initial={{ x: -100, opacity: 0.5 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{
                             type: "spring",
@@ -30,7 +30,7 @@ export default function NeighborhoodHomeSection() {
                             damping: 15,
                             delay: 0.2
                         }}
-                        viewport={{ once: true, amount: 0.2 }}
+                        viewport={{ once: true, amount: 0.1 }}
                     />
                 </Col>
                 <Col md={12} lg={6} className="neighborhood-text-column">

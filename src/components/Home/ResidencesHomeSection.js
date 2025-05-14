@@ -47,7 +47,7 @@ export default function ResidencesHomeSection() {
                             src={livingRoomImage}
                             className="residences-home-section-image"
                             alt="Lobby view of the residences"
-                            initial={{ x: 500, opacity: 0.5 }}
+                            initial={{ x: 100, opacity: 0.5 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{
                                 type: "spring",
@@ -55,7 +55,7 @@ export default function ResidencesHomeSection() {
                                 damping: 15,
                                 delay: 0.2
                             }}
-                            viewport={{ once: true, amount: 0.2 }}
+                            viewport={{ once: true, amount: 0.1 }}
                         />
                     </Col>
                 </Row>
