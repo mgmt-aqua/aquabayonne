@@ -168,4 +168,8 @@
     .building-home-section-main-text {
         font-size: 2.5rem;
     }
+
+    .building-home-section-content-container {
+        padding: 0;
+    }
 }

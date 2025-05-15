@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import ReactDOM from "react-dom/client";
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'normalize.css';
+
 
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Routes, Route } from "react-router";

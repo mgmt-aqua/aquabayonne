@@ -189,4 +189,8 @@
     .neighborhood-home-section-main-text {
         font-size: 2rem;
     }
+
+    .neighborhood-home-section-content-container {
+        padding: 0;
+    }
 }

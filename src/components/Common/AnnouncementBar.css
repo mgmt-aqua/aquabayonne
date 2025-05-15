@@ -40,12 +40,13 @@
 @media (max-width: 576px) {
   /* Mobile Styles */
   .announcement-bar-container {
+    width: 100vw;
     padding: 5px;
     font-size: .60rem;
   }
 
   .announcement-bar-text {
-    font-size: .75rem;
+    font-size: .6rem;
     line-height: 25px;
   }
 }
