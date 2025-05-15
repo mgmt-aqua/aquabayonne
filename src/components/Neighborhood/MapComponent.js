@@ -304,6 +304,7 @@ export default function MapComponent() {
             center: [40.670988, -74.100399],
             zoom: 16,
             scrollWheelZoom: false,  // Disable scroll zoom
+            dragging: !(windowSize === 'mobile')
         });
 
         // Set the tile layer (you can choose a tile provider)
@@ -377,7 +378,7 @@ export default function MapComponent() {
     return (
         <div className="map-component-container">
             <Row className="map-component-row">
-                <Col xs={12} sm={12} md={6} lg={8} xl={9} className="map-component-map" ref={mapContainer} style={{ width: { mapWidth }, height: '100vh' }}></Col>
+                <Col xs={12} sm={12} md={6} lg={8} xl={9} className="map-component-map" ref={mapContainer}></Col>
                 <Col xs={12} sm={12} md={6} lg={4} xl={3} className="map-component-legend">
                     <Accordion activeKey={activeKey} onSelect={handleAccordionSelect}>
                         {mapData.map((item) => {
