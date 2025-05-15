@@ -72,12 +72,14 @@
 }
 
 @media (max-width: 576px) {
+
     .footer-address {
-        width: 60%;
+        width: 90%;
+        font-size: .75rem;
     }
 
     .footer-logo {
-        height: 50px;
+        height: 25px;
         margin-top: 50x !important;
         margin-bottom: 50px !important;
     }
@@ -90,5 +92,9 @@
     .footer-rights {
        padding-left: 50px;
        padding-right: 50px;
+    }
+
+    .footer-contact-information a {
+        font-size: .75rem;
     }
 }
