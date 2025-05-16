@@ -41,7 +41,7 @@ export default function InventoryCarousel({ floorPlan }) {
                   ))}
                 </Row>
         <div className="d-flex justify-content-center appfolio-container">
-          <iframe title="Available Properties" src={`https://guptaassociates.appfolio.com/listings?1747144685304&amp;filters%5Bbedrooms%5D=${selectedFloorPlan.filterOptions.bedrooms}&amp;filters%5Bproperty_list%5D=Altura&amp;theme_color=%234A6670&amp;filters%5Border_by%5D=bedrooms`} tabindex="0" className="residences-appfolio"> </iframe>
+          <iframe title="Available Properties" src={`https://guptaassociates.appfolio.com/listings?1747144685304&amp;filters%5Bbedrooms%5D=${selectedFloorPlan.filterOptions.bedrooms}&amp;filters%5Bproperty_list%5D=Aqua&amp;theme_color=%234A6670&amp;filters%5Border_by%5D=bedrooms`} tabindex="0" className="residences-appfolio"> </iframe>
         </div>
 
 
