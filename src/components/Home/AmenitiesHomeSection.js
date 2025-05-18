@@ -42,10 +42,7 @@ export default function AmenitiesHomeSection() {
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.35}>
                                 <p className="amenities-home-section-description">
-                                    Discover a collection of sophisticated amenities designed to complement your lifestyle.
-                                    Whether you're unwinding in the resident lounge, focusing in a serene co-working space,
-                                    or staying active in the fitness center, every detail has been considered to offer comfort,
-                                    convenience, and connection. Experience a community where everyday moments feel effortlessly luxurious.
+                                Discover a collection of sophisticated amenities designed to complement your lifestyle. Whether you're unwinding in the resident lounge, focusing in the co-working space, having a yoga session on the outdoor terrace, grabbing a cocktail at the bar in the food hall, taking in the unobstructed panoramic views on our expansive rooftop deck or staying active in the fitness center, every detail has been considered to offer comfort, convenience, and relaxation.
                                 </p>
                             </FramerTextReveal>
                             <FramerTextReveal delay={0.45}>

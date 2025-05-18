@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Carousel, Modal, Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { floorplanMap, inventoryCarousel } from '../../configuration/residences'
+import { Modal, Row, Col, Card, Button } from 'react-bootstrap';
+import { floorplanMap } from '../../configuration/residences'
 import './InventoryCarousel.css'
 
 export default function InventoryCarousel({ floorPlan }) {

@@ -93,7 +93,7 @@ export default function ContactUsForm() {
       <Row className="contact-us-container">
         <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-left">
           <h1 className="contact-us-title">Contact Us</h1>
-          <p className="contact-us-sub-text">Interested in learning more? Fill out some info and we will be in touch shortly! We can't wait to hear from you!</p>
+          <p className="contact-us-sub-text">We’re Here to Help You Find Your New Home-Share a few details, and our team will be in touch shortly. We look forward to connecting with you.</p>
 
           {/* Form */}
           <Form

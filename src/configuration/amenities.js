@@ -27,12 +27,12 @@ export const images = [
 ];
 export const amenitiesHighlightData = [{
     title: "Club Room",
-    content: ["AQUA’s club room blends classic style with a modern edge, offering a sophisticated setting curated for both comfort and character. Tufted leather seating, a sleek stone-accented bar, and a pool table anchor the space in timeless elegance, while expansive windows fill it with natural light. Sculptural details, contemporary furnishings, and an iconic red telephone booth add a distinct sense of style—ideal for quiet workdays, intimate gatherings, or unwinding in good company."],
+    content: ["AQUA’s club room blends classic style with a modern edge, offering a sophisticated setting curated for both comfort and character. Tufted leather seating, a sleek stone-accented bar, and a pool table anchor the space in timeless elegance, while expansive windows fill it with natural light. Ideal for quiet workdays, intimate gatherings, a wine tasting class or unwinding in good company."],
     image: clubRoom,
     imageAlt: 'Club Room'
 }, {
     title: "The Co-Working Lounge",
-    content: ["AQUA’s sun-drenched coworking lounge is more than just a workspace — it’s a sanctuary for focus and creativity. Natural light pours in through expansive windows, energizing the space and boosting productivity throughout the day. The soft, neutral palette is purposefully chosen to foster calm and clarity, while subtle accents of teal and orange add vibrancy without distraction. With ergonomic seating, ample desk space, and refined design touches, this serene environment supports both collaboration and deep, uninterrupted work."],
+    content: ["AQUA’s sun-drenched coworking lounge is more than just a workspace — it’s a sanctuary for focus and creativity. Natural light pours in through expansive windows, energizing the space and boosting productivity throughout the day. The soft, neutral palette is purposefully chosen to foster calm and clarity. With ergonomic seating and ample desk space, this serene environment supports both collaboration and deep, uninterrupted work."],
     image: coworkingSpace,
     imageAlt: 'The Co-Working Lounge'
 }, {
