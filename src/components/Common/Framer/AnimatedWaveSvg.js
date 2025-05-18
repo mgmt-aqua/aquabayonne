@@ -47,6 +47,7 @@ export default function AnimatedWaveSvg({ direction = "left" }) {
                     key={i}
                     d={d}
                     stroke="#62A3AE"
+                    opacity={.3}
                     fill="none"
                     strokeWidth="1"
                     initial={{ pathLength: 0, scale: 0 }}
