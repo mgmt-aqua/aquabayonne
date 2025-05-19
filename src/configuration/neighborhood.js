@@ -2,7 +2,7 @@ import neighborhoodGolf from '../img/neighborhood/neighborhood_golf.jpg';
 import neighborhoodWaterfront from '../img/neighborhood/waterfront.png';
 import neighborhoodFoodHall from '../img/neighborhood/food_hall_bar.jpg';
 import neighborhoodCostco from '../img/neighborhood/neighborhood_costco.jpeg';
-import neighborhoodFerry from '../img/neighborhood_cover.jpg'
+import neighborhoodFerry from '../img/neighborhood/ferry.jpg'
 import tearDropMemorial from '../img/neighborhood/tear_drop_memorial.png'
 import lightrail from '../img/neighborhood/lightrail.png'
 import shuttleBus from '../img/neighborhood/path.jpg'
