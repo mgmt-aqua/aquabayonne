@@ -2,7 +2,6 @@ import amenitiesGym from "../img/amemities/amenities_gym.png";
 import amenitiesRendering from "../img/amemities/amenities_cover.png";
 
 import coworkingSpace from '../img/amemities/Coworking.png'
-import mailRoom from '../img/amemities/Mailroom upscale.png'
 import clubRoom from '../img/amemities/Clubroom.png'
 import clubRoomBar from '../img/amemities/club_room_bar.jpg'
 import roofDeckRender from '../img/amemities/Roofdeck Render.png'
@@ -11,10 +10,10 @@ import pickleball from '../img/amemities/pickleball.jpg'
 import basketball from '../img/amemities/basketball.jpg'
 import foodHall from '../img/neighborhood/food_hall_bar.jpg'
 
-export const amenitiesList = ["Fitness Center/Gym", "Pickle Ball Court", "Half-Size Basketball Court", "Comunnity Garden", "Pedestrian Walkway"]
+export const amenitiesList = ["Fitness Center/Gym", "Pickle Ball Court", "Basketball Court", "Community Garden", "Pedestrian Walkway"]
 export const amenitiesList2 = ["Food Hall", "Club Room", "Rooftop Deck", "Amenity Terrace", "Co-Working Space"]
 export const amenitiesList3 = ["Bike Storage", "Package Room", "On-Site Parking", "EV-Charging Stations", "Outdoor BBQ Grills/Picnic Area"]
-export const amenitiesList4 = ["Pet Friendly", "Shuttle Service", "Outdoor Fire Pits", "Resident’s Events", "Rentable Event Space"]
+export const amenitiesList4 = ["Pet Friendly", "Shuttle Service", "Outdoor Fire Pits", "Resident Events", "Rentable Event Space"]
 export const allAmenities = [amenitiesList, amenitiesList2, amenitiesList3, amenitiesList4]
 
 export const images = [
