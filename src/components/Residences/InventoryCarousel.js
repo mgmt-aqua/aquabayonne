@@ -21,9 +21,10 @@ export default function InventoryCarousel({ floorPlan }) {
     return (
       <div className="inventory-carousel-container">
         <h3 className="mb-3 inventory-carousel-title">Our Collection of {floorPlan} Apartments</h3>
+        <iframe src={selectedFloorPlan.matterportUrl} className="residences-matterport"/>
         <Row className="justify-content-center inventory-carousel-row">
                   {selectedFloorPlan.floorplans.map((plan, idx) => (
-                    <Col key={idx} xs={12} sm={6} md={6} lg={3} className="mb-4">
+                    <Col key={idx} xs={12} sm={6} md={6} lg={3} className="mb-4">  
                       <Card className="h-100 border-0">
                         <Card.Img
                           variant="top"

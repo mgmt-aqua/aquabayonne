@@ -56,15 +56,29 @@
     width: 100%;
 }
 
+.residences-matterport {
+    display: block;
+    margin: 25px auto;
+    width: 60%;
+    height: 500px;
+}
+
 /* Mobile Styles */
 @media (max-width: 1200px) {
-    
+    .residences-matterport {
+        width: 80%;
+        height: 500px;
+    }
 }
 
 @media (max-width: 992px) {
     .inventory-carousel-container {
         padding-left: 0px;
         padding-right: 0px;
+    }
+    .residences-matterport {
+        width: 100%;
+        height: 500px;
     }
 }
 
@@ -82,5 +96,9 @@
     .inventory-carousel-container {
         padding-left: 0px;
         padding-right: 0px;
+    }
+    .residences-matterport {
+        width: 100%;
+        height: 500px;
     }
 }

@@ -30,32 +30,14 @@ import TwoBed4 from '../assets/Floor Plans/B4.jpg'
 export const pageTitle = "Residences";
 export const subText = "Luxury Meets Comfort";
 export const quote = "Luxury Meets Serenity";
-export const filterOptions = ['All', 'Studio', '1 Bed', '2 Bed'];
+export const filterOptions = ['Studio', '1 Bed', '2 Bed'];
 export const floorplanMap = {
-    'All':  {
-        startingPrice: "$1,850",
-        filterOptions: {
-            bedrooms: '0'
-        },
-        floorplans: [{
-            type: "Studio 4",
-            floorplan: Studio4
-        },{
-            type: "One Bed 4",
-            floorplan: OneBed4
-        },{
-            type: "Two Bed 3",
-            floorplan: TwoBed3
-        },{
-            type: "Two Bed 4",
-            floorplan: TwoBed3
-        }]
-    },
     'Studio':  {
         startingPrice: "$1,850",
         filterOptions: {
             bedrooms: '0'
         },
+        matterportUrl: "https://my.matterport.com/show/?m=iSFz2FGEQVH",
         floorplans: [{
             type: "Studio 1",
             floorplan: Studio1
@@ -75,6 +57,7 @@ export const floorplanMap = {
         filterOptions: {
             bedrooms: '1'
         },
+        matterportUrl: "https://my.matterport.com/show/?m=2kDZPP1coSo",
         floorplans: [{
             type: "One Bed 1",
             floorplan: OneBed1
@@ -94,6 +77,7 @@ export const floorplanMap = {
         filterOptions: {
             bedrooms: '2'
         },
+        matterportUrl: "https://my.matterport.com/show/?m=4QLAkwfoWwa",
         floorplans: [{
             type: "Two Bed 1",
             floorplan: TwoBed1
