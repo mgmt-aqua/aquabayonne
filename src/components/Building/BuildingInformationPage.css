@@ -1,4 +1,6 @@
-/* Cover Image */
+.building-information-page {
+    overflow-x: hidden;
+}
 .building-information-page-cover-img {
     width: 100%;
     height: 100vh;
