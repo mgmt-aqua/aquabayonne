@@ -8,6 +8,7 @@ import FramerSlide from "../Common/FramerSlide";
 import InformationPage from "../Common/InformationPage";
 import InformationGrid from "../Common/InformationGrid";
 import QuoteHero from "../Common/QuoteHero";
+import ApplyNowHero from '../Common/ApplyNowHero'
 
 // Config
 import { desktopStyles, mobileStyles } from "../../configuration/framer-slide-styles";
@@ -57,6 +58,7 @@ export default function AmenitiesInformationPage() {
                         </Col>
                     ))}
                 </Row>
+                <ApplyNowHero />
             </InformationPage>
         </div>
     );

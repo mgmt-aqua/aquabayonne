@@ -6,6 +6,7 @@ import FramerSlide from '../Common/FramerSlide';
 import InformationPage from '../Common/InformationPage';
 import QuoteHero from '../Common/QuoteHero';
 import InformationGrid from '../Common/InformationGrid';
+import ApplyNowHero from '../Common/ApplyNowHero'
 
 import coverImage from '../../img/building/building_background.png';
 import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
@@ -70,6 +71,7 @@ export default function BuildingInformationPage() {
                         ))}
                     </Row>
                 </div>
+                <ApplyNowHero />
             </InformationPage>
         </div>
     );

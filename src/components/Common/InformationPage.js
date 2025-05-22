@@ -2,7 +2,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types'
 import './InformationPage.css'
 import { motion, AnimatePresence } from 'framer-motion';
-import ApplyNowHero from './ApplyNowHero';
 import Footer from '../Footer/Footer'
 import useScrollToTop from '../../hooks/useScrollToTop'
 
@@ -31,7 +30,6 @@ export default function InformationPage({pageTitle, subText, img, imgStyles, chi
             </div>
             </AnimatePresence>
             {children}
-            <ApplyNowHero />
             <Footer />
         </div>
         
