@@ -10,7 +10,7 @@ export default function useWindowSize() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const windowSize = windowWidth < 576 ? "mobile" : "desktop";
+    const windowSize = windowWidth < 992 ? "mobile" : "desktop";
 
     return { windowWidth, windowSize };
 }

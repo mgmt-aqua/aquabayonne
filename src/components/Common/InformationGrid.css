@@ -69,7 +69,15 @@
 }
 
 @media (max-width: 992px) {
+    .information-grid-img-comtainer {
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 @media (max-width: 576px) {
+    .information-grid-img-comtainer {
+        margin: 0 auto;
+        width: 100%;
+    }
 }
