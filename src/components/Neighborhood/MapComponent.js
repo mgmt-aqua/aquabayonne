@@ -1,21 +1,33 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Col, Row } from 'react-bootstrap'
-import { Accordion } from 'react-bootstrap';
-import useWindowSize from '../../hooks/useWindowSize'
+import { Accordion, Col, Row } from 'react-bootstrap';
+import useWindowSize from '../../hooks/useWindowSize';
+
+import { mapData } from '../../configuration/neighborhood-map';
 
 import L from 'leaflet';
-import 'leaflet/dist/leaflet.css'; // For Leaflet CSS styles
-import 'leaflet-providers'; // For additional map tile layers
+import 'leaflet/dist/leaflet.css';
+import 'leaflet-providers';
 import './MapComponent.css';
 
-// This forces the marker icon to be loaded correctly.
+// Fix for loading marker icons
 delete L.Icon.Default.prototype._getIconUrl;
-
 L.Icon.Default.mergeOptions({
     iconUrl: require('leaflet/dist/images/marker-icon.png'),
     iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
     shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
 });
+
+// Custom Logo Marker
+const createLogoIcon = () =>
+    L.icon({
+        iconUrl: require('../../img/aqua-logo-white.png'),
+        iconSize: [70, 20],
+        iconAnchor: [20, 25],
+        popupAnchor: [0, -50],
+    });
+
+// Map center (used in multiple places)
+const MAP_CENTER = [40.670988, -74.100399];
 
 export default function MapComponent() {
     const mapContainer = useRef(null);
@@ -23,376 +35,78 @@ export default function MapComponent() {
     const [map, setMap] = useState(null);
     const { windowSize } = useWindowSize();
 
-    const mapData = [{
-        accordionDetails: {
-            id: "parks",
-            title: "Parks",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-        },
-        mapDetails: {
-            centerCoordinates: [40.670988, -74.100399],
-            zoom: 12,
-            locations: [{
-                name: "James J. Donovan Park",
-                coordinates: [40.670540, -74.096501],
-                highlight: true,
-            },
-            {
-                name: "Bayonne Park",
-                coordinates: [40.679475, -74.101452],
-                highlight: true,
-            }, {
-                name: "Hudson County Park",
-                coordinates: [40.679987, -74.116925],
-                highlight: true,
-            },
-            {
-                name: "Stephen R. Greg Park",
-                coordinates: [40.682526, -74.114650],
-                highlight: true,
-            },
-            {
-                name: "Liberty State Park",
-                coordinates: [40.705805, -74.055368],
-                highlight: false
-            }]
-        }
-    }, {
-        accordionDetails: {
-            id: "restaurants",
-            title: "Restaurants",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-        },
-        mapDetails: {
-            centerCoordinates: [40.670988, -74.100399],
-            zoom: 14,
-            locations: [
-                {
-                    name: "Houlihan's",
-                    coordinates: [40.668299, -74.104428],
-                    highlight: true,
-                }, {
-                    name: "Wendy's",
-                    coordinates: [40.668504, -74.106489],
-                    highlight: true,
-                },
-                {
-                    name: "Bubbakoo's Burritos",
-                    coordinates: [40.667666, -74.105202],
-                    highlight: true,
-                },
-                {
-                    name: "Starbucks",
-                    coordinates: [40.671992, -74.104402],
-                    highlight: true,
-                }, {
-                    name: "Dunkin Donutes",
-                    coordinates: [40.668641, -74.106984],
-                    highlight: true,
-                }, {
-                    name: "Panda Express",
-                    coordinates: [40.662962, -74.106648],
-                    highlight: false,
-                }, {
-                    name: "Five Guys",
-                    coordinates: [40.662884, -74.106266],
-                    highlight: false,
-                }, {
-                    name: "Wonder Bagels",
-                    coordinates: [40.662426, -74.105979],
-                    highlight: false,
-                },
-                {
-                    name: "Qdoba Mexican Eats",
-                    coordinates: [40.660931, -74.108453],
-                    highlight: false,
-                },
-                {
-                    name: "Jersey Mike's Subs",
-                    coordinates: [40.660541, -74.107895],
-                    highlight: false
-                }]
-        }
-    },
-    {
-        accordionDetails: {
-            id: "shopping",
-            title: "Shopping",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-        },
-        mapDetails: {
-            centerCoordinates: [40.670988, -74.100399],
-            zoom: 16,
-            locations: [{
-                name: "Costco",
-                coordinates: [40.672945, -74.103929],
-                highlight: true,
-            },
-            {
-                name: "Lidl",
-                coordinates: [40.670828, -74.106556],
-                highlight: true,
-            }, {
-                name: "CVS",
-                coordinates: [40.671762, -74.106107],
-                highlight: true,
-            },
-            {
-                name: "Stop and Shop",
-                coordinates: [40.666865, -74.104591],
-                highlight: true,
-            },
-            {
-                name: "Walmart",
-                coordinates: [40.660329, -74.106909],
-                highlight: true,
-            }]
-        }
-    },
-    {
-        accordionDetails: {
-            id: "fitness",
-            title: "Fitness",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-        },
-        mapDetails: {
-            centerCoordinates: [40.670988, -74.100399],
-            zoom: 14,
-            locations: [{
-                name: "LA Fitness",
-                coordinates: [40.670510, -74.104505],
-                highlight: true,
-            },
-            {
-                name: "CKO Kickboxing Bayonne",
-                coordinates: [40.672359, -74.110728],
-                highlight: true,
-            }, {
-                name: "Stanlaw Fitness",
-                coordinates: [40.670194, -74.112604],
-                highlight: true,
-            },
-            {
-                name: "Orange Theory Fitness",
-                coordinates: [40.659695, -74.110547],
-                highlight: true,
-            }]
-        }
-    }, {
-        accordionDetails: {
-            id: "transit",
-            title: "Transit",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-        },
-        mapDetails: {
-            centerCoordinates: [40.670988, -74.100399],
-            zoom: 14,
-            locations: [{
-                name: "AQUA Shuttle to Path",
-                coordinates: [40.671888, -74.100544],
-                highlight: true
-            },
-
-            {
-                name: "34 St/Hoboken Light Rail Station",
-                coordinates: [40.671105, -74.107041],
-                highlight: true,
-            },
-            {
-                name: "Upcoming Ferry",
-                coordinates: [40.667004, -74.086441],
-                highlight: true,
-            }, {
-                name: "Cape Liberty Cruise Port",
-                coordinates: [40.664601, -74.071723],
-                highlight: true,
-            },
-            {
-                name: "45th Street Light Rail Station",
-                coordinates: [40.678921, -74.102109],
-                highlight: true,
-            }]
-        }
-    },
-    {
-        accordionDetails: {
-            id: "schools",
-            title: "Schools",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-        },
-        mapDetails: {
-            centerCoordinates: [40.670988, -74.100399],
-            zoom: 13,
-            locations: [{
-                name: "Bayonne High School",
-                coordinates: [40.671461, -74.121588],
-                highlight: true
-            },
-            {
-                name: "Horace Mann Elementary School",
-                coordinates: [40.676018, -74.108885],
-                highlight: true,
-            },
-            {
-                name: "Philip G. Vroom Elementary School",
-                coordinates: [40.666500, -74.116598],
-                highlight: true,
-            }, {
-                name: "Lincoln Community School",
-                coordinates: [40.666874, -74.110199],
-                highlight: true,
-            },
-            {
-                name: "Washington Elementary School",
-                coordinates: [40.683520, -74.108311],
-                highlight: true,
-            },
-            {
-                name: "Beacon Christian Academy",
-                coordinates: [40.660438, -74.115847],
-                highlight: false,
-            },
-            {
-                name: "Nicholas Oresko School PS 14",
-                coordinates: [40.663758, -74.115384],
-                highlight: false,
-            },
-            {
-                name: "William Shemin Midtown Community School",
-                coordinates: [40.667435, -74.123056],
-                highlight: false,
-            },
-        ]
-        }
-    },
-    {
-        accordionDetails: {
-            id: "medicalServices",
-            title: "Medical Services",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-        },
-        mapDetails: {
-            centerCoordinates: [40.670988, -74.100399],
-            zoom: 14,
-            locations: [{
-                name: "CityMD Bayonne Urgent Care",
-                coordinates: [40.660522, -74.108488],
-                highlight: true
-            },
-            {
-                name: "Bayonne Medical Center: Emergency Room",
-                coordinates: [40.667633, -74.111955],
-                highlight: true
-            },
-            {
-                name: "Barnabas Health Medical Group United Medical",
-                coordinates: [40.681217, -74.103090],
-                highlight: true
-            },
-            {
-                name: "RWJ Barnabas Health at Bayonne",
-                coordinates: [40.664251, -74.118115],
-                highlight: true,
-            }]
-        }
-    }]
-
     useEffect(() => {
-        // Initialize the map
-        const map = L.map(mapContainer.current, {
-            center: [40.670988, -74.100399],
+        const mapInstance = L.map(mapContainer.current, {
+            center: MAP_CENTER,
             zoom: 16,
-            scrollWheelZoom: false,  // Disable scroll zoom
-            dragging: !(windowSize === 'mobile')
+            scrollWheelZoom: false,
+            dragging: windowSize !== 'mobile',
         });
 
-        // Set the tile layer (you can choose a tile provider)
-        L.tileLayer.provider('CartoDB.DarkMatter').addTo(map);
+        L.tileLayer.provider('CartoDB.DarkMatter').addTo(mapInstance);
 
-        // Create a custom icon (your logo)
-        const logoIcon = L.icon({
-            iconUrl: require('../../img/aqua-logo-white.png'),
-            iconSize: [70, 20],
-            iconAnchor: [20, 25],
-            popupAnchor: [0, -50]
+        L.marker(MAP_CENTER, { icon: createLogoIcon() })
+            .addTo(mapInstance)
+            .bindPopup('<b>AQUA Bayonne</b>');
+
+        mapInstance.zoomControl.setPosition('bottomright');
+        setMap(mapInstance);
+
+        return () => mapInstance.remove();
+    }, [windowSize]);
+
+    const handleAccordionSelect = (key) => {
+        setActiveKey(key);
+        const selectedMap = mapData.find(data => data.accordionDetails.id === key);
+        if (!selectedMap || !map) return;
+
+        const { centerCoordinates, zoom, locations } = selectedMap.mapDetails;
+
+        map.setView(centerCoordinates, zoom);
+
+        map.eachLayer(layer => {
+            if (layer instanceof L.Marker) map.removeLayer(layer);
         });
 
-        // Add a permanent marker with the custom logo at a specific position
-        L.marker([40.670988, -74.100399], { icon: logoIcon })
+        locations.forEach(location => {
+            L.marker(location.coordinates).addTo(map).bindPopup(location.name);
+        });
+
+        L.marker(MAP_CENTER, { icon: createLogoIcon() })
             .addTo(map)
             .bindPopup('<b>AQUA Bayonne</b>');
 
         map.zoomControl.setPosition('bottomright');
-
-        setMap(map);
-        // Cleanup function to remove map on component unmount
-        return () => {
-            map.remove();
-        };
-    }, []);
-
-    const handleAccordionSelect = (key) => {
-        setActiveKey(key);
-
-        // Find the selected map data based on activeKey
-        const selectedMap = mapData.find(data => data.accordionDetails.id === key);
-
-        if (selectedMap && map) {
-            const { centerCoordinates, zoom, locations } = selectedMap.mapDetails;
-
-            // Update the map center and zoom dynamically
-            map.setView(centerCoordinates, zoom);
-
-            // Remove all existing markers
-            map.eachLayer((layer) => {
-                if (layer instanceof L.Marker) {
-                    map.removeLayer(layer);
-                }
-            });
-
-            // Add new markers
-            locations.forEach(location => {
-                L.marker(location.coordinates).addTo(map).bindPopup(location.name);
-            });
-
-            // Create a custom icon (your logo)
-            const logoIcon = L.icon({
-                iconUrl: require('../../img/aqua-logo-white.png'),
-                iconSize: [70, 20],
-                iconAnchor: [20, 25],
-                popupAnchor: [0, -50]
-            });
-
-            // Add a permanent marker with the custom logo at a specific position
-            L.marker([40.670988, -74.100399], { icon: logoIcon })
-                .addTo(map)
-                .bindPopup('<b>AQUA Bayonne</b>');
-
-            map.zoomControl.setPosition('bottomright');
-        }
-
-
     };
 
     return (
         <div className="map-component-container">
             <Row className="map-component-row">
-                <Col xs={12} sm={12} md={12} lg={12} xl={9} className="map-component-map" ref={mapContainer}></Col>
-                <Col xs={12} sm={12} md={12} lg={12} xl={3} className="map-component-legend">
+                <Col xs={12} xl={9} className="map-component-map" ref={mapContainer} />
+                <Col xs={12} xl={3} className="map-component-legend">
                     <Accordion activeKey={activeKey} onSelect={handleAccordionSelect}>
-                        {mapData.map((item) => {
-                            return (
-                                <Accordion.Item eventKey={item.accordionDetails.id} className='map-accordion-item'>
-                                    <Accordion.Header className='map-accordion-header'>{item.accordionDetails.title}</Accordion.Header>
-                                    <Accordion.Body className='map-accordion-body'>
-                                        <ul className="map-accordion-list">
-                                            {item.mapDetails.locations?.filter((location) => location.highlight).map((location, index) => {
-                                                return (<li className="map-accordion-list-item"><span>0{index + 1}</span> {location.name}</li>)
-                                            })}
-                                        </ul>
-                                    </Accordion.Body>
-                                </Accordion.Item>);
-                        })}
+                        {mapData.map(({ accordionDetails, mapDetails }) => (
+                            <Accordion.Item
+                                eventKey={accordionDetails.id}
+                                className="map-accordion-item"
+                                key={accordionDetails.id}
+                            >
+                                <Accordion.Header className="map-accordion-header">
+                                    {accordionDetails.title}
+                                </Accordion.Header>
+                                <Accordion.Body className="map-accordion-body">
+                                    <ul className="map-accordion-list">
+                                        {mapDetails.locations
+                                            .filter(location => location.highlight)
+                                            .map((location, index) => (
+                                                <li className="map-accordion-list-item" key={index}>
+                                                    <span>0{index + 1}</span> {location.name}
+                                                </li>
+                                            ))}
+                                    </ul>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        ))}
                     </Accordion>
                 </Col>
             </Row>
