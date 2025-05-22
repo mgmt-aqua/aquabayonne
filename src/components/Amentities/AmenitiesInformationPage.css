@@ -178,13 +178,17 @@
 
 /* Mobile Styles */
 @media (max-width: 1200px) {
-    
+  
 }
 
 @media (max-width: 992px) {
-    
+    .list-unstyled {
+        font-size: .75rem;
+    }
 }
 
 @media (max-width: 576px) {
-   
+    .list-unstyled {
+        font-size: .75rem;
+    }
 }
