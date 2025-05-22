@@ -31,12 +31,19 @@ const MAP_CENTER = [40.670988, -74.100399];
 
 export default function MapComponent() {
     const mapContainer = useRef(null);
+    const [mapInitialized, setMapInitialized] = useState(false);
     const [activeKey, setActiveKey] = useState('restaurants');
     const [map, setMap] = useState(null);
     const { windowSize } = useWindowSize();
 
     useEffect(() => {
-        if (!map || !activeKey) return;
+        if (map) {
+          setMapInitialized(true);
+        }
+      }, [map]);
+
+    useEffect(() => {
+        if (!mapInitialized || !activeKey) return;
       
         const selectedMap = mapData.find(data => data.accordionDetails.id === activeKey);
         if (!selectedMap) return;
@@ -62,7 +69,7 @@ export default function MapComponent() {
           .bindPopup('<b>AQUA Bayonne</b>');
       
         map.zoomControl.setPosition('bottomright');
-      }, [activeKey, map]);
+      }, [activeKey, mapInitialized]);
 
     useEffect(() => {
         const mapInstance = L.map(mapContainer.current, {
