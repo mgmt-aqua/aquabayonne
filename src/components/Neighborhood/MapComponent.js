@@ -22,7 +22,6 @@ export default function MapComponent() {
     const [activeKey, setActiveKey] = useState(null);
     const [map, setMap] = useState(null);
     const { windowSize } = useWindowSize();
-    const mapWidth = windowSize === "mobile" ? '100%' : '75%'
 
     const mapData = [{
         accordionDetails: {
@@ -378,8 +377,8 @@ export default function MapComponent() {
     return (
         <div className="map-component-container">
             <Row className="map-component-row">
-                <Col xs={12} sm={12} md={6} lg={8} xl={9} className="map-component-map" ref={mapContainer}></Col>
-                <Col xs={12} sm={12} md={6} lg={4} xl={3} className="map-component-legend">
+                <Col xs={12} sm={12} md={12} lg={12} xl={9} className="map-component-map" ref={mapContainer}></Col>
+                <Col xs={12} sm={12} md={12} lg={12} xl={3} className="map-component-legend">
                     <Accordion activeKey={activeKey} onSelect={handleAccordionSelect}>
                         {mapData.map((item) => {
                             return (
