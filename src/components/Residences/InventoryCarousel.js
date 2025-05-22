@@ -20,7 +20,7 @@ export default function InventoryCarousel({ floorPlan }) {
   
     return (
       <div className="inventory-carousel-container">
-        <h3 className="mb-3 inventory-carousel-title">Our Collection of {floorPlan} Apartments</h3>
+        <h3 className="mb-3 inventory-carousel-title">Our Luxury {floorPlan} Residences</h3>
         <iframe src={selectedFloorPlan.matterportUrl} className="residences-matterport"/>
         <Row className="justify-content-center inventory-carousel-row">
                   {selectedFloorPlan.floorplans.map((plan, idx) => (
