@@ -31,9 +31,38 @@ const MAP_CENTER = [40.670988, -74.100399];
 
 export default function MapComponent() {
     const mapContainer = useRef(null);
-    const [activeKey, setActiveKey] = useState(null);
+    const [activeKey, setActiveKey] = useState('restaurants');
     const [map, setMap] = useState(null);
     const { windowSize } = useWindowSize();
+
+    useEffect(() => {
+        if (!map || !activeKey) return;
+      
+        const selectedMap = mapData.find(data => data.accordionDetails.id === activeKey);
+        if (!selectedMap) return;
+      
+        const { centerCoordinates, zoom, locations } = selectedMap.mapDetails;
+      
+        // Set view
+        map.setView(centerCoordinates, zoom);
+      
+        // Clear existing markers
+        map.eachLayer(layer => {
+          if (layer instanceof L.Marker) map.removeLayer(layer);
+        });
+      
+        // Add new markers
+        locations.forEach(location => {
+          L.marker(location.coordinates).addTo(map).bindPopup(location.name);
+        });
+      
+        // Add static logo marker
+        L.marker(MAP_CENTER, { icon: createLogoIcon() })
+          .addTo(map)
+          .bindPopup('<b>AQUA Bayonne</b>');
+      
+        map.zoomControl.setPosition('bottomright');
+      }, [activeKey, map]);
 
     useEffect(() => {
         const mapInstance = L.map(mapContainer.current, {
@@ -58,25 +87,6 @@ export default function MapComponent() {
     const handleAccordionSelect = (key) => {
         setActiveKey(key);
         const selectedMap = mapData.find(data => data.accordionDetails.id === key);
-        if (!selectedMap || !map) return;
-
-        const { centerCoordinates, zoom, locations } = selectedMap.mapDetails;
-
-        map.setView(centerCoordinates, zoom);
-
-        map.eachLayer(layer => {
-            if (layer instanceof L.Marker) map.removeLayer(layer);
-        });
-
-        locations.forEach(location => {
-            L.marker(location.coordinates).addTo(map).bindPopup(location.name);
-        });
-
-        L.marker(MAP_CENTER, { icon: createLogoIcon() })
-            .addTo(map)
-            .bindPopup('<b>AQUA Bayonne</b>');
-
-        map.zoomControl.setPosition('bottomright');
     };
 
     return (

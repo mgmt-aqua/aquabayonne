@@ -1,39 +1,5 @@
 export const mapData = [{
     accordionDetails: {
-        id: "parks",
-        title: "Parks",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-    },
-    mapDetails: {
-        centerCoordinates: [40.670988, -74.100399],
-        zoom: 12,
-        locations: [{
-            name: "James J. Donovan Park",
-            coordinates: [40.670540, -74.096501],
-            highlight: true,
-        },
-        {
-            name: "Bayonne Park",
-            coordinates: [40.679475, -74.101452],
-            highlight: true,
-        }, {
-            name: "Hudson County Park",
-            coordinates: [40.679987, -74.116925],
-            highlight: true,
-        },
-        {
-            name: "Stephen R. Greg Park",
-            coordinates: [40.682526, -74.114650],
-            highlight: true,
-        },
-        {
-            name: "Liberty State Park",
-            coordinates: [40.705805, -74.055368],
-            highlight: false
-        }]
-    }
-}, {
-    accordionDetails: {
         id: "restaurants",
         title: "Restaurants",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
@@ -89,6 +55,41 @@ export const mapData = [{
             }]
     }
 },
+{
+    accordionDetails: {
+        id: "parks",
+        title: "Parks",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+    },
+    mapDetails: {
+        centerCoordinates: [40.670988, -74.100399],
+        zoom: 12,
+        locations: [{
+            name: "James J. Donovan Park",
+            coordinates: [40.670540, -74.096501],
+            highlight: true,
+        },
+        {
+            name: "Bayonne Park",
+            coordinates: [40.679475, -74.101452],
+            highlight: true,
+        }, {
+            name: "Hudson County Park",
+            coordinates: [40.679987, -74.116925],
+            highlight: true,
+        },
+        {
+            name: "Stephen R. Greg Park",
+            coordinates: [40.682526, -74.114650],
+            highlight: true,
+        },
+        {
+            name: "Liberty State Park",
+            coordinates: [40.705805, -74.055368],
+            highlight: false
+        }]
+    }
+}, 
 {
     accordionDetails: {
         id: "shopping",
