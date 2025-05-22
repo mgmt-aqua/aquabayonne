@@ -26,7 +26,7 @@ ReactGA.initialize(MEASUREMENT_ID);
 const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
     <BrowserRouter>
-        <AnnouncementBar text={"For a limited time, get one month free on a 13-month lease."} link={'/contact-us'} />
+        <AnnouncementBar text={"For a limited time, get one month free on a 13-month lease.*"} link={'/contact-us'} />
         <Navbar />
         <AppRoutes />
     </BrowserRouter>

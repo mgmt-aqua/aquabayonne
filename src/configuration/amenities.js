@@ -1,8 +1,10 @@
 import amenitiesGym from "../img/amemities/amenities_gym.png";
+import amenitiesGym2 from "../img/amemities/amenities_gym_2.jpg"
 import amenitiesRendering from "../img/amemities/amenities_cover.png";
 
 import coworkingSpace from '../img/amemities/Coworking.png'
 import coworkingSpace2 from '../img/amemities/coworking_2.png'
+import coworkingSpace3 from '../img/amemities/amenities_co_working_3.jpg'
 import clubRoom from '../img/amemities/Clubroom.png'
 import clubRoomBar from '../img/amemities/club_room_bar.jpg'
 import roofDeckRender from '../img/amemities/Roofdeck Render.png'
@@ -10,6 +12,9 @@ import pedestrianWalkwayRender from '../img/amemities/Walkway Render.png'
 import pickleball from '../img/amemities/pickleball.jpg'
 import basketball from '../img/amemities/basketball.png'
 import foodHall from '../img/neighborhood/food_hall_bar.jpg'
+import foodhall2 from '../img/amemities/amenities_food_hall_2.jpg'
+import roofdeck1 from '../img/amemities/amenities_roof_deck_1.jpg'
+import roofdeck2 from '../img/amemities/amenities_roof_deck_2.jpg'
 
 export const amenitiesList = ["Fitness Center/Gym", "Pickle Ball Court", "Basketball Court", "Community Garden", "Pedestrian Walkway"]
 export const amenitiesList2 = ["Food Hall", "Club Room", "Rooftop Deck", "Amenity Terrace", "Co-Working Space"]
@@ -18,12 +23,13 @@ export const amenitiesList4 = ["Pet Friendly", "Shuttle Service", "Outdoor Fire 
 export const allAmenities = [amenitiesList, amenitiesList2, amenitiesList3, amenitiesList4]
 
 export const images = [
-    { src: clubRoom, alt: 'Club Room Amenity' },
+    { src: amenitiesGym2, alt: 'Gym Amenity' },
     { src: clubRoomBar, alt: 'Club Room Bar Amenity' },
-    { src: roofDeckRender, alt: 'Roof Top Deck' },
-    { src: coworkingSpace, alt: 'Co Working Space Amenity' },
-    { src: amenitiesRendering, alt: 'Terrace Amenity' },
-    { src: foodHall, alt: 'Food Hall Amenity' },
+    { src: roofdeck1, alt: 'Roof Top Deck' },
+    { src: roofdeck2, alt: 'Roof Deck Amenitiy' },
+    { src: foodhall2, alt: 'Food Hall Amenity' },
+    
+    { src: coworkingSpace3, alt: 'Co Working Space Amenity' },
 ];
 export const amenitiesHighlightData = [{
     title: "Club Room",
