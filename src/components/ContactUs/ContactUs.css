@@ -49,7 +49,9 @@
 }
 
 .contact-us-col-right {
-  padding-left: 0;
+  margin-top: 0px !important;
+  padding-right: 0px;
+  background-color: #eee;
 }
 
 .contact-us-title {
@@ -83,6 +85,12 @@
 
 .contact-us-form-control-radio {
   margin-bottom: 15px;
+}
+
+.contact-us-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Mobile Styles */

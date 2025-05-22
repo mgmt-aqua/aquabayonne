@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 
-import useLeafletMap from '../../hooks/useLeafletMap';
 import TextInput from '../Common/Forms/TextInput';
 import SelectInput from '../Common/Forms/SelectInput';
 import DateInput from '../Common/Forms/DateInput';
@@ -25,12 +24,12 @@ import {
 } from '../../helpers/form';
 import useScrollToTop from '../../hooks/useScrollToTop';
 
+import leasingOffice from '../../img/contactus.jpg'
+
 import './ContactUs.css';
 
 export default function ContactUsForm() {
   useScrollToTop();
-  const mapContainer = useRef(null);
-  useLeafletMap(mapContainer);
   const [formErrors, setFormErrors] = useState(defaultFormErrors);
   const [formData, setFormData] = useState(defaultFormOptions);
   const [successMessage, setSuccessMessage] = useState("");
@@ -40,9 +39,6 @@ export default function ContactUsForm() {
   */
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    console.log(e)
-    console.log(name)
-    console.log(value)
     if (formErrors[name]) {
       delete formErrors[name];
     }
@@ -58,7 +54,6 @@ export default function ContactUsForm() {
       ...prevData,
       [name]: value,
     }));
-    console.log(formData)
   };
 
   // Function used to endcode form data to POST for Netlify forms
@@ -262,7 +257,7 @@ export default function ContactUsForm() {
           </Form>
         </Col>
         <Col xs={12} md={12} lg={6} xl={6} className="contact-us-col contact-us-col-right">
-          <div className="contact-us-map" ref={mapContainer} style={{ width: '100%', height: '100%' }}></div>
+          <img src={leasingOffice} alt="Leasing Office" className='contact-us-image'/>
         </Col>
       </Row>
       <Footer />
