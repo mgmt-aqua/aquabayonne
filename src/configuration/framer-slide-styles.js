@@ -9,7 +9,7 @@ export const baseStyles = {
 
 export const desktopStyles = {
     ...baseStyles,
-    fontSize: "8rem"
+    fontSize: "6rem"
 }
 
 export const mobileStyles = {

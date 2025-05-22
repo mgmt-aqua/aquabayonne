@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import useWindowSize from '../../hooks/useWindowSize';
 
@@ -7,7 +7,7 @@ const FullPageSlideAnimation = (props) => {
   const containerRef = useRef(null);
   const mounted = useRef(false);
   const { windowWidth } = useWindowSize();
-  const size = windowWidth < 600 ? "small" : windowWidth < 1200 ? "medium" : "large";
+  const size = windowWidth < 992 ? "small" : windowWidth < 1200 ? "medium" : "large";
 
   useEffect(() => {
     mounted.current = true;
