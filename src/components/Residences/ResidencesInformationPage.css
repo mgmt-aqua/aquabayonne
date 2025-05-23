@@ -140,7 +140,7 @@
 }
 
 .floorplan-subtext {
-    margin: 0 auto;
+    margin: 50px auto;
     width: 50%;
     text-align: center;
     font-weight: 400;
@@ -199,6 +199,35 @@
     color: #AA9580;
     border: 1px solid #AA9580;
 }
+
+.residences-information-page-list-title {
+    text-align: center;
+    font-size: 1.25rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #AA9580;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: 50px; 
+    margin-top: 50px;
+}
+
+.residences-information-page-list-container {
+    width: 95%;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: #A0C1D1;
+    color: #5F4A35;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.residences-information-page-list-row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 
 /* Mobile Styles */
 @media (max-width: 1200px) {

@@ -19,7 +19,8 @@ import {
   residencesHighlightData,
   quote,
   pageTitle,
-  subText
+  subText,
+  allResidenceFeatures
 } from '../../configuration/residences';
 import { desktopStyles, mobileStyles } from '../../configuration/framer-slide-styles';
 
@@ -93,8 +94,8 @@ export default function ResidencesInformationPage() {
           <h1 className="floorplans-heading-text">Floor Plans</h1>
           <p className="floorplan-subtext">Your private oasis, designed for modern living.</p>
 
-        {/* Features Carousel */}
-        {/* <section className="inventory-carousel-section">
+          {/* Features Carousel */}
+          {/* <section className="inventory-carousel-section">
           <Carousel className="inventory-carousel">
             {inventoryCarousel.map((item, index) => (
               <Carousel.Item key={index} interval={8000}>
@@ -116,7 +117,7 @@ export default function ResidencesInformationPage() {
             ))}
           </Carousel>
         </section> */}
-      
+
           {/* Filter Buttons */}
           <div className="button-wrapper">
             {filterOptions.map(option => (
@@ -130,8 +131,24 @@ export default function ResidencesInformationPage() {
             ))}
           </div>
 
-        <InventoryCarousel floorPlan={activeFilter}/> 
-        
+          <InventoryCarousel floorPlan={activeFilter} />
+
+          <h1 className="residences-information-page-list-title">Residences Features</h1>
+          {/* List of Residence Features */}
+          <div className="residences-information-page-list-container">
+            <Row className="residences-information-page-list-row">
+              {allResidenceFeatures.map((list, colIndex) => (
+                <Col xs={6} sm={6} md={3} lg={3} xl={3} key={colIndex}>
+                  <ul className="list-unstyled">
+                    {list.map((amenity, index) => (
+                      <li key={index} className="mb-3">{amenity}</li>
+                    ))}
+                  </ul>
+                </Col>
+              ))}
+            </Row>
+          </div>
+
           {/* Inventory Grid */}
           {/* <Row className="floorplans-row">
             <AnimatePresence>

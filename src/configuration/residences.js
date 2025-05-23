@@ -218,3 +218,7 @@ export const residencesHighlightData = [
         img: resideneces4
     }
 ];
+
+export const residenceFeaturesList1 = ["Stainless Steel Appliances", "Chef-Inspired Kitchen", "Vented Microwaves", "Remote Controlled Ceiling Fans", "Remote Controlled Under-Cabinet Lights", "Quartz Countertops"]
+export const residenceFeaturesList2 = [ "In-Unit Washer/Dryer", "Italian Inspired Cabinetry", "Panoramic Waterfront Views of NYC", "Sun Drenched Units", "Floor to Ceiling Windows", "Oversized Bathrooms with Tubs"];
+export const allResidenceFeatures = [residenceFeaturesList1, residenceFeaturesList2];
