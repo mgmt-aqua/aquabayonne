@@ -1,8 +1,5 @@
 import React from "react";
 
-// Hooks
-import usePageTracking from '../hooks/usePageTracking'
-
 // Components
 import Home from "./Home/Home";
 import HomeSplashScreen from "./Common/HomeSplashScreen";

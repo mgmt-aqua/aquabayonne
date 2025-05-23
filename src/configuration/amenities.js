@@ -5,6 +5,7 @@ import amenitiesRendering from "../img/amemities/amenities_cover.png";
 import coworkingSpace from '../img/amemities/Coworking.png'
 import coworkingSpace2 from '../img/amemities/coworking_2.png'
 import coworkingSpace3 from '../img/amemities/amenities_co_working_3.jpg'
+import coworkingSpace4 from '../img/amemities/coworking_4.jpg'
 import clubRoom from '../img/amemities/Clubroom.png'
 import clubRoomBar from '../img/amemities/club_room_bar.jpg'
 import roofDeckRender from '../img/amemities/Roofdeck Render.png'
@@ -39,7 +40,7 @@ export const amenitiesHighlightData = [{
 }, {
     title: "The Co-Working Lounge",
     content: ["AQUA’s sun-drenched coworking lounge is more than just a workspace — it’s a sanctuary for focus and creativity. Natural light pours in through expansive windows, energizing the space and boosting productivity throughout the day. The soft, neutral palette is purposefully chosen to foster calm and clarity. With ergonomic seating and ample desk space, this serene environment supports both collaboration and deep, uninterrupted work."],
-    image: coworkingSpace2,
+    image: coworkingSpace4,
     imageAlt: 'The Co-Working Lounge'
 }, {
     title: "The Rooftop at AQUA",

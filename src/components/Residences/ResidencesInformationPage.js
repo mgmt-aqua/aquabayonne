@@ -14,7 +14,6 @@ import InventoryCarousel from './InventoryCarousel';
 // Configuration
 import {
   filterOptions,
-  inventoryCarousel,
   inventoryOptions,
   residencesHighlightData,
   quote,
@@ -133,7 +132,7 @@ export default function ResidencesInformationPage() {
 
           <InventoryCarousel floorPlan={activeFilter} />
 
-          <h1 className="residences-information-page-list-title">Residences Features</h1>
+          <h1 className="residences-information-page-list-title">Residence Features</h1>
           {/* List of Residence Features */}
           <div className="residences-information-page-list-container">
             <Row className="residences-information-page-list-row">

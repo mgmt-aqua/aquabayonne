@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 
 // Icons
-import { FaFacebook, FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 // Local Components
 import Section from "../Common/Section";
