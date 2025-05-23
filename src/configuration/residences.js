@@ -204,7 +204,7 @@ export const residencesHighlightData = [
     },
     {
         title: "Chef Inspired Elegance",
-        description: "This chef-inspired kitchen is the perfect fusion of form and function, crafted for both everyday elegance and elevated entertaining. The striking quartz marble island offers a central gathering point, ideal for morning coffee, casual dining, or hosting with style. Matte naval blue cabinetry paired with sleek stainless steel appliances creates a bold yet balanced aesthetic. Every detail has been thoughtfully selected to inspire creativity, comfort, and culinary moments worth savoring.",
+        description: "This chef-inspired kitchen is the perfect fusion of form and function, crafted for both everyday elegance and elevated entertaining. The striking quartz island offers a central gathering point, ideal for morning coffee, casual dining, or hosting with style. Matte cabinetry paired with sleek stainless steel appliances creates a bold yet balanced aesthetic. Every detail has been thoughtfully selected to inspire creativity, comfort, and culinary moments worth savoring.",
         img: resideneces2
     },
     {

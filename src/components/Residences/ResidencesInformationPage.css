@@ -140,10 +140,18 @@
 }
 
 .floorplan-subtext {
+    margin: 0 auto;
     width: 50%;
-    margin: 50px auto;
     text-align: center;
     font-weight: 400;
+}
+
+.residences-disclaimer {
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: .75rem;
 }
 
 .floorplans-card {

@@ -22,7 +22,7 @@ export const neighborhoodHighlights = [
   },
   {
     title: "Shuttle to Path Station",
-    content: ["AQUA's weekday shuttle offers direct service to the Light Rail and ferry, making your daily commute simple and seamless."],
+    content: ["AQUA's weekday shuttle will offer direct service to the Grove St. PATH Station, making your daily commute simple and seamless."],
     image: shuttleBus,
     imageAlt: 'Shuttle to Path Station'
   },
