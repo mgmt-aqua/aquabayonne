@@ -55,5 +55,5 @@ export const buildingGridBlocksContent = [{
     title: "Contact Us",
     description: "We're here to help you anytime.",
     img: contactUsGridImg,
-    link: '/contact'
+    link: '/contact-us'
 }]
