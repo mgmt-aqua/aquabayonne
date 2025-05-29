@@ -37,7 +37,7 @@ export const floorplanMap = {
         filterOptions: {
             bedrooms: '0'
         },
-        matterportUrl: "https://my.matterport.com/show/?m=iSFz2FGEQVH",
+        matterportUrl: "https://my.matterport.com/show/?m=TW73nLGf8M9",
         floorplans: [{
             type: "Studio 1",
             floorplan: Studio1
@@ -57,7 +57,7 @@ export const floorplanMap = {
         filterOptions: {
             bedrooms: '1'
         },
-        matterportUrl: "https://my.matterport.com/show/?m=2kDZPP1coSo",
+        matterportUrl: "https://my.matterport.com/show/?m=JbCGtbqgq5v",
         floorplans: [{
             type: "One Bed 1",
             floorplan: OneBed1
@@ -77,7 +77,7 @@ export const floorplanMap = {
         filterOptions: {
             bedrooms: '2'
         },
-        matterportUrl: "https://my.matterport.com/show/?m=4QLAkwfoWwa",
+        matterportUrl: "https://my.matterport.com/show/?m=x4Hvd2hc4xk",
         floorplans: [{
             type: "Two Bed 1",
             floorplan: TwoBed1
