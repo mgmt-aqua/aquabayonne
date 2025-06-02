@@ -11,15 +11,14 @@ import clubRoomBar from '../img/amemities/club_room_bar.jpg'
 import roofDeckRender from '../img/amemities/Roofdeck Render.png'
 import pedestrianWalkwayRender from '../img/amemities/Walkway Render.png'
 import pickleball from '../img/amemities/pickleball.jpg'
-import basketball from '../img/amemities/basketball.png'
 import foodHall from '../img/neighborhood/food_hall_bar.jpg'
 import foodhall2 from '../img/amemities/amenities_food_hall_2.jpg'
 import roofdeck1 from '../img/amemities/amenities_roof_deck_1.jpg'
 import roofdeck2 from '../img/amemities/amenities_roof_deck_2.jpg'
 
-export const amenitiesList = ["Fitness Center/Gym", "Pickle Ball Court", "Basketball Court", "Community Garden", "Pedestrian Walkway"]
+export const amenitiesList = ["Fitness Center/Gym", "Pickle Ball Court", "Dog Run Area", "Community Garden", "Pedestrian Walkway"]
 export const amenitiesList2 = ["Food Hall", "Club Room", "Rooftop Deck", "Amenity Terrace", "Co-Working Space"]
-export const amenitiesList3 = ["Bike Storage", "Package Room", "On-Site Parking", "EV-Charging Stations", "Outdoor BBQ Grills/Picnic Area"]
+export const amenitiesList3 = ["Bike Storage", "Package Room", "On-Site Parking", "EV-Charging Stations", "Outdoor Picnic Area"]
 export const amenitiesList4 = ["Pet Friendly", "Shuttle Service", "Outdoor Fire Pits", "Resident Events", "Rentable Event Space"]
 export const allAmenities = [amenitiesList, amenitiesList2, amenitiesList3, amenitiesList4]
 
@@ -62,11 +61,6 @@ export const amenitiesHighlightData = [{
     content: ["AQUA is proud to offer a rare luxury—the only dedicated pickleball court among neighboring residential communities. Whether you're a seasoned player or a curious beginner, this vibrant and fast-growing sport finds its perfect match in our professionally designed court.", "Set within a beautifully landscaped environment, the court invites residents to engage, connect, and stay active—all just steps from their front door. At AQUA, we care about offering amenities that energize the community and wellness in ways others simply can’t match."],
     image: pickleball,
     imageAlt: "Pickleball at AQUA",
-},{
-    title: "Basketball at AQUA",
-    content: ["AQUA offers the only private half-court basketball court in the area—perfect for solo practice, casual games, or staying fit. Whether you're playing for fun or focused on fitness, this exclusive outdoor amenity brings the game home—no gym required."],
-    image: basketball,
-    imageAlt: "Basketball at AQUA",
 },{
     title: "OT Social – Your All-Day Culinary Lounge",
     content: ["Welcome to OT Social, AQUA’s exclusive on-site food hall and full-service bar—a vibrant social hub just steps from your front door. From morning cappuccinos to evening aperitifs, OT Social is designed to serve your every craving, any time of day.", "Featuring a curated mix of multi-cuisine offerings, artisanal bites, and craft beverages, this stylish space blends convenience with community. Whether you're grabbing a quick coffee before work, meeting friends for wood-fired pizza, or winding down with a signature cocktail at the bar, OT Social brings the energy of a boutique dining experience right to your doorstep."],
