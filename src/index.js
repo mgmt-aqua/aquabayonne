@@ -19,7 +19,7 @@ import AnnouncementBar from './components/Common/AnnouncementBar'
 import Privacy from './components/Footer/Privacy';
 import ReactGA from 'react-ga4';
 
-const MEASUREMENT_ID = "G-F4TXE4KJ98";
+const MEASUREMENT_ID = "G-PZPBCLBS9V";
 
 ReactGA.initialize(MEASUREMENT_ID);
 
