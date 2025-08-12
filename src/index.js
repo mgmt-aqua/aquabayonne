@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Routes, Route } from "react-router";
-import { useLocation } from 'react-router-dom'
 
 import Navbar from './components/Navbar/Navbar';
 import App from './components/App';
@@ -17,11 +16,13 @@ import ResidencesInformationPage from './components/Residences/ResidencesInforma
 import NeighborhoodInformationPage from './components/Neighborhood/NeighborhoodInformationPage';
 import AnnouncementBar from './components/Common/AnnouncementBar'
 import Privacy from './components/Footer/Privacy';
-import ReactGA from 'react-ga4';
+import TagManager from 'react-gtm-module';
 
-const MEASUREMENT_ID = "G-PZPBCLBS9V";
+const tagManagerArgs = {
+    gtmId: 'GTM-TKZQXH8F'
+};
 
-ReactGA.initialize(MEASUREMENT_ID);
+TagManager.initialize(tagManagerArgs);
 
 const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
@@ -33,12 +34,6 @@ ReactDOM.createRoot(root).render(
 );
 
 function AppRoutes() {
-    const location = useLocation();
-
-    useEffect(() => {
-        ReactGA.send({ hitType: "pageview", page: location.pathname, title: document.title });
-    }, [location]);
-
     return (
         <Routes>
             <Route path='/' element={<App />} />
