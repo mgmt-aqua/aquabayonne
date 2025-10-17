@@ -28,25 +28,6 @@ import leasingOffice from '../../img/contactus.jpg'
 
 import './ContactUs.css';
 
-import ReCAPTCHA from "react-google-recaptcha";
-
-function MyForm() {
-  const handleChange = (value) => {
-    console.log("Captcha value:", value);
-  }
-
-  return (
-    <form>
-      <input type="text" name="name" />
-      <ReCAPTCHA
-        sitekey="6LcmlewrAAAAAFd5JOJNtryHWibXyTutMq0LxQCV"
-        onChange={handleChange}
-      />
-      <button type="submit">Submit</button>
-    </form>
-  );
-}
-
 export default function ContactUsForm() {
   useScrollToTop();
   const [formErrors, setFormErrors] = useState(defaultFormErrors);
