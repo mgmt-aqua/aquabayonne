@@ -1,7 +1,7 @@
 {
   "event": {
     "token": "TOKEN",
-    "expectedAction": "USER_ACTION",
+    "expectedAction": "SUBMIT",
     "siteKey": "6LcmlewrAAAAAFd5JOJNtryHWibXyTutMq0LxQCV",
   }
 }
