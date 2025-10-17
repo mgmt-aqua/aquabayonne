@@ -24,6 +24,8 @@ const tagManagerArgs = {
 
 TagManager.initialize(tagManagerArgs);
 
+ <script src="https://www.google.com/recaptcha/api.js"></script>
+
 const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
     <BrowserRouter>
