@@ -45,8 +45,9 @@
     -->
 
     <!-- This hidden form is added to handle Netlify forms-->
-    <form name="contact" netlify hidden>
-      <label for="name">Name*</label><input placeholder="e.g. John Smith" id="name" type="text" value="" name="name">
+    <form id="contact-form" name="contact" netlify hidden>
+      <label for="name">Name*</label>
+      <input placeholder="e.g. John Smith" id="name" type="text" value="" name="name">
     <label for="phone">Phone Number*</label><input placeholder="e.g. 555-555-5555" id="phone" type="text" value="" name="phone">
     <label for="email">Email*</label><input placeholder="e.g. johnsmith@example.com" id="email" type="text" value="" name="email">
     <label>Desired Unit Size*</label>
@@ -75,7 +76,17 @@
     <label>Opt-in to receive text communication?*</label>
         <input id="optIn-Yes" type="radio" value="Yes" name="optIn"><label title="" for="optIn-Yes">Yes</label>
         <input id="optIn-No" type="radio" value="No" name="optIn"><label title="" for="optIn-No">No</label>
-      <button type="submit">Submit</button>
+      <button class="g-recaptcha"
+        data-sitekey="6LcmlewrAAAAAFd5JOJNtryHWibXyTutMq0LxQCV"
+        data-callback="onSubmit"
+        data-action="submit">
+        Submit
+      </button>
   </form>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact").submit();
+      }
+    </script>
   </body>
 </html>
