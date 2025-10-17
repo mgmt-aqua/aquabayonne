@@ -35,11 +35,24 @@ export default function ContactUsForm() {
   const [formErrors, setFormErrors] = useState(defaultFormErrors);
   const [formData, setFormData] = useState(defaultFormOptions);
   const [successMessage, setSuccessMessage] = useState("");
-
+  
 <ReCAPTCHA
   sitekey="6LcmlewrAAAAAFd5JOJNtryHWibXyTutMq0LxQCV"
   onChange={(value) => setFormData((prev) => ({ ...prev, "g-recaptcha-response": value }))}
     />
+    
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+   <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+
+  <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
   
   /* Function that is used to handle any input form changes.
      If we detect any changes to a form input that has an error, we remove that error
