@@ -82,15 +82,6 @@ export default function ContactUsForm() {
     }
   };
 
-  <script>
-  function onClick(e) {
-    e.preventDefault();
-    grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6LcmlewrAAAAAFd5JOJNtryHWibXyTutMq0LxQCV', {action: 'SUBMIT'});
-    });
-  }
-</script>
-
   return (
     <AnimatePresence>
       <FramerSlide text="Contact Us" desktopTextStyles={desktopStyles} mobileTextStyles={mobileStyles} />
