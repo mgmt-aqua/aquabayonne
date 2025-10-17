@@ -247,15 +247,6 @@ export default function ContactUsForm() {
               radioClassName="contact-us-form-control-radio"
               errorClassName="contact-us-form-error"
             />
-                
-                <script>
-                function onClick(e) {
-                  e.preventDefault();
-                  grecaptcha.enterprise.ready(async () => {
-                    const token = await grecaptcha.enterprise.execute('6LcmlewrAAAAAFd5JOJNtryHWibXyTutMq0LxQCV', {action: 'LOGIN'});
-                  });
-                }
-                </script>
 
             {/* Submit Button */}
             <Button variant="primary" type="submit" className="contact-us-submit-button">
